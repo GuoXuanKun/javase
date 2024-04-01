@@ -31,4 +31,9 @@
 
 ## 今天下午的笔记
 - 安装idea
-- 注册giee
+- 注册gitee
+
+- 绑定gitee与idea
+  - 创建仓库
+  - idea Terminal 粘贴创建仓库时(底端的最后两行代码,最后一行根据需要改成main)
+  -  commit 上传
