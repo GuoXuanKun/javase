@@ -29,7 +29,6 @@
         - 少了一个括号
         - ![img_3.png](img_3.png)
 
-
-
-
-![img_2.png](img_2.png)
+## 今天下午的笔记
+- 安装idea
+- 注册giee
