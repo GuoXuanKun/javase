@@ -3,9 +3,11 @@
 ### 回顾上一周的内容
 ![wemeet image_20240401144526781.png](wemeet%20image_20240401144526781.png)
 ###本周的课前准备
--java的安装
+- java的安装
+- IntelliJ IDEA Ultimate (Free 30-day trial)
+- IntelliJ IDEA CE (Free, built on open source)
 
-###写代码
+### 写代码
 用记事本写Hello World
 
 
@@ -13,6 +15,7 @@
 - 怎么打开 cmd
   - 方法1:win+r
   - 资源管理器中 cmd
+    ![img_6.png](img_6.png)
 - 在命令行怎么cd到f盘
   -方法: `f:`(数字键1旁边的`)
   ![img_1.png](img_1.png)
@@ -35,5 +38,6 @@
 
 - 绑定gitee与idea
   - 创建仓库
+  - ![img_7.png](img_7.png)
   - idea Terminal 粘贴创建仓库时(底端的最后两行代码,最后一行根据需要改成main)
   -  commit 上传
