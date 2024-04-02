@@ -1,3 +1,5 @@
+package day240401;
+
 public class HelloWorld {
     public static void main(String[] args) {
         //注释给人看的(//单行注释)
