@@ -34,10 +34,16 @@
 
 ## 今天下午的笔记
 - 安装idea
+- java注释
+![img_10.png](img_10.png)
 - 注册gitee
 
 - 绑定gitee与idea
   - 创建仓库
-  - ![img_7.png](img_7.png)
+  - 在idea里
+   ![img_7.png](img_7.png)
+  
   - idea Terminal 粘贴创建仓库时(底端的最后两行代码,最后一行根据需要改成main)
-  -  commit 上传
+  -  commit 上传文件
+  -  ![img_8.png](img_8.png)
+  -  ![img_9.png](img_9.png)
