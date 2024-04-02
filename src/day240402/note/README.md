@@ -8,14 +8,15 @@
   ![img_3.png](img_3.png)
   ![img_2.png](img_2.png)
 ### 文档注释 注释内容可以被生成html
-    ![img_8.png](img_8.png)
-    ![img_5.png](img_5.png)
+
+  ![img_8.png](img_8.png)
+  ![img_5.png](img_5.png)
 
 ### commit 屏蔽doc
-    ![img_4.png](img_4.png)
+  ![img_4.png](img_4.png)
 
 ### 还没push到远程仓库 还能再编辑commit
-    ![img_6.png](img_6.png)
+  ![img_6.png](img_6.png)
 
 ### 命名的重要性
 > 编程最重要的不是算法...,而是命名.
@@ -34,6 +35,23 @@
 - 名字要好懂
 - ![wemeet image_20240402112317521.png](wemeet%20image_20240402112317521.png)
 - ![img_10.png](img_10.png)
+
+## 下午
+![img_13.png](img_13.png)
+
+### 定义变量的格式
+![img_12.png](img_12.png)
+
+## 数据类型
+- ### 整形
+  ![img_14.png](img_14.png)
+  ![img_15.png](img_15.png)
+
+- ### 浮点型
+  - double
+
+## 运算符
+- ![img_16.png](img_16.png)
 
 ### 技巧:
     - 给自己提示:`...`表示有不止一行的内容
