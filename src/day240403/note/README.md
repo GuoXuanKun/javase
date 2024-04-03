@@ -10,10 +10,9 @@
 
 ### 数据类型(部分)
 - (必考) ![img_2.png](img_2.png) (使用时要考虑有效范围)![img_3.png](img_3.png)
-- 
 - char ![img_7.png](img_7.png)
 - 转义字符 ![img_8.png](img_8.png)
-
+- 
 
 ### 赋值
 - ![img_4.png](img_4.png)
@@ -25,6 +24,15 @@
 ### 数字_分隔:
 - 定义int 数据中加_不影响原值内容,但是观看的时候更友好 ![img_9.png](img_9.png) ![img_10.png](img_10.png) ps: ![img_11.png](img_11.png)
 - 多个 ___ 是可以的 ![img_12.png](img_12.png)
+- 表示金钱 ![img_13.png](img_13.png)
+
+## 下午
+
+### byte,char,short 间在进行计算会先转成int
+- ![img_15.png](img_15.png)
+
+### ++ , --
+- ![img_16.png](img_16.png)
 
 ### 细节 :
 - commit 内容尽可能详细
