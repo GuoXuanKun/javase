@@ -28,7 +28,7 @@
 
 ## 下午
 
-### byte,char,short 间在进行计算会先转成int
+### byte,char,short 在进行计算会先转成int
 - ![img_15.png](img_15.png)
 
 ### ++ , --
@@ -36,6 +36,9 @@
 
 ### 取余
 - 起作用的是被取余的数 ![img_17.png](img_17.png)
+
+### += 包含了强制转换
+- ![img_19.png](img_19.png) ![img_18.png](img_18.png)
 
 ### 细节 :
 - commit 内容尽可能详细
