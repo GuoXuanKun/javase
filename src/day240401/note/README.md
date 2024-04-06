@@ -4,7 +4,7 @@
 ![wemeet image_20240401144526781.png](wemeet%20image_20240401144526781.png)
 ###本周的课前准备
 - java的安装
-- IntelliJ IDEA Ultimate (Free 30-day trial)
+- IntelliJ IDEA Ultimate (Free 30-day240406 trial)
 - IntelliJ IDEA CE (Free, built on open source)
 
 ### 写代码
