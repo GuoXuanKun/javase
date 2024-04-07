@@ -5,7 +5,7 @@ public class Loop {
 
         // for 次数明确且次数有限
         // 每天都要上班,下班,睡觉.固定的,不太需要改变的
-        for (int i = 1; i < 5; i++) {
+        for (int i = 5; i < 5; i++) {
             System.out.println("Hello World");
         }
 
@@ -13,7 +13,7 @@ public class Loop {
 
         // while 次数模糊 且 次数可以无限(条件循环)
         // 喝水,直到不渴才不喝
-        int j = 1;
+        int j = 5;
         while (j <= 5){
             System.out.println("Hello World");
             j++;
@@ -23,7 +23,7 @@ public class Loop {
 
         //do...while 次数模糊 且 次数可以无限(条件循环) do里面的内容必须做一次再进行条件判断
         //example 晚饭是必须吃的,看看肚子饿不饿再决定吃夜宵
-        int k = 1;
+        int k = 5;
         do {
             System.out.println("Hello World");
             k++;
