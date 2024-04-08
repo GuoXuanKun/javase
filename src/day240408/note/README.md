@@ -39,14 +39,11 @@
   - `||` 左边计算能出结果,就不会再进行右边的计算
 - 非 `!`
 
-## PM
-
-### 
 
 ### 练习 
 - FindMonthDay
   - ![img_6.png](img_6.png)
-  - 
+--
 
 ### DRY
 - Don't repeat yourself
