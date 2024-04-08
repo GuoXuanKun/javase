@@ -25,6 +25,21 @@
 - ![img_3.png](img_3.png)
 - 三元运算符
   - ![img_2.png](img_2.png)
+- switch...case
+  - ![img_7.png](img_7.png)
+
+### 逻辑运算
+- ![img_4.png](img_4.png)
+- 与 `&&` `&`
+  - ![img_5.png](img_5.png)
+- 或 `||` `|`
+  - `||` 左边计算能出结果,就不会再进行右边的计算
+- 非 `!`
+
+### 练习 
+- FindMonthDay
+  - ![img_6.png](img_6.png)
+  - 
 
 ### DRY
 - Don't repeat yourself
