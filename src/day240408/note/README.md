@@ -4,7 +4,8 @@
 
 ### review
 - 命名的规范
-  - 
+  - ![img_10.png](img_10.png)
+  - ![img_11.png](img_11.png)
 
 ### 数据类型
 - ![img.png](img.png)
@@ -26,7 +27,9 @@
 - 三元运算符
   - ![img_2.png](img_2.png)
 - switch...case
+  - ![img_9.png](img_9.png)
   - ![img_7.png](img_7.png)
+  - ![img_8.png](img_8.png)
 
 ### 逻辑运算
 - ![img_4.png](img_4.png)
@@ -36,6 +39,10 @@
   - `||` 左边计算能出结果,就不会再进行右边的计算
 - 非 `!`
 
+## PM
+
+### 
+
 ### 练习 
 - FindMonthDay
   - ![img_6.png](img_6.png)
@@ -44,11 +51,27 @@
 ### DRY
 - Don't repeat yourself
 
-
-
 ## PM
 
+### continue 跳过本次循环
 
+### 注释
+- 单行 ctrl + /
+- 多行 ctrl + shift + /
+
+### 标签 label 
+- ![img_12.png](img_12.png)
+
+### 数组 Arrays
+- 数组首地址是0: 偏移量
+- 初始化
+  - ![img_13.png](img_13.png)
+- 动态初始化
+  - ![img_14.png](img_14.png)
+- 
+
+### 版本的概念
+- ![img_15.png](img_15.png)
 
 ## Thinking
 
