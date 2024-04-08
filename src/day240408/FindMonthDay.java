@@ -21,7 +21,21 @@ public class FindMonthDay {
             System.out.println("本月天数为: 30" );
         }else {
             //不考虑闰年的情况
-            System.out.println("本月天数为: 28" );
+//            System.out.println("本月天数为: 28" );
+
+            //判断是否为闰年
+            if(year % 4 == 0 ){
+                if(year % 100 == 0 && year % 400 == 0){
+                    System.out.println("本月天数为: 29" );
+                }else if(year %100 != 0) {
+                    System.out.println("本月天数为: 29" );
+                }else{
+                    System.out.println("本月天数为: 28" );
+                }
+            }else {
+                System.out.println("本月天数为: 28" );
+            }
+
         }
 
     }
