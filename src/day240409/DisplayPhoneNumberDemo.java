@@ -33,6 +33,18 @@ public class DisplayPhoneNumberDemo {
         for (int i = 0; i < 11; i++) {
             id = array2[i];
             System.out.print(array1[id]);
+
+        }
+
+        System.out.println();
+
+        // 自己的电话
+        int[] array5 = new int[]{0,1,4,5,6,7,8,9};
+        int[] array6 = new int[]{1, 3, 7, 6, 0, 5, 4, 6, 7, 2, 4};
+        int id1;
+        for (int i = 0; i < 11; i++) {
+            id1 = array6[i];
+            System.out.print(array5[id1]);
         }
     }
 }
