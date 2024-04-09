@@ -33,7 +33,6 @@ public class DisplayPhoneNumberDemo {
         for (int i = 0; i < 11; i++) {
             id = array2[i];
             System.out.print(array1[id]);
-
         }
 
         System.out.println();
