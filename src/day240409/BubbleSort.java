@@ -52,9 +52,9 @@ public class BubbleSort {
                     arr[i] = arr[i+1];
                     arr[i+1] = temp;
                 }
-                length -= 1;
-            }
 
+            }
+            length -= 1;
         }
 
         //遍历数组
