@@ -24,6 +24,7 @@ public class BubbleSort {
         // 待排序的数据
         int[] arr = new int[]{28, 5, 11, 9, 2};
 
+
         // 你的代码...
 
         //临时变量
