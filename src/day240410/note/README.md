@@ -43,10 +43,10 @@
 ### 折半查找
 - ![img_12.png](img_12.png)
 - ![img_11.png](img_11.png)
-- ![img_17.png](img_17.png)
 - ![img_13.png](img_13.png)
 - 通过命令窗可以确定跳出循环的式子
-  - ![img_14.png](img_14.png)
+  - ![img_17.png](img_17.png)
+    - ![img_14.png](img_14.png)
 - `哨兵`的确认其实是从里到外
   - ![img_18.png](img_18.png)
 - 辅助线的概念
