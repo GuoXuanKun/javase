@@ -6,4 +6,5 @@ public class Student {
     String hair;
     int age;
 
+    Dog[] dogs;
 }
