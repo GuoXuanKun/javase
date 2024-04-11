@@ -36,6 +36,8 @@
   - 对象数组的实例化
     - ![img_9.png](img_9.png)
     - ![img_10.png](img_10.png)
+      - 内存图
+        - ![img_16.png](img_16.png)
 ### 实例化的快捷键
 - ![img_2.png](img_2.png)
 
