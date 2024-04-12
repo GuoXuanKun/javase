@@ -13,7 +13,8 @@ public class FanTest {
         fan.voltage1();
         fan.voltage2();
         fan.voltage3();
-
+        fan.shake();
+        fan.noShake();
     }
 
 }

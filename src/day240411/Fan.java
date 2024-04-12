@@ -18,4 +18,10 @@ public class Fan {
     public void voltage3(){
         System.out.println("三档风");
     }
+    public void shake(){
+        System.out.println("摇头");
+    }
+    public void noShake(){
+        System.out.println("固定,不摇头");
+    }
 }
