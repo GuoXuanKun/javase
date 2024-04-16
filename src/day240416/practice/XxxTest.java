@@ -43,5 +43,9 @@ public class XxxTest {
         System.out.println(add(1, 2, 3, 4, 5, 6));
         System.out.println(add(1, 2, 3, 4, 5, 6, 7));
         System.out.println(add(1, 2, 3, 4, 5, 6, 7, 8));
+
+        // 验证方法之一：可以在外部（main）方法，传一个你猜测的 int... numbers 可能的类型
+        System.out.println(add(new int[]{1, 2}));
+
     }
 }
