@@ -1,6 +1,6 @@
 package day240416.practice;
 
-public class XxxTest {
+public class VarargTest {
     public static int add(int a, int b) {
         return a + b;
     }
