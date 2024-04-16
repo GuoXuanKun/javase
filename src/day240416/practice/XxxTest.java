@@ -18,6 +18,15 @@ public class XxxTest {
         return result;
     }*/
 
+    // 需求4: 功能不变，就是需求3的功能。写法上变了
+    public static int add(int... numbers){
+        int result = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            result += numbers[i];
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         // 需求1: 计算两个 int 数之和
         System.out.println(add(1, 2));
@@ -27,5 +36,12 @@ public class XxxTest {
 
         // 需求3: 计算 n 个 int 数之和。不确定个数，你会怎么写？
 //        System.out.println(add(new int[]{1, 2, 3, 4, 5}));
+
+        // 需求4: 功能不变，就是需求3的功能。写法上变了
+        System.out.println(add(1, 2, 3, 4));
+        System.out.println(add(1, 2, 3, 4, 5));
+        System.out.println(add(1, 2, 3, 4, 5, 6));
+        System.out.println(add(1, 2, 3, 4, 5, 6, 7));
+        System.out.println(add(1, 2, 3, 4, 5, 6, 7, 8));
     }
 }
