@@ -5,7 +5,9 @@ public class XxxTest {
         return a + b;
     }
 
-
+    public static int add(int a, int b, int c) {
+        return a + b + c;
+    }
 
     // 需求3: 你的代码
 
@@ -14,7 +16,7 @@ public class XxxTest {
         System.out.println(add(1, 2));
 
         // 需求2: 计算三个 int 数之和
-
+        System.out.println(add(3, 4, 5));
 
         // 需求3: 计算 n 个 int 数之和。不确定个数，你会怎么写？
     }
