@@ -20,6 +20,10 @@ public class XxxTest {
 
     // 需求4: 功能不变，就是需求3的功能。写法上变了
     public static int add(int... numbers){
+        // 这些数据传是传进来了，而且支持不确定个数的参数
+        // 重点是：我怎么取？
+        // 验证方法之二：直接输出这个参数的变量名
+        //System.out.println(numbers);
         int result = 0;
         for (int i = 0; i < numbers.length; i++) {
             result += numbers[i];
