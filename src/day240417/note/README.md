@@ -25,6 +25,9 @@
 - ![img_5.png](img_5.png)
 - ![img_6.png](img_6.png)
 - ![img_7.png](img_7.png)
+- 为什么 int... arr 能实现不定长
+  - ![img_8.png](img_8.png)
+  - int... arr 是在编译的时候才进行 实例化数组的
 
 ## 学习
 - 举一反三 （点 -> 线 -> 面）类似于思维导图的方式 串起来
