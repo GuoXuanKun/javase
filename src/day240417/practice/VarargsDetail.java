@@ -1,7 +1,10 @@
 package day240417.practice;
 
 public class VarargsDetail {
-    public static void main(String[] args) {}
+    public static void main(String[] args) {
+        // int... 与 int[] 有区别 . int... 可以传递空参数
+//        demo1();
+    }
 
         // personal: 不会出错
         public static void demo1 ( int a){
