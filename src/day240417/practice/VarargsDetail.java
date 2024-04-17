@@ -44,7 +44,7 @@ public class VarargsDetail {
 
     // personal: 会出错
     // 变长数组不能放在前面
-
+    //这个可以用反证法:假设可以有两个可变类型参数，那第一个参数肯定无法满足可变长度参数的规则:
 //        public static void demo6 ( int...is1,int...is2){
 //        }
 }
