@@ -6,6 +6,11 @@ public class StringConcat {
         System.out.println(concat("Hello","World"));
         System.out.println(concat("Hello","国贸","class8"));
         System.out.println(concat());
+
+        // 需求二 :让用户输入 args[]
+
+        System.out.println(concat(args));
+
     }
 
     public static String concat(String... arr){
