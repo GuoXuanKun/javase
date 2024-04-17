@@ -1,5 +1,7 @@
 package day240417.practice;
 
+import java.util.Scanner;
+
 public class StringConcat {
     public static void main(String[] args) {
 
@@ -10,6 +12,13 @@ public class StringConcat {
         // 需求二 :让用户输入 args[]
 
         System.out.println(concat(args));
+
+        // 新需求 让用户输入分隔符
+        System.out.println("请输入分隔符");
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.next();
+
+        System.out.println(concat(args,string));
 
     }
 
@@ -25,4 +34,14 @@ public class StringConcat {
     }
     }
 
+    // 新需求 由用户输入分隔符
+    public static String concat(String[] arr,String str){
+
+            String string = " ";
+            for (int i = 0; i < arr.length - 1; i++) {
+                string += arr[i] + (i == (arr.length - 1) ? " " : str );
+            }
+            return string ;
+
+    }
 }
