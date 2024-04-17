@@ -38,7 +38,7 @@ public class StringConcat {
     public static String concat(String[] arr,String str){
 
             String string = " ";
-            for (int i = 0; i < arr.length - 1; i++) {
+            for (int i = 0; i < arr.length ; i++) {
                 string += arr[i] + (i == (arr.length - 1) ? " " : str );
             }
             return string ;
