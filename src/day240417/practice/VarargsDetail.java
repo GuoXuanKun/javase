@@ -38,7 +38,7 @@ public class VarargsDetail {
 
     // personal: 不会出错
     // reality: 会出错
-
+    // 跟类型无关, 可变类型的参数,必须出现在参数列表的最后一个位置
 //        public static void demo5 ( int...is, String type,char c){
 //        }
 
