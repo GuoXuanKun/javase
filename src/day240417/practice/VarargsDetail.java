@@ -26,7 +26,8 @@ public class VarargsDetail {
 
     // personal: 会出错
     // 变长数组不能放在前面
-
+    // reality: Vararg parameter must be the last in the list
+    // 新知识 可变类型的参数,必须出现在参数列表的最后一个位置
 //        public static void demo3 ( int...is,int type, int c){
 //        }
 
