@@ -5,9 +5,11 @@ public class Student {
     int id;
     String name;
 
+    static Student istance = new Student();
+
     // 3. constructor
     private Student(){
-
+        System.out.println(istance);
     }
 
     // 2. behavior
