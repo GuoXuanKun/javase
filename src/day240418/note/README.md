@@ -24,7 +24,14 @@
 - ![img_4.png](img_4.png)
 
 ### 远程更新了怎么 pull 到本地
-- ![img_5.png](img_5.png)
+- 方式1:
+  - ![img_5.png](img_5.png)
+  - 1.复制代码
+    - ![img_7.png](img_7.png)
+  - 2.鼠标右键 点击 Open Git Bash here
+    - ![img_6.png](img_6.png)
+  - 3.右键 paste 回车
+  - 4.在 IDEA 打开文件夹
 
 ### 访问权限修饰符
 - ![img_3.png](img_3.png)
