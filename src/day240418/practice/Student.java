@@ -19,4 +19,9 @@ public class Student {
         this.name = name;
     }
 
+    // 提供 实例化方法
+    public static void instantiation(){
+        Student student = new Student();
+    }
+
 }
