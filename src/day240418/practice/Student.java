@@ -8,7 +8,7 @@ public class Student {
     //通过 state 进行实例化
     static Student istance = new Student();
 
-    static Student istance1;
+    static private Student istance1;
 
     // 3. constructor
     private Student(){
