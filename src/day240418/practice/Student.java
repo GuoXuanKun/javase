@@ -22,7 +22,10 @@ public class Student {
     // 提供 实例化方法
     public static void instantiation(){
         Student student = new Student();
-        System.out.println(student);
+        for (int i = 0; i < 5; i++) {
+            System.out.println(student);
+        }
+
     }
 
 }
