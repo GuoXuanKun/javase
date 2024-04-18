@@ -5,11 +5,14 @@ public class Student {
     int id;
     String name;
 
+    //通过 state 进行实例化
     static Student istance = new Student();
+
+    static Student istance1;
 
     // 3. constructor
     private Student(){
-        System.out.println(istance);
+//        System.out.println(istance);
     }
 
     // 2. behavior
@@ -22,12 +25,12 @@ public class Student {
     }
 
     // 提供 实例化方法
-    public static void instantiation(){
-        Student student = new Student();
-        for (int i = 0; i < 5; i++) {
-            System.out.println(student);
+    public static Student instantiation(){
+        if(istance1 == null){
+            istance1 = new Student();
         }
 
+        return istance1;
     }
 
 }
