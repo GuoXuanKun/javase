@@ -6,7 +6,7 @@ public class Student {
     String name;
 
     // 3. constructor
-    public Student(){
+    private Student(){
 
     }
 
