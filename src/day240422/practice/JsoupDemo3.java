@@ -9,7 +9,8 @@ import java.io.IOException;
 
 public class JsoupDemo3 {
     public static void main(String[] args) throws IOException {
-        Document doc = Jsoup.connect("http://bbs.xmfish.com/thread-htm-fid-55.html").get();
+        // 最新发帖网站
+        Document doc = Jsoup.connect("http://bbs.xmfish.com/thread-htm-fid-55-search-all-orderway-postdate-asc-DESC-page-1.html").get();
 
         // 获取所有链接 但是有部分不对
 //        System.out.println(doc.select("td[class=subject] > a[class=subject_t f14]").text());
