@@ -30,7 +30,7 @@ public class RockPaperScissors {
         System.out.println("电脑出: "+computer[id]);
 
         // 进行判定胜负
-        if (user == computer[id]) {
+        if (user.equals(computer[id]) ) {
             System.out.println("平局");
         } else if ((user.equals("Rock") && computer[id].equals("Scissors"))
                 || (user.equals("Paper")  && computer[id].equals("Rock"))
