@@ -18,12 +18,15 @@
 - assert 校验语句
 - 数组
   - 二维数组
+    - 数据类型必须确定
     - 一维必须长度必须确定
     - 内存图
       - ![img_7.png](img_7.png)
+      - 
 - this 与 constructor 的联合用法
   - 细节 Call to 'this()' must be first statement in constructor body
   - ![img_6.png](img_6.png)
+  - ![img_8.png](img_8.png)
 
 ## 技巧
 - 同种数字 作用一样可以抽离出来 这样改参数会方便很多
