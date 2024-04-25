@@ -17,7 +17,7 @@ public class Accumulation {
         if (a == 1){
             return 1;
         }
-        return sum(a) + sum(a-1);
+        return a + sum(a-1);
     }
 
 }
