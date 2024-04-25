@@ -11,4 +11,5 @@ public class Accumulation {
         }
         return sum;
     }
+
 }

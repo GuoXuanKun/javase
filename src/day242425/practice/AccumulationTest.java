@@ -4,6 +4,6 @@ public class AccumulationTest {
     public static void main(String[] args) {
         Accumulation accumulation = new Accumulation();
         int n = 100;
-        accumulation.sum();
+        System.out.println(accumulation.sum());
     }
 }
