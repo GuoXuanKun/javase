@@ -11,7 +11,7 @@ public class Circle {
     // 2. behavior ( method , function)
 
     public double getArea() {
-        area = r * r * pi;
+        area = r * r * Math.PI;
         return area;
     }
 
