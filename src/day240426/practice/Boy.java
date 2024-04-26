@@ -6,8 +6,8 @@ public class Boy extends Person{
     public Boy() {
     }
 
-    @Override
-    public String toString() {
+
+    public String toStrnig() {
         return "Boy{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
