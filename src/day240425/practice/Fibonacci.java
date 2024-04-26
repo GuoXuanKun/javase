@@ -1,4 +1,4 @@
-package day242425.practice;
+package day240425.practice;
 
 public class Fibonacci {
     // 需要思考的点：int 类型够不够用？

@@ -1,4 +1,4 @@
-package day242425.practice;
+package day240425.practice;
 
 public class FibonacciTestDebug {
     public static void main(String[] args) {
