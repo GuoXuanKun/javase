@@ -17,6 +17,9 @@ public class Test {
         // Object 的父类谁
         System.out.println(Object.class.getSuperclass());
 
+        // boy 打印出来为什么会是地址
+        System.out.println(boy);
+
 
     }
 }
