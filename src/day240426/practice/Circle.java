@@ -4,7 +4,7 @@ public class Circle {
 
     // 1. state (fields , variable)
     public double r = 1.5;
-    public final double pi = 3.14;
+    public static final double pi = 3.14;
 
     public double area;
 
