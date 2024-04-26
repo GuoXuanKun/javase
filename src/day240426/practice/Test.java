@@ -20,6 +20,9 @@ public class Test {
         // boy 打印出来为什么会是地址
         System.out.println(boy);
 
+        // behavior 也能继承
+        boy.eat();
+
 
     }
 }
