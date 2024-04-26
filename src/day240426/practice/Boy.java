@@ -13,4 +13,9 @@ public class Boy extends Person{
                 ", age=" + age +
                 '}';
     }
+
+    @Override
+    public void eat() {
+        System.out.println("Boy 吃");
+    }
 }
