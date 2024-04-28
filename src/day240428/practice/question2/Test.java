@@ -12,5 +12,10 @@ public class Test {
             Field field = fields[i];
             System.out.println(field);
         }
+
+        // 增强 for 循环
+        for (Field field : fields) {
+            System.out.println(field);
+        }
     }
 }
