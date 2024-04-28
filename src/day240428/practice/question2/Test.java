@@ -1,6 +1,7 @@
 package day240428.practice.question2;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 public class Test {
     public static void main(String[] args) {
@@ -23,6 +24,14 @@ public class Test {
         fields = person.getClass().getDeclaredFields();
         for (Field field : fields) {
             System.out.println(field);
+        }
+
+        //  类比刚才打印 getDeclaredFields 的方式，猜测肯定有类似方法打印 Methods
+        System.out.println("=== === ===");
+        Method[] methods = person.getClass().getDeclaredMethods();
+        System.out.println(methods.length);
+        for (Method method : methods) {
+            System.out.println(method);
         }
     }
 }
