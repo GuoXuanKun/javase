@@ -76,15 +76,24 @@ public class Girl extends Person{
 
 //       返回类型之引用类型
     // 父类被重写的方法的返回值类型是引用数据类型(比如类)，则子类重写的方法的返回值类型可以与被重写的方法的返回值类型相同 或 是被重写的方法的返回值类型的子类
-    public Person personal(){
-        return null;
+//    public Person personal(){
+//        return null;
+//    }
+//
+//    public Boy personal(){
+//        return null;
+//    }
+//
+//    public Girl personal(){
+//        return null;
+//    }
+
+    // body
+    // 没有硬性要求
+    // 但是子类重写的方法的方法体理应与父类被重写的方法的不同，否则没有重写的必要
+    public void eat(){
+        System.out.println("女生喝水");
     }
 
-    public Boy personal(){
-        return null;
-    }
 
-    public Girl personal(){
-        return null;
-    }
 }
