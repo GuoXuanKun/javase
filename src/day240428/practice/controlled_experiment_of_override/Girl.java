@@ -40,13 +40,16 @@ public class Girl extends Person{
 //    }
 
     // modifier 权限修饰符
-    public void eat(){
-
-    }
+//    public void eat(){
+//
+//    }
 
     // 子类重写的方法权限修饰符不小于父类被重写的方法的权限修饰符
-    void eat(){
+//    void eat(){
+//
+//    }
 
-    }
+    // 子类不能重写父类中声明为 private 权限修饰的方法
+    private void eat(){}
 
 }
