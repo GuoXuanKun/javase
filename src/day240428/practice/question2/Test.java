@@ -17,5 +17,12 @@ public class Test {
         for (Field field : fields) {
             System.out.println(field);
         }
+
+        System.out.println("=== === ===");
+
+        fields = person.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            System.out.println(field);
+        }
     }
 }
