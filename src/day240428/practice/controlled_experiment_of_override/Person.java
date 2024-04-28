@@ -11,4 +11,8 @@ public class Person {
         return "喝水";
     }
 
+    public Person personal(){
+        return null;
+    }
+
 }

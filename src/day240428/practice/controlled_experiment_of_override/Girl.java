@@ -63,15 +63,28 @@ public class Girl extends Person{
 //        return 1;
 //    }
 
-    // 非 void
-    public String drink(){
-        System.out.println("女生喝水");
-        return "女生喝水";
+//    // 非 void
+//    public String drink(){
+//        System.out.println("女生喝水");
+//        return "女生喝水";
+//    }
+//
+//    // 父类被重写的方法的返回值类型是基本数据类型，则子类重写的方法的返回值类型必须与被重写的方法的返回值类型相同
+//    public void drink(){
+//
+//    }
+
+//       返回类型之引用类型
+    // 父类被重写的方法的返回值类型是引用数据类型(比如类)，则子类重写的方法的返回值类型可以与被重写的方法的返回值类型相同 或 是被重写的方法的返回值类型的子类
+    public Person personal(){
+        return null;
     }
 
-    // 父类被重写的方法的返回值类型是基本数据类型，则子类重写的方法的返回值类型必须与被重写的方法的返回值类型相同
-    public void drink(){
-
+    public Boy personal(){
+        return null;
     }
 
+    public Girl personal(){
+        return null;
+    }
 }
