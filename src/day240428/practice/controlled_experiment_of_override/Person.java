@@ -6,4 +6,9 @@ public class Person {
         System.out.println("人类要吃饭");
     }
 
+    public String drink(){
+        System.out.println("喝水");
+        return "喝水";
+    }
+
 }

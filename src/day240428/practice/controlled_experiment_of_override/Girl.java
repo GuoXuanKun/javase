@@ -53,16 +53,25 @@ public class Girl extends Person{
 //    private void eat(){}
 
     // 父类被重写的方法的返回值类型是void，则子类重写的方法的返回值类型必须是void
-    public void eat(){
-
-    }
+//    public void eat(){
+//
+//    }
 
     // 报错 内容为: attempting to use incompatible return type
     // 父类被重写的方法的返回值类型是void，则子类重写的方法的返回值类型必须是void
-    public int eat(){
-        return 1;
+//    public int eat(){
+//        return 1;
+//    }
+
+    // 非 void
+    public String drink(){
+        System.out.println("女生喝水");
+        return "女生喝水";
     }
 
+    // 父类被重写的方法的返回值类型是基本数据类型，则子类重写的方法的返回值类型必须与被重写的方法的返回值类型相同
+    public void drink(){
 
+    }
 
 }
