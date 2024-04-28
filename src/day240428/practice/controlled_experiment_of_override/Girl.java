@@ -50,6 +50,19 @@ public class Girl extends Person{
 //    }
 
     // 子类不能重写父类中声明为 private 权限修饰的方法
-    private void eat(){}
+//    private void eat(){}
+
+    // 父类被重写的方法的返回值类型是void，则子类重写的方法的返回值类型必须是void
+    public void eat(){
+
+    }
+
+    // 报错 内容为: attempting to use incompatible return type
+    // 父类被重写的方法的返回值类型是void，则子类重写的方法的返回值类型必须是void
+    public int eat(){
+        return 1;
+    }
+
+
 
 }
