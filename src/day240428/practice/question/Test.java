@@ -11,5 +11,7 @@ public class Test {
         Boy boy2 = new Boy();
         boy2.setId("789");
         boy2.setSchool("清华");
+
+        boy2.setId("890").setSchool("北大");
     }
 }

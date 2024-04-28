@@ -9,8 +9,9 @@ public class Boy extends Person{
         return id;
     }
 
-    public void setId(String id) {
+    public Boy setId(String id) {
         this.id = id;
+        return this;
     }
 
     public String getSchool() {
