@@ -29,4 +29,8 @@ public class Girl extends Person{
 //        System.out.println("女生也要吃饭");
 //    }
 
+    // 更改方法体
+        public void eat() {
+        System.out.println("女生当然也要吃饭");
+    }
 }
