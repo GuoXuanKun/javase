@@ -18,7 +18,7 @@ public class Cylinder extends Circle{
 //    计算体积
     public double findVolume(){
         System.out.print("圆柱体的体积为: ");
-        return this.getRadius() * this.getRadius() * length;
+        return findArea() * length;
     }
 
     // constructor
