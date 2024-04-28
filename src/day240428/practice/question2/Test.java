@@ -1,5 +1,6 @@
 package day240428.practice.question2;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
@@ -32,6 +33,14 @@ public class Test {
         System.out.println(methods.length);
         for (Method method : methods) {
             System.out.println(method);
+        }
+
+        // 类比 getDeclaredFields 的方式,猜测肯定有类似方法打印 constructor
+        System.out.println("=== === ===");
+        Constructor[] constructors = person.getClass().getDeclaredConstructors();
+        System.out.println(constructors.length);
+        for (Constructor constructor : constructors) {
+            System.out.println(constructor);
         }
     }
 }
