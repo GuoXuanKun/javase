@@ -20,7 +20,13 @@ public class Girl extends Person{
 //    }
 
     // 更改方法名
-    public void eae(){
-        System.out.println("女生也要吃饭");
-    }
+//    public void eae(){
+//        System.out.println("女生也要吃饭");
+//    }
+
+    // 更改参数类型列表
+//    public void eat(int a){
+//        System.out.println("女生也要吃饭");
+//    }
+
 }
