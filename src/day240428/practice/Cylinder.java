@@ -15,10 +15,14 @@ public class Cylinder extends Circle{
         this.length = length;
     }
 
+    public double findArea() {
+        return 0;
+    }
+
 //    计算体积
     public double findVolume(){
         System.out.print("圆柱体的体积为: ");
-        return findArea() * length;
+        return super.findArea() * length;
     }
 
     // constructor
