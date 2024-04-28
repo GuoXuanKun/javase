@@ -33,9 +33,20 @@ public class Girl extends Person{
 //        public void eat() {
 //        System.out.println("女生当然也要吃饭");
 //    }
+
     // 方法名 (形参列表)
-        public void eat() {
-//        System.out.println("女生也要吃饭");
+//        public void eat() {
+////        System.out.println("女生也要吃饭");
+//    }
+
+    // modifier 权限修饰符
+    public void eat(){
+
+    }
+
+    // 子类重写的方法权限修饰符不小于父类被重写的方法的权限修饰符
+    void eat(){
+
     }
 
 }
