@@ -9,6 +9,7 @@ public class Person {
 
     // behavior
     public Person() {
+        System.out.println("我来了");
     }
 
     public Person(String id) {
