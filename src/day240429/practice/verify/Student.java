@@ -11,4 +11,9 @@ public class Student extends Person{
         this.school = school;
     }
 
+    public Student(String id, String school) {
+        super(id);
+        this.school = school;
+    }
+
 }

@@ -13,6 +13,7 @@ public class Person {
     }
 
     public Person(String id) {
+        System.out.println("String id");
         this.id = id;
     }
 
