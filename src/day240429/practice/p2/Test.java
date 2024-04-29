@@ -10,6 +10,8 @@ public class Test {
         cat.testInstanceMethod();
         Animal animal = cat;
         animal.testInstanceMethod();
-//        animal.eat();
+
+        // Cannot resolve method 'eat' in 'Animal'
+        animal.eat();
     }
 }
