@@ -7,4 +7,8 @@ public class Cat extends Animal{
     public void testInstanceMethod(){
         System.out.println("This instance method in Cat");
     }
+
+    public void eat(){
+        System.out.println("Cat eat");
+    }
 }
