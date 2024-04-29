@@ -13,4 +13,8 @@ public class Person {
     public void adopt(Cat cat){
         System.out.println(this.name + " 养了一只( " + cat.name + " )");
     }
+
+    public void adopt(Dog dog){
+        System.out.println(this.name + " 养了一只( " + dog.name + " )");
+    }
 }
