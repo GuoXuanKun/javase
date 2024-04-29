@@ -6,6 +6,8 @@ public class Student extends Person{
 
     // behavior
     public Student(String school) {
+        // the superclass no-argument constructor is called.
+        super();
         this.school = school;
     }
 
