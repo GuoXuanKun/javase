@@ -18,4 +18,13 @@ public class Student extends Person{
         this.school = school;
     }
 
+    public Student(String id, String name, int age) {
+        // 如果没有在子类的构造器中显式的调用父类的构造器，If a constructor does not explicitly invoke a superclass constructor,
+        // the Java compiler automatically inserts a call to the no-argument constructor of the superclass.
+        // super();
+
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
 }
