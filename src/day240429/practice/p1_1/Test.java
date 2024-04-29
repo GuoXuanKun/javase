@@ -23,5 +23,11 @@ public class Test {
 
         // 一个人养了一只猪
         person.adopt(pig);
+
+        // 一只兔子
+        Rabbit rabbit = new Rabbit("月兔");
+
+        // 一个人养了一只兔子
+        person.adopt(rabbit);
     }
 }
