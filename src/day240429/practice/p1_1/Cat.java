@@ -1,8 +1,8 @@
 package day240429.practice.p1_1;
 
-public class Cat {
+public class Cat extends Animal{
     // 1. state
-    String name;
+//    String name;
 
     // 3. Constructor
 

@@ -1,9 +1,9 @@
 package day240429.practice.p1_1;
 
-public class Pig {
+public class Pig extends Animal{
 
     // 1.state
-    String name;
+//    String name;
 
     // 3.Constructor
 
