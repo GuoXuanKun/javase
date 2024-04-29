@@ -8,6 +8,10 @@ public class Person {
     int age;
 
     // behavior
+
+    // 此时，如果把 Person 的空参构造器注释，会报错。
+    // If the super class does not have a no-argument constructor,
+    // you will get a compile-time error.
     public Person() {
         System.out.println("我来了");
     }
