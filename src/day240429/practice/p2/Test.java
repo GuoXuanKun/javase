@@ -6,6 +6,9 @@ public class Test {
         // 思考:
         // Animal animal = cat;
         // 引出直接打印 char[] 竟然不是我们预想的 '地址值'
+//        Animal animal = cat;
+        cat.testInstanceMethod();
         Animal animal = cat;
+        animal.testInstanceMethod();
     }
 }
