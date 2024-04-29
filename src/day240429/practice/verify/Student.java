@@ -13,6 +13,8 @@ public class Student extends Person{
 
     public Student(String id, String school) {
         super(id);
+        // 下面的代码会报错：Only one explicit constructor call allowed in constructor
+        //super();
         this.school = school;
     }
 
