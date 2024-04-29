@@ -17,5 +17,11 @@ public class Test {
 
         // 一个人养了一只狗
         person.adopt(dog);
+
+        // 一只猪
+        Pig pig = new Pig("八戒");
+
+        // 一个人养了一只猪
+        person.adopt(pig);
     }
 }
