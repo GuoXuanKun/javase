@@ -4,7 +4,7 @@ public class Dog {
     // 1. state
     String name;
 
-    // 2. behavior
+    // 3. Constructor
 
     public Dog(String name) {
         this.name = name;

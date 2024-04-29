@@ -4,7 +4,7 @@ public class Cat {
     // 1. state
     String name;
 
-    // 2. behavior
+    // 3. Constructor
 
     public Cat(String name) {
         this.name = name;
