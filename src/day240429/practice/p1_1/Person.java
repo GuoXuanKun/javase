@@ -10,19 +10,19 @@ public class Person {
     }
 
     // 2. behavior
-    public void adopt(Cat cat){
-        System.out.println(this.name + " 养了一只( " + cat.name + " )");
+    public void adopt(Animal animal){
+        System.out.println(this.name + " 养了一只( " + animal.name + " )");
     }
 
-    public void adopt(Dog dog){
-        System.out.println(this.name + " 养了一只( " + dog.name + " )");
-    }
-
-    public void adopt(Pig pig){
-        System.out.println(this.name + " 养了一只( " + pig.name + " )");
-    }
-
-    public void adopt(Rabbit rabbit){
-        System.out.println(this.name + " 养了一只( " + rabbit.name + " )");
-    }
+//    public void adopt(Dog dog){
+//        System.out.println(this.name + " 养了一只( " + dog.name + " )");
+//    }
+//
+//    public void adopt(Pig pig){
+//        System.out.println(this.name + " 养了一只( " + pig.name + " )");
+//    }
+//
+//    public void adopt(Rabbit rabbit){
+//        System.out.println(this.name + " 养了一只( " + rabbit.name + " )");
+//    }
 }
