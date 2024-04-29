@@ -12,6 +12,6 @@ public class Test {
         animal.testInstanceMethod();
 
         // Cannot resolve method 'eat' in 'Animal'
-        animal.eat();
+//        animal.eat();
     }
 }
