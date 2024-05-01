@@ -9,4 +9,8 @@ public class Dog extends Animal{
     public Dog(String name) {
         this.name = name;
     }
+
+    public void www() {
+        System.out.println("汪汪汪...");
+    }
 }
