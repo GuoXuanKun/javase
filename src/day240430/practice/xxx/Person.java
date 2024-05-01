@@ -6,4 +6,8 @@ public abstract class Person {
 
     // behavior
     public abstract void describeLonely(String text) ;
+
+    public void judgeXDD(String text) {
+        System.out.println(text);
+    }
 }
