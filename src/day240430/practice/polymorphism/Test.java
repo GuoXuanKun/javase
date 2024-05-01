@@ -23,11 +23,17 @@ public class Test {
         */
 
         Student student = new Student();
+        // 你是 JC 身份，主动申请，去当 WD
         Person person = student;
         person.eat();
 
         // 思考：是否可以通过 person 调用 study 方法
         // Cannot resolve method 'study' in 'Person'
         //person.study();
+
+        // 思考：person 能否赋值回给 Student 类型的 s
+        // 恢复 JC 身份
+        Student s = (Student) person;
+        s.study();
     }
 }
