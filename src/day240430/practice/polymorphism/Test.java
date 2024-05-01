@@ -2,6 +2,7 @@ package day240430.practice.polymorphism;
 
 public class Test {
     public static void main(String[] args) {
+/*
         Person person = new Person();
         person.eat();
         person.play();
@@ -19,5 +20,10 @@ public class Test {
         teacher.teach();
         teacher.eat();
         teacher.play();
+        */
+
+        Student student = new Student();
+        Person person = student;
+        person.eat();
     }
 }
