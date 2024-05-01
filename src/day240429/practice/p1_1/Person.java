@@ -19,7 +19,7 @@ public class Person {
 
         // 思路：有没有一种方式可以判断出 animal 是否属于某种子类的具体类型
         // 假设有，你就可以怎么做...
-        if (animal 属于 Dog 类型) {
+        if (animal instanceof Dog Dog) {
             System.out.println("汪汪汪...");
         }
 
