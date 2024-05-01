@@ -10,8 +10,8 @@ public class Student extends Person {
         System.out.println(text);
     }
 
-    @Override
-    public void judgeXDD(String text) {
+ /*   @Override
+    public  void judgeXDD(String text) {
         System.out.println(text);
-    }
+    }*/
 }
