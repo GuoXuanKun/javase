@@ -15,6 +15,15 @@ public class Person {
         // 新需求:
         // 如果外面传进来的是 Dog
         // 需要额外的输出一句 " 汪汪汪 "
+
+
+        // 思路：有没有一种方式可以判断出 animal 是否属于某种子类的具体类型
+        // 假设有，你就可以怎么做...
+        if (animal 属于 Dog 类型) {
+            System.out.println("汪汪汪...");
+        }
+
+
         System.out.println(this.name + " 养了一只( " + animal.name + " )");
     }
 
