@@ -9,4 +9,9 @@ public class Student extends Person {
     public void describeLonely(String text) {
         System.out.println(text);
     }
+
+    @Override
+    public void judgeXDD(String text) {
+        System.out.println(text);
+    }
 }
