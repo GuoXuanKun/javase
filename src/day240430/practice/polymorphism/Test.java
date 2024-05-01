@@ -66,6 +66,6 @@ public class Test {
         // 思考：如果你想把 p1 还原回到原来的类型，该怎么做？
 
         // Student|Teacher|... = (xxx) p1;
-
+        // 参考对之前代码的修改：day240429.p1_1.Person 中 adopt 里面的注释和代码
     }
 }
