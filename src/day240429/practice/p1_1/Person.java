@@ -11,6 +11,10 @@ public class Person {
 
     // 2. behavior
     public void adopt(Animal animal){
+
+        // 新需求:
+        // 如果外面传进来的是 Dog
+        // 需要额外的输出一句 " 汪汪汪 "
         System.out.println(this.name + " 养了一只( " + animal.name + " )");
     }
 
