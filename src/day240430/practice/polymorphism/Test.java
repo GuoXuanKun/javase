@@ -51,5 +51,21 @@ public class Test {
         // Student s2 = teacher;
         // Inconvertible types; cannot cast 'Teacher' to 'Student'
         // Student s2 = (Student) teacher;
+
+        System.out.println("=== === ===");
+
+        Student s1 = new Student();
+        Person p1 = s1;
+        Teacher t1 = new Teacher();
+        p1 = t1;
+
+        // 假设这里有 50 行代码，甚至 Person 还有其他的子类...
+        // 所有 Person 子类的对象，都可以赋值给 p1;
+        // ......
+        // 此时，你只知道 p1 是 Person 类型，
+        // 思考：如果你想把 p1 还原回到原来的类型，该怎么做？
+
+        // Student|Teacher|... = (xxx) p1;
+
     }
 }
