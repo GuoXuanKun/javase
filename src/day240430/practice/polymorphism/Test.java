@@ -25,5 +25,9 @@ public class Test {
         Student student = new Student();
         Person person = student;
         person.eat();
+
+        // 思考：是否可以通过 person 调用 study 方法
+        // Cannot resolve method 'study' in 'Person'
+        //person.study();
     }
 }
