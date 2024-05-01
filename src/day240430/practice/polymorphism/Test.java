@@ -8,8 +8,12 @@ public class Test {
 
         Student student = new Student();
         student.study();
+        student.eat();
+        student.play();
 
         Teacher teacher = new Teacher();
         teacher.teach();
+        teacher.eat();
+        teacher.play();
     }
 }
