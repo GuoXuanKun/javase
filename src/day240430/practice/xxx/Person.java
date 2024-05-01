@@ -8,6 +8,7 @@ public abstract class Person {
     public abstract void describeLonely(String text) ;
 
     public void judgeXDD(String text) {
-        System.out.println(text);
+//        System.out.println(text);
+        System.out.println("宇宙最牛逼！！！");
     }
 }
