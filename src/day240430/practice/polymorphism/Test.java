@@ -35,5 +35,16 @@ public class Test {
         // 恢复 JC 身份
         Student s = (Student) person;
         s.study();
+
+
+        System.out.println("=== === ===");
+
+        Teacher teacher = new Teacher();
+        Person p = teacher;
+        // Cannot resolve method 'teach' in 'Person'
+        //p.teach();
+        Teacher t = (Teacher) p;
+        t.teach();
+        System.out.println("=== === ===");
     }
 }
