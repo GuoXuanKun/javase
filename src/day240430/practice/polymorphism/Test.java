@@ -46,5 +46,10 @@ public class Test {
         Teacher t = (Teacher) p;
         t.teach();
         System.out.println("=== === ===");
+
+
+        // Student s2 = teacher;
+        // Inconvertible types; cannot cast 'Teacher' to 'Student'
+        // Student s2 = (Student) teacher;
     }
 }
