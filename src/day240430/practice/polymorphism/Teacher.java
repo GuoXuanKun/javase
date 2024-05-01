@@ -6,4 +6,14 @@ public class Teacher extends Person{
     public void teach() {
         System.out.println("Teacher.teach");
     }
+
+    @Override
+    public void eat() {
+        System.out.println("Teacher.eat");
+    }
+
+    @Override
+    public void play() {
+        System.out.println("Teacher.play");
+    }
 }
