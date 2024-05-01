@@ -6,10 +6,14 @@ public class Test {
         person.eat();
         person.play();
 
+        System.out.println("===============");
+
         Student student = new Student();
         student.study();
         student.eat();
         student.play();
+
+        System.out.println("===============");
 
         Teacher teacher = new Teacher();
         teacher.teach();
