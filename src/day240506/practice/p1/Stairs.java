@@ -38,9 +38,16 @@ public class Stairs {
 
         }
         System.out.println("上个方法就会这么多了");
-
+        // 用递归的想法
+        System.out.println(" 一共有多少种爬法: " + climbstairs(n));
     }
 
-
+    // 递归
+    public static int climbstairs(int n){
+        if(n == 1 || n == 2){
+            return n;
+        }
+        // 所有的台阶都是 爬了 若干个 1 阶 和 2 阶
+        return (n - 1) + (n - 2);
     }
 }
