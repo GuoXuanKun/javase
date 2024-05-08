@@ -5,7 +5,7 @@ public abstract class Person {
     String name;
 
     // behavior
-    public abstract void describeLonely(String text) ;
+    public final abstract void describeLonely(String text) ;
 
     public final void judgeXDD(String text) {
 //        System.out.println(text);
