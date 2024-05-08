@@ -11,4 +11,5 @@
 ### abstract 
 - 方法是 abstract 那么 类也得声明 abstract
 - 类是 abstract 是 不能被 new 的(不能被实例化)
-- 父类是 abstract 子类 也是 abstract 那么 父类的 abstract 的方法可以不在abstract的子类override
+- 父类是 abstract 子类 也是 abstract 那么 父类的 abstract 的方法可以不在abstract的子类 override
+
