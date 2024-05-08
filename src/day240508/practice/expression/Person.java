@@ -1,0 +1,14 @@
+package day240508.practice.expression;
+
+public abstract class Person {
+    // state
+    String name;
+
+    // behavior
+    public abstract void describeLonely(String text) ;
+
+    public final void judgeXDD(String text) {
+//        System.out.println(text);
+        System.out.println("宇宙最牛逼！！！");
+    }
+}
