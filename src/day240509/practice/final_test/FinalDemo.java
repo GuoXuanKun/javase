@@ -29,7 +29,8 @@ public class  FinalDemo {
 //        Cannot assign a value to final variable 'id'
 //        不能给最终变量“id”赋值
 //        id = 1;
-
+          int iu = id;
+        System.out.println(iu);
     }
 
 }
