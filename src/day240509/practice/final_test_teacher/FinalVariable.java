@@ -34,7 +34,8 @@ public class FinalVariable {
     }
 
     public void parameterWithFinalTest2(final MyClass myClass) {
-        //myClass.i++;
+        //myClass.i++; // 可以，没有改变 myClass 的值（地址）
+        //myClass = new MyClass(); // 不行，改变 myClass 的值（地址）
     }
 }
 
