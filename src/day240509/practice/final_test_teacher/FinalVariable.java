@@ -4,7 +4,8 @@ public class FinalVariable {
     // Variable 'id' might not have been initialized
     final int id;
     public FinalVariable() {
-        id = 1;
+        System.out.println("执行了 `空参构造器`");
+        //id = 1;
     }
 //
 //    public FinalVariable(int id) {
@@ -12,7 +13,11 @@ public class FinalVariable {
 //    }
 
     {
+        System.out.println("执行了 `block`");
         id = 3;
     }
 
+    public static void main(String[] args) {
+        new FinalVariable();
+    }
 }
