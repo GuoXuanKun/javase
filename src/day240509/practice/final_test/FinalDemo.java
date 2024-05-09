@@ -5,5 +5,18 @@ public class  FinalDemo {
 //    变量“id”可能尚未初始化
 //    final int id;
 
-    final int id = 1;
+
+   // position 1
+    final int id  ;
+
+//    {
+    // position 2
+//        id = 1;
+//    }
+
+    // position 3
+    public FinalDemo() {
+        id = 1;
+    }
+
 }
