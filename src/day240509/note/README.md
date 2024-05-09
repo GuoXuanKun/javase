@@ -15,9 +15,14 @@
 ### abstract
 - 不能修饰变量、代码块、构造器
 - 不能修饰 私有方法 , 静态方法 , final 方法 , final 类
-  
+ 
 ## PM
+### block 执行的时间会比 构造器的更早
 
+### final
+- test(final Myclass myclass)
+  - 不能改的是 myclass 的地址
+  - ![img_2.png](img_2.png)
 
 
 ## 思维
