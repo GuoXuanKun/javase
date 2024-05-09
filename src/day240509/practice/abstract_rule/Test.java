@@ -20,4 +20,8 @@ public abstract class Test {
 //    Illegal combination of modifiers: 'abstract' and 'static'
 //    修饰符` abstract `和` static `的非法组合
     public /*abstract*/ static void test1(){}
+
+//    Illegal combination of modifiers: 'abstract' and 'final'
+//    修饰语“abstract”和“final”的非法组合
+    public /*abstract*/ final void test2(){}
 }
