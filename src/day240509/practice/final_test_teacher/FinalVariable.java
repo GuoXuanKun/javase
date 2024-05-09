@@ -23,7 +23,9 @@ public class FinalVariable {
         AGE = 19;
     }
 
-    public static void main(String[] args) {
-        new FinalVariable();
+    public void localVariableWithFinalTest() {
+        final int a = 0;
+        // Cannot assign a value to final variable 'a'
+        //a = 3;
     }
 }
