@@ -2,7 +2,8 @@ package day240509.practice.util;
 
 public class AnalysisXiaMenXiaoYu extends AnalysisWebsite{
     @Override
-    public String Analysis() {
-        return "分析完毕";
+    public String Analysis(String key) {
+        // 先假设这里有具体分析算法
+        return key;
     }
 }
