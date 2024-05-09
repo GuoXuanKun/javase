@@ -11,6 +11,10 @@
 - ( new Algorithm() {重写 abstract 方法}) 这里 就是匿名的 抽象方法子类
   - 适合临时使用,一次性的
   - ![img.png](img.png)
+
+### abstract
+- 不能修饰变量、代码块、构造器
+- 不能修饰 私有方法 , 静态方法 , final 方法 , final 类
   
 ## PM
 
