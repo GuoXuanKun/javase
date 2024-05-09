@@ -20,9 +20,16 @@
 ### block 执行的时间会比 构造器的更早
 
 ### final
-- test(final Myclass myclass)
-  - 不能改的是 myclass 的地址
-  - ![img_2.png](img_2.png)
+- 修饰的类不能被继承
+- 修饰的方法不能被重写
+- 修饰变量 Instance Variables (Non-Static Fields) 实例变量 必须被初始化
+- 修饰变量 Class Variables (Static Fields) 类变量 必须被初始化
+- 修饰变量 Local Variables 局部变量 - 值不能被改变
+- 修饰变量 Parameters 参数 - 值不能被改变
+- final - 修饰变量 Parameters - 值不能被改变 - 引用数据类型
+  - 比如:test(final Myclass myclass)
+    - 不能改的是 myclass 的地址
+    - ![img_2.png](img_2.png)
 
 
 ## 思维
