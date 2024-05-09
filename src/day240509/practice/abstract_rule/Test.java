@@ -8,6 +8,9 @@ public abstract class Test {
     /*abstract*/ {}
 
 //    Modifier 'abstract' not allowed here
+    /*abstract*/ static{}
+
+//    Modifier 'abstract' not allowed here
     /*abstract*/ public Test(){}
 
 //    Illegal combination of modifiers: 'abstract' and 'private'
