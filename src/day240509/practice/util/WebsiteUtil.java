@@ -9,8 +9,8 @@ import java.io.IOException;
 // 分析网站的工具类
 public class WebsiteUtil {
 
-    //这个工具类方法需要传入 网址(String), 具体的分析算法(对象),要搜索的关键词(String)
-    public static void util(String url , AnalysisWebsite analysisWebsite,String key) throws Exception {
+    //这个工具类方法需要传入 网址(String), 具体的分析算法(对象),要搜索的关键词(String),邮箱地址(String)
+    public static void util(String url , AnalysisWebsite analysisWebsite,String key,String address) throws Exception {
         // 把源码下载
         Document doc = Jsoup.connect(url).get();
 
@@ -23,7 +23,7 @@ public class WebsiteUtil {
         System. out.println("解析的结果: " + result);
 
 //         关键词命中、邮件发送
-        MyEmailUtil.send("xuankun_guo@qq.com",result);
+        MyEmailUtil.send(address,result);
 }
 
 }
