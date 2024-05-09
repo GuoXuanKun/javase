@@ -25,4 +25,11 @@ public class  FinalDemo {
         System.out.println(iu);
     }
 
+    public void test1(final int id){
+//        Cannot assign a value to final variable 'id'
+//        不能给最终变量“id”赋值
+//        id = 1;
+
+    }
+
 }
