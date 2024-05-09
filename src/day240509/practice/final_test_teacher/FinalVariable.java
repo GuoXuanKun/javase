@@ -32,4 +32,12 @@ public class FinalVariable {
     public void parameterWithFinalTest1(final int i) {
         //i++;
     }
+
+    public void parameterWithFinalTest2(final MyClass myClass) {
+        //myClass.i++;
+    }
+}
+
+class MyClass {
+    int i;
 }
