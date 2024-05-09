@@ -1,19 +1,10 @@
 package day240509.practice.p1;
 
 public class MyUtil {
-    public static void calculateTime(Sum100 Sum100) {
+    public static void calculateTime(Algorithm algorithm) {
         // 开始：记录时间点
         long start = System.nanoTime();
-        Sum100.justDoIt();
-        // 结束：记录时间点
-        // 这个算法的运行时间 = 结束时间 - 开始时间
-        long end = System.nanoTime();
-        System.out.println(end - start);
-    }
-    public static void calculateTime(Table99 table99) {
-        // 开始：记录时间点
-        long start = System.nanoTime();
-        table99.justDoIt();
+        algorithm.justDoIt();
         // 结束：记录时间点
         // 这个算法的运行时间 = 结束时间 - 开始时间
         long end = System.nanoTime();
