@@ -7,7 +7,7 @@ import org.jsoup.nodes.Document;
 import java.io.IOException;
 
 // 分析网站的工具类
-public class WebsideUtil {
+public class WebsiteUtil {
 
     //这个工具类方法需要传入 网址(String), 具体的分析算法(对象),要搜索的关键词(String)
     public static void util(String url , AnalysisWebsite analysisWebsite,String key) throws Exception {
