@@ -19,4 +19,10 @@ public class  FinalDemo {
         id = 1;
     }
 
+    public void test(){
+        final int iu;
+//        iu = 1;
+//        System.out.println(iu);
+    }
+
 }
