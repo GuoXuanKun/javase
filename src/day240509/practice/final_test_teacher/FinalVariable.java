@@ -7,4 +7,7 @@ public class FinalVariable {
     public FinalVariable() {
         id = 1;
     }
+    public FinalVariable(int id) {
+        this.id = id;
+    }
 }
