@@ -1,5 +1,6 @@
 package day240509.practice.final_test_teacher;
 
 public class FinalVariable {
-    int id;
+    // Variable 'id' might not have been initialized
+    final int id;
 }
