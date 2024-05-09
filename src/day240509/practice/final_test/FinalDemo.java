@@ -21,7 +21,7 @@ public class  FinalDemo {
 
     public void test(){
         final int iu;
-//        iu = 1;
+        iu = 1;
         System.out.println(iu);
     }
 
