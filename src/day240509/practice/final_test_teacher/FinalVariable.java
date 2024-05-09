@@ -28,4 +28,8 @@ public class FinalVariable {
         // Cannot assign a value to final variable 'a'
         //a = 3;
     }
+
+    public void parameterWithFinalTest1(final int i) {
+        //i++;
+    }
 }
