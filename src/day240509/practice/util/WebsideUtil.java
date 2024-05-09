@@ -23,7 +23,7 @@ public class WebsideUtil {
         System. out.println("解析的结果: " + result);
 
 //         关键词命中、邮件发送
-        MyEmailUtil.send("xuankunguo@qq.com",result);
+        MyEmailUtil.send("xuankun_guo@qq.com",result);
 }
 
 }
