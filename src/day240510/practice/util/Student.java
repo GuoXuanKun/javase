@@ -24,4 +24,19 @@ public class Student {
     public Student(){
 
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "number=" + number +
+                ", state=" + state +
+                ", score=" + score +
+                '}';
+    }
+
+    public Student(int number, int state, int score) {
+        this.number = number;
+        this.state = state;
+        this.score = score;
+    }
 }
