@@ -32,7 +32,7 @@ public class MyselfSortUtil {
     }
 
     // double[] 冒泡排序
-    public static double[] BubbleSort(double[] a){
+    public static double[] BubbleSort(double[] a) {
         double[] arr = a;
 
         //临时变量
@@ -62,7 +62,7 @@ public class MyselfSortUtil {
     }
 
     // Student[] 的冒泡排序
-    public static Student[] BubbleSort(Student[] a){
+    public static Student[] BubbleSort(Student[] a) {
         Student[] arr = a;
 
         //临时变量
@@ -91,5 +91,30 @@ public class MyselfSortUtil {
         return arr;
     }
 
+    public static All[] BubbleSort(All[] all) {
+        for (int i = 0; i < all.length - 1; i++) {
+            boolean swapped = false;
+            for (int j = 0; j < (all.length - 1) - i; j++) {
+                if (all[j].appoint() > all[j + 1].appoint()) {
+                    All temp = all[j];
+                    all[j] = all[j + 1];
+                    all[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) {
+                break;
+            }
+
+        }
+        return all;
+    }
+    public static void print(Student[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
 }
+
 

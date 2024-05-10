@@ -26,5 +26,9 @@ public class Test {
         }
         MyselfSortUtil.BubbleSort(students);
 
+        // 4.
+
+        MyselfSortUtil.print(MyselfSortUtil.BubbleSort(students));
+
     }
 }

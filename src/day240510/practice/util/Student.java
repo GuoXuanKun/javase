@@ -1,6 +1,6 @@
 package day240510.practice.util;
 
-public class Student {
+public class Student extends All {
 
     // state
     int number;
@@ -38,5 +38,11 @@ public class Student {
         this.number = number;
         this.state = state;
         this.score = score;
+    }
+
+    @Override
+    public int appoint() {
+        this.index = this.score;
+        return index;
     }
 }
