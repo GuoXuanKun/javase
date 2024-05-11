@@ -16,6 +16,13 @@ public class Student extends Sortable {
 
     @Override
     public int compareTo(Sortable sortable) {
-        return 0;
+        Student student = (Student) sortable;
+        if (this.score > student.score) {
+            return 1;
+        } else if (this.score < student.score) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }

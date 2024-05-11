@@ -19,6 +19,13 @@ public class Dog extends Sortable {
 
     @Override
     public int compareTo(Sortable sortable) {
-        return 0;
+        Dog dog = (Dog) sortable;
+        if (this.age > dog.age) {
+            return 1;
+        } else if (this.age < dog.age) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }

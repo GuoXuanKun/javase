@@ -20,6 +20,13 @@ public class TV extends Sortable {
 
     @Override
     public int compareTo(Sortable sortable) {
-        return 0;
+        TV tv = (TV) sortable;
+        if (this.price > tv.price) {
+            return 1;
+        } else if (this.price < tv.price) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }
