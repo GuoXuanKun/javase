@@ -16,8 +16,10 @@ public class Test {
         int size = 5;
         Student[] studentArr = new Student[size];
         for (int i = 0; i < size; i++) {
-            studentArr[i] = new Student("小-" + i, 80 + i);
+            studentArr[i] = new Student("小-" + i, 80 - i);
         }
+        MySortUtil.print(studentArr);
+        MySortUtil.sort(studentArr);
         MySortUtil.print(studentArr);
 
     }

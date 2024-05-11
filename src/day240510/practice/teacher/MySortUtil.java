@@ -31,4 +31,20 @@ public class MySortUtil {
         System.out.println();
     }
 
+    public static void sort(Student[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            boolean swapped = false;
+            for (int j = 0; j < (arr.length - 1) - i; j++) {
+                if (arr[j].score > arr[j+1].score) {
+                    Student temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) {
+                break;
+            }
+        }
+    }
 }
