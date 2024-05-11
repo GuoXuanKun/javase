@@ -28,5 +28,7 @@ public class Test {
             dogArr[i] = new Dog("狗-" + i, 10 - i);
         }
         MySortUtil.print(dogArr);
+        MySortUtil.sort(dogArr);
+        MySortUtil.print(dogArr);
     }
 }
