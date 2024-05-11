@@ -17,4 +17,9 @@ public class TV extends Sortable {
                 ", price=" + price +
                 '}';
     }
+
+    @Override
+    public int compareTo(Sortable sortable) {
+        return 0;
+    }
 }

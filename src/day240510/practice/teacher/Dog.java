@@ -16,4 +16,9 @@ public class Dog extends Sortable {
                 ", age=" + age +
                 '}';
     }
+
+    @Override
+    public int compareTo(Sortable sortable) {
+        return 0;
+    }
 }

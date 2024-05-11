@@ -13,4 +13,9 @@ public class Student extends Sortable {
     public String toString() {
         return this.name + "(" + this.score + ")";
     }
+
+    @Override
+    public int compareTo(Sortable sortable) {
+        return 0;
+    }
 }
