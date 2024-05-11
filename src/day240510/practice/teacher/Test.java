@@ -30,5 +30,12 @@ public class Test {
         MySortUtil.print(dogArr);
         MySortUtil.sort(dogArr);
         MySortUtil.print(dogArr);
+
+        // 4. 支持 TV[]
+        TV[] tvArr = new TV[size];
+        for (int i = 0; i < size; i++) {
+            tvArr[i] = new TV("电视-" + i, 1999.99 - i);
+        }
+        MySortUtil.print(tvArr);
     }
 }
