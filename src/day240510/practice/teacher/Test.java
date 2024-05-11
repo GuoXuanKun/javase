@@ -18,6 +18,7 @@ public class Test {
         for (int i = 0; i < size; i++) {
             studentArr[i] = new Student("小-" + i, 80 + i);
         }
+        MySortUtil.print(studentArr);
 
     }
 }
