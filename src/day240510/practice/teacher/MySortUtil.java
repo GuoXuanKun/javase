@@ -1,6 +1,33 @@
 package day240510.practice.teacher;
 
-public class MySortUtil {
+public class MySortUtil { public static void print(int[] arr) {
+    for (int i = 0; i < arr.length; i++) {
+        System.out.print(arr[i] + " ");
+    }
+    System.out.println();
+}
+
+    public static void print(Student[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static void print(Dog[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static void print(TV[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
     public static void sort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             boolean swapped = false;
@@ -16,19 +43,6 @@ public class MySortUtil {
                 break;
             }
         }
-    }
-    public static void print(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-    }
-
-    public static void print(Student[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
     }
 
     public static void sort(Student[] arr) {
@@ -47,12 +61,6 @@ public class MySortUtil {
             }
         }
     }
-    public static void print(Dog[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-    }
 
     public static void sort(Dog[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
@@ -70,14 +78,6 @@ public class MySortUtil {
             }
         }
     }
-
-    public static void print(TV[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-    }
-
 
     public static void sort(TV[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
