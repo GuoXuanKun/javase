@@ -39,5 +39,16 @@ public class Test {
         MySortUtil.print(tvArr);
         MySortUtil.sort(tvArr);
         MySortUtil.print(tvArr);
+
+
+        // 5. 支持 Room
+        Room[] roomArr = new Room[size];
+        for (int i = 0; i < size; i++) {
+            roomArr[i] = new Room("实训室-" + (i+1), 64 - i);
+        }
+        MySortUtil.print(roomArr);
+        MySortUtil.sort(roomArr);
+        MySortUtil.print(roomArr);
+
     }
 }
