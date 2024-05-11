@@ -8,10 +8,16 @@ public class Test {
         MySortUtil.print(intArr);
 
         // 2. 支持 Student[]
-        Student s1 = new Student("小芳", 30);
+        /*Student s1 = new Student("小芳", 30);
         Student s2 = new Student("小红", 45);
         Student s3 = new Student("小张", 55);
-        Student[] studentArr = new Student[] {s1, s2, s3};
+        Student[] studentArr = new Student[] {s1, s2, s3};*/
+
+        int size = 5;
+        Student[] studentArr = new Student[size];
+        for (int i = 0; i < size; i++) {
+            studentArr[i] = new Student("小-" + i, 80 + i);
+        }
 
     }
 }
