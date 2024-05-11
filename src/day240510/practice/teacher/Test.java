@@ -5,5 +5,6 @@ public class Test {
         // 1. 排序 int[]
         int[] intArr = new int[] {3, 5, 1, 2, 9};
         MySortUtil.sort(intArr);
+        MySortUtil.print(intArr);
     }
 }
