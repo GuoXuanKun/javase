@@ -37,5 +37,7 @@ public class Test {
             tvArr[i] = new TV("电视-" + i, 1999.99 - i);
         }
         MySortUtil.print(tvArr);
+        MySortUtil.sort(tvArr);
+        MySortUtil.print(tvArr);
     }
 }
