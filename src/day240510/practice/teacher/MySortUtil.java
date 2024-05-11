@@ -1,11 +1,12 @@
 package day240510.practice.teacher;
 
-public class MySortUtil { public static void print(int[] arr) {
-    for (int i = 0; i < arr.length; i++) {
-        System.out.print(arr[i] + " ");
+public class MySortUtil {
+    public static void print(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
-    System.out.println();
-}
 
     public static void print(Student[] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -32,10 +33,10 @@ public class MySortUtil { public static void print(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             boolean swapped = false;
             for (int j = 0; j < (arr.length - 1) - i; j++) {
-                if (arr[j] > arr[j+1]) {
+                if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                     swapped = true;
                 }
             }
@@ -45,48 +46,14 @@ public class MySortUtil { public static void print(int[] arr) {
         }
     }
 
-    public static void sort(Student[] arr) {
+    public static void sort(Sortable[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             boolean swapped = false;
             for (int j = 0; j < (arr.length - 1) - i; j++) {
-                if (arr[j].score > arr[j+1].score) {
-                    Student temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                    swapped = true;
-                }
-            }
-            if (!swapped) {
-                break;
-            }
-        }
-    }
-
-    public static void sort(Dog[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            boolean swapped = false;
-            for (int j = 0; j < (arr.length - 1) - i; j++) {
-                if (arr[j].age > arr[j+1].age) {
-                    Dog temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                    swapped = true;
-                }
-            }
-            if (!swapped) {
-                break;
-            }
-        }
-    }
-
-    public static void sort(TV[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            boolean swapped = false;
-            for (int j = 0; j < (arr.length - 1) - i; j++) {
-                if (arr[j].price > arr[j+1].price) {
-                    TV temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+                if (arr[j].score > arr[j + 1].score) {
+                    Sortable temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                     swapped = true;
                 }
             }

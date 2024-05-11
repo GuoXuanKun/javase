@@ -1,6 +1,6 @@
 package day240510.practice.teacher;
 
-public class TV {
+public class TV extends Sortable {
 
     String name;
     double price;

@@ -1,6 +1,6 @@
 package day240510.practice.teacher;
 
-public class Student {
+public class Student extends Sortable {
     String name;
     int score;
 
