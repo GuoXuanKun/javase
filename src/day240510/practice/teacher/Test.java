@@ -22,5 +22,11 @@ public class Test {
         MySortUtil.sort(studentArr);
         MySortUtil.print(studentArr);
 
+        // 3. 支持 Dog[]
+        Dog[] dogArr = new Dog[size];
+        for (int i = 0; i < size; i++) {
+            dogArr[i] = new Dog("狗-" + i, 10 - i);
+        }
+        MySortUtil.print(dogArr);
     }
 }
