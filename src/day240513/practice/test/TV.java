@@ -25,7 +25,7 @@ public class TV extends MyComparable {
     public int compareTo(MyComparable s) {
         if (s instanceof TV) {
             TV other = (TV) s;
-            if (this.price > other.price) {
+            if (this.price == other.price) {
                 return 0;
             } if (this.price > other.price) {
                 return 1;
