@@ -1,6 +1,6 @@
 package day240513.practice.test;
 
-public class Student implements MyComparable {
+public class Student implements Comparable {
     String name;
     int score;
 
@@ -19,7 +19,7 @@ public class Student implements MyComparable {
     }
 
     @Override
-    public int compareTo(MyComparable s) {
+    public int compareTo(Object s) {
         if (s instanceof Student) {
             Student other = (Student) s;
             if (this.score == other.score) {
@@ -34,11 +34,5 @@ public class Student implements MyComparable {
             System.out.println("类型不匹配");
             return -999;
         }
-    }
-
-    @Override
-    public double getXxx() {
-        // 具体子类中，哪个 state 要参与比较，就通过这个方法返回出去
-        return this.score;
     }
 }

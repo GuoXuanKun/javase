@@ -1,6 +1,6 @@
 package day240513.practice.test;
 
-public class Xxx implements MyComparable{
+public class Xxx implements Comparable{
     int xxx;
 
     public Xxx(int xxx) {
@@ -15,7 +15,7 @@ public class Xxx implements MyComparable{
     }
 
     @Override
-    public int compareTo(MyComparable s) {
+    public int compareTo(Object s) {
         if (s instanceof Xxx) {
             Xxx other = (Xxx) s;
             if (this.xxx == other.xxx) {
@@ -32,8 +32,4 @@ public class Xxx implements MyComparable{
         }
     }
 
-    @Override
-    public double getXxx() {
-        return 0;
-    }
 }
