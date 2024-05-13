@@ -10,4 +10,6 @@ public abstract class Sortable {
     }*/
 
     // 这里只定义规范，具体的由各自子类实现
-    public abstract boolean isLargerThan(Sortable s);}
+    public abstract boolean isLargerThan(Sortable s);
+    public abstract double getXxx();
+}

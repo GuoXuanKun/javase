@@ -36,4 +36,10 @@ public class TV extends Sortable {
             return false;
         }
     }
+
+    @Override
+    public double getXxx() {
+        // 具体子类中，哪个 state 要参与比较，就通过这个方法返回出去
+        return this.price;
+    }
 }
