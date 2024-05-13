@@ -5,10 +5,11 @@ public class Student extends Sortable {
     int score;
 
     public Student(String name, int score) {
+        super(score);
         this.name = name;
         this.score = score;
         // 具体的子类中，哪个 state 要参与比较，就把它赋值给从父类基础的那个 xxx
-        this.xxx = this.score;
+//        this.xxx = this.score;
     }
 
     @Override
