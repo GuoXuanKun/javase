@@ -20,11 +20,16 @@ public class Student extends Sortable {
 
     @Override
     public boolean isLargerThan(Sortable s) {
-        // 严格来说，这里要进行 instanceof 判断，确定了传进来的是 Student 类型，才能强制转成 Student
-        Student other = (Student) s;
-        if (this.score > other.score) {
-            return true;
+        if (s instanceof Student) {
+            Student other = (Student) s;
+            if (this.score > other.score) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
+            // 后续学了异常之后，这里可以抛出异常
+            System.out.println("类型不匹配");
             return false;
         }
     }
