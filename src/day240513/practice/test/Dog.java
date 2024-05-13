@@ -23,18 +23,20 @@ public class Dog extends MyComparable {
 
 
     @Override
-    public boolean compareTo(MyComparable s) {
+    public int compareTo(MyComparable s) {
         if (s instanceof Dog) {
             Dog other = (Dog) s;
-            if (this.age > other.age) {
-                return true;
+            if (this.age == other.age) {
+                return 0;
+            } else if (this.age > other.age) {
+                return 1;
             } else {
-                return false;
+                return -1;
             }
         } else {
             // 后续学了异常之后，这里可以抛出异常
             System.out.println("类型不匹配");
-            return false;
+            return -999;
         }
     }
 

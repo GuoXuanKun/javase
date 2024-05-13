@@ -9,7 +9,12 @@ public abstract class MyComparable {
         this.xxx = xxx;
     }*/
 
-    // 这里只定义规范，具体的由各自子类实现
-    public abstract boolean compareTo(MyComparable s);
+    /**
+     * 这里只定义规范，具体的由各自子类实现
+     *
+     * @param s MyComparable 类型
+     * @return int (0 代表相等；1 代表大于；-1 代表小于；-999 代表类型不匹配)
+     */
+    public abstract int compareTo(MyComparable s);
     public abstract double getXxx();
 }

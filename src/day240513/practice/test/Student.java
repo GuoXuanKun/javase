@@ -19,18 +19,20 @@ public class Student extends MyComparable {
     }
 
     @Override
-    public boolean compareTo(MyComparable s) {
+    public int compareTo(MyComparable s) {
         if (s instanceof Student) {
             Student other = (Student) s;
-            if (this.score > other.score) {
-                return true;
+            if (this.score == other.score) {
+                return 0;
+            } if (this.score > other.score) {
+                return 1;
             } else {
-                return false;
+                return -1;
             }
         } else {
             // 后续学了异常之后，这里可以抛出异常
             System.out.println("类型不匹配");
-            return false;
+            return -999;
         }
     }
 

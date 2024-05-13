@@ -22,18 +22,20 @@ public class TV extends MyComparable {
     }
 
     @Override
-    public boolean compareTo(MyComparable s) {
+    public int compareTo(MyComparable s) {
         if (s instanceof TV) {
             TV other = (TV) s;
             if (this.price > other.price) {
-                return true;
+                return 0;
+            } if (this.price > other.price) {
+                return 1;
             } else {
-                return false;
+                return -1;
             }
         } else {
             // 后续学了异常之后，这里可以抛出异常
             System.out.println("类型不匹配");
-            return false;
+            return -999;
         }
     }
 
