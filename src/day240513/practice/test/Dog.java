@@ -21,18 +21,14 @@ public class Dog extends Sortable {
                 '}';
     }
 
+
     @Override
     public boolean isLargerThan(Sortable s) {
-        if (s instanceof Dog) {
-            Dog other = (Dog) s;
-            if (this.age > other.age) {
-                return true;
-            } else {
-                return false;
-            }
+        // 严格来说，这里要进行 instanceof 判断，确定了传进来的是 Dog 类型，才能强制转成 Dog
+        Dog other = (Dog) s;
+        if (this.age > other.age) {
+            return true;
         } else {
-            // 后续学了异常之后，这里可以抛出异常
-            System.out.println("类型不匹配");
             return false;
         }
     }
