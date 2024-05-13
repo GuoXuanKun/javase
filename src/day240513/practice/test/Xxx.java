@@ -1,6 +1,6 @@
 package day240513.practice.test;
 
-public class Xxx extends MyComparable{
+public class Xxx implements MyComparable{
     int xxx;
 
     public Xxx(int xxx) {

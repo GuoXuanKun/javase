@@ -1,6 +1,6 @@
 package day240513.practice.test;
 
-public class TV extends MyComparable {
+public class TV implements MyComparable {
     String name;
     double price;
 

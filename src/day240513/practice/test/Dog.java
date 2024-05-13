@@ -1,6 +1,6 @@
 package day240513.practice.test;
 
-public class Dog extends MyComparable {
+public class Dog implements MyComparable {
     String name;
     int age;
 

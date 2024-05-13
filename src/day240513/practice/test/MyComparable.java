@@ -1,6 +1,6 @@
 package day240513.practice.test;
 
-public abstract class MyComparable {
+public interface MyComparable {
     // 变量类型 变量名 = 变量值;
     // `变量类型` 好像不太容易确定
     //final double xxx;
@@ -15,6 +15,6 @@ public abstract class MyComparable {
      * @param s MyComparable 类型
      * @return int (0 代表相等；1 代表大于；-1 代表小于；-999 代表类型不匹配)
      */
-    public abstract int compareTo(MyComparable s);
-    public abstract double getXxx();
+     int compareTo(MyComparable s);
+     double getXxx();
 }

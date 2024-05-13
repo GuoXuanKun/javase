@@ -1,6 +1,6 @@
 package day240513.practice.test;
 
-public class Student extends MyComparable {
+public class Student implements MyComparable {
     String name;
     int score;
 
