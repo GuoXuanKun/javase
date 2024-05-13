@@ -39,5 +39,14 @@ public class Test {
         MySortUtil.print(tvArr);
         MySortUtil.sort(tvArr);
         MySortUtil.print(tvArr);
+
+        // 4. 支持 Xxx[]
+        Xxx[] xxxArr = new Xxx[size];
+        for (int i = 0; i < size; i++) {
+            xxxArr[i] = new Xxx(10 - i);
+        }
+        MySortUtil.print(xxxArr);
+        MySortUtil.sort(xxxArr);
+        MySortUtil.print(xxxArr);
     }
 }
