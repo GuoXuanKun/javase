@@ -1,6 +1,6 @@
 package day240513.practice.test;
 
-public class Dog extends Sortable {
+public class Dog extends MyComparable {
     String name;
     int age;
 
@@ -23,7 +23,7 @@ public class Dog extends Sortable {
 
 
     @Override
-    public boolean isLargerThan(Sortable s) {
+    public boolean compareTo(MyComparable s) {
         if (s instanceof Dog) {
             Dog other = (Dog) s;
             if (this.age > other.age) {

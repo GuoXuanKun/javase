@@ -1,6 +1,6 @@
 package day240513.practice.test;
 
-public class TV extends Sortable {
+public class TV extends MyComparable {
     String name;
     double price;
 
@@ -22,7 +22,7 @@ public class TV extends Sortable {
     }
 
     @Override
-    public boolean isLargerThan(Sortable s) {
+    public boolean compareTo(MyComparable s) {
         if (s instanceof TV) {
             TV other = (TV) s;
             if (this.price > other.price) {
