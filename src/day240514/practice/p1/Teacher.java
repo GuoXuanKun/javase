@@ -4,6 +4,8 @@ public class Teacher implements MyComparable {
     String name;
     char firstLetter;
     int age;
+    long x;
+    double y;
 
     public Teacher(String name, char firstLetter, int age) {
         this.name = name;
@@ -22,7 +24,17 @@ public class Teacher implements MyComparable {
 
     @Override
     public int compareTo(MyComparable s) {
-        if (s instanceof Teacher other) {
+        // `谁`来`帮我处理`一下
+        // `谁`.`帮我处理`
+        // 👆复习 OOP 的思维
+
+        // 👇抽象的思维
+        // 根据之前的经验：哪里想实现`稳定`，同时`可扩展`，就在哪里应用抽象的思维
+        // 抽象类、接口
+
+        return 0;
+
+        /*if (s instanceof Teacher other) {
             if (this.firstLetter == other.firstLetter) {
                 return 0;
             } if (this.firstLetter > other.firstLetter) {
@@ -34,6 +46,6 @@ public class Teacher implements MyComparable {
             // 后续学了异常之后，这里可以抛出异常
             System.out.println("类型不匹配");
             return -999;
-        }
+        }*/
     }
 }
