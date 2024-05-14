@@ -13,7 +13,12 @@ public class Test {
         Teacher[] teachers = new Teacher[] {z, x, b, y, a};
 
         MySortUtil.print(teachers);
-        MySortUtil.sort(teachers, new DoNothingComparator());
+        MySortUtil.sort(teachers, new MyComparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                return 0;
+            }
+        });
         MySortUtil.print(teachers);
     }
 }
