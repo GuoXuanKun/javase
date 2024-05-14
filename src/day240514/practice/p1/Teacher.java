@@ -32,7 +32,16 @@ public class Teacher implements MyComparable {
         // 根据之前的经验：哪里想实现`稳定`，同时`可扩展`，就在哪里应用抽象的思维
         // 抽象类、接口
 
-        return 0;
+        // xxx.compare(this, s);
+        // 自己.compare(this, s);
+        // 别人.compare(this, s);
+        // 比较器.compare(this, s);
+        // (按姓氏首字母排序)的比较器.compare(this, s);
+        // (按x值排序)的比较器.compare(this, s);
+        // (按y值排序)的比较器.compare(this, s);
+        // (xxx)的比较器.compare(this, s);
+
+        return new FirstLetterComparator().compare(this, s);
 
         /*if (s instanceof Teacher other) {
             if (this.firstLetter == other.firstLetter) {
