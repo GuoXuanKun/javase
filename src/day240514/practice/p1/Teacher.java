@@ -6,7 +6,7 @@ public class Teacher implements MyComparable {
     int age;
     long x;
     double y;
-    MyComparator comparator = new TeacherFirstLetterComparator();
+    static MyComparator comparator = new TeacherFirstLetterComparator();
 
     public Teacher(String name, char firstLetter, int age) {
         this.name = name;
