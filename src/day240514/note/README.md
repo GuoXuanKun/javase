@@ -14,6 +14,9 @@
 ### 想要哪里稳定和可扩展
 - 对哪里进行抽象
 
+### MySortUtil 练习的总结
+- ![img_2.png](img_2.png)
+
 ### SOLID 
 - ### 是面向对象设计和编程（OOP）中的五大设计原则
     - ### 单一职责原则（Single Responsibility Principle, SRP）：
