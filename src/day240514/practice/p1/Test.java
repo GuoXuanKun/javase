@@ -13,7 +13,7 @@ public class Test {
         Teacher[] teachers = new Teacher[] {z, x, b, y, a};
 
         MySortUtil.print(teachers);
-        MySortUtil.sort(teachers, new TeacherFirstLetterComparator());
+        MySortUtil.sort(teachers, new DoNothingComparator());
         MySortUtil.print(teachers);
     }
 }
