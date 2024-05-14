@@ -23,9 +23,9 @@ public class Teacher implements MyComparable {
     @Override
     public int compareTo(MyComparable s) {
         if (s instanceof Teacher other) {
-            if (this.age == other.age) {
+            if (this.firstLetter == other.firstLetter) {
                 return 0;
-            } if (this.age > other.age) {
+            } if (this.firstLetter > other.firstLetter) {
                 return 1;
             } else {
                 return -1;
@@ -37,4 +37,3 @@ public class Teacher implements MyComparable {
         }
     }
 }
-

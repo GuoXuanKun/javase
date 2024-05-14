@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
-        Teacher j = new Teacher("江老师", 'J', 21);
-        Teacher g = new Teacher("郭老师", 'G', 18);
-        Teacher y = new Teacher("叶老师", 'Y', 22);
-        Teacher l = new Teacher("李老师", 'L', 20);
-        Teacher z = new Teacher("张老师", 'Z', 19);
+        Teacher z = new Teacher("Z老师", 'Z', 19);
+        Teacher x = new Teacher("X老师", 'X', 22);
+        Teacher b = new Teacher("B老师", 'B', 18);
+        Teacher y = new Teacher("Y老师", 'Y', 20);
+        Teacher a = new Teacher("A老师", 'A', 21);
 
-        Teacher[] teachers = new Teacher[] {j, g, l, y, z};
+        Teacher[] teachers = new Teacher[] {z, x, b, y, a};
 
         MySortUtil.print(teachers);
         MySortUtil.sort(teachers);
