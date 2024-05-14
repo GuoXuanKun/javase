@@ -1,5 +1,7 @@
 package day240514.practice.p1_del;
 
+import java.util.Arrays;
+
 public class Test {
     public static void main(String[] args) {
         Teacher z = new Teacher("Z老师", 'Z', 19);
@@ -10,8 +12,12 @@ public class Test {
 
         Teacher[] teachers = new Teacher[] {z, x, b, y, a};
 
-        MySortUtil.print(teachers);
+        /*MySortUtil.print(teachers);
         MySortUtil.sort(teachers, new TeacherFirstLetterComparator());
-        MySortUtil.print(teachers);
+        MySortUtil.print(teachers);*/
+
+        System.out.println(Arrays.toString(teachers));
+        Arrays.sort(teachers, new TeacherAgeComparator());
+        System.out.println(Arrays.toString(teachers));
     }
 }

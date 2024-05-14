@@ -1,6 +1,8 @@
 package day240514.practice.p1_del;
 
-public class TeacherFirstLetterComparator implements MyComparator {
+import java.util.Comparator;
+
+public class TeacherFirstLetterComparator implements Comparator {
     @Override
     public int compare(Object o1, Object o2) {
         Teacher t1 = (Teacher) o1;
