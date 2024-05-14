@@ -11,6 +11,7 @@ public class Test {
         Teacher a = new Teacher("A老师", 'A', 21);
 
         Teacher[] teachers = new Teacher[] {z, x, b, y, a};
+        Teacher.comparator = new TeacherAgeComparator();
 
         MySortUtil.print(teachers);
         MySortUtil.sort(teachers);
