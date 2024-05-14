@@ -6,6 +6,7 @@ public class Teacher implements MyComparable {
     int age;
     long x;
     double y;
+    MyComparator comparator = new TeacherFirstLetterComparator();
 
     public Teacher(String name, char firstLetter, int age) {
         this.name = name;
@@ -41,7 +42,7 @@ public class Teacher implements MyComparable {
         // (按y值排序)的比较器.compare(this, s);
         // (xxx)的比较器.compare(this, s);
 
-        return new TeacherFirstLetterComparator().compare(this, s);
+        return comparator.compare(this, s);
 
         /*if (s instanceof Teacher other) {
             if (this.firstLetter == other.firstLetter) {
