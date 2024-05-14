@@ -18,8 +18,7 @@ public class Student implements MyComparable {
 
     @Override
     public int compareTo(MyComparable s) {
-        if (s instanceof Student) {
-            Student other = (Student) s;
+        if (s instanceof Student other) {
             if (this.score == other.score) {
                 return 0;
             } if (this.score > other.score) {

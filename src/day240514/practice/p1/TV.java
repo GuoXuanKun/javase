@@ -21,8 +21,7 @@ public class TV implements MyComparable {
 
     @Override
     public int compareTo(MyComparable s) {
-        if (s instanceof TV) {
-            TV other = (TV) s;
+        if (s instanceof TV other) {
             if (this.price == other.price) {
                 return 0;
             } if (this.price > other.price) {

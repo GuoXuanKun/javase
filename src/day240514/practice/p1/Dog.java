@@ -21,8 +21,7 @@ public class Dog implements MyComparable {
 
     @Override
     public int compareTo(MyComparable s) {
-        if (s instanceof Dog) {
-            Dog other = (Dog) s;
+        if (s instanceof Dog other) {
             if (this.age == other.age) {
                 return 0;
             } else if (this.age > other.age) {
@@ -37,4 +36,3 @@ public class Dog implements MyComparable {
         }
     }
 }
-

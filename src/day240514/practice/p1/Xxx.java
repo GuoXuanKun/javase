@@ -16,8 +16,7 @@ public class Xxx implements MyComparable {
 
     @Override
     public int compareTo(MyComparable s) {
-        if (s instanceof Xxx) {
-            Xxx other = (Xxx) s;
+        if (s instanceof Xxx other) {
             if (this.xxx == other.xxx) {
                 return 0;
             } if (this.xxx > other.xxx) {
