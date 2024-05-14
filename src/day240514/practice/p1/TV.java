@@ -1,6 +1,6 @@
 package day240514.practice.p1;
 
-public class TV implements Comparable {
+public class TV implements MyComparable {
     String name;
     double price;
 
@@ -9,8 +9,6 @@ public class TV implements Comparable {
         super(price);*/
         this.name = name;
         this.price = price;
-        // 具体的子类中，哪个 state 要参与比较，就把它赋值给从父类基础的那个 xxx
-//        this.xxx = this.price;
     }
 
     @Override
@@ -22,7 +20,7 @@ public class TV implements Comparable {
     }
 
     @Override
-    public int compareTo(Object s) {
+    public int compareTo(MyComparable s) {
         if (s instanceof TV) {
             TV other = (TV) s;
             if (this.price == other.price) {

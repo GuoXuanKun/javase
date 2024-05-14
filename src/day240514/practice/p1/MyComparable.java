@@ -3,7 +3,7 @@ package day240514.practice.p1;
 public interface MyComparable {
     // 变量类型 变量名 = 变量值;
     // `变量类型` 好像不太容易确定
-    //final double xxx;
+    /*final double xxx;
 
     /*public Sortable(double xxx) {
         this.xxx = xxx;
@@ -16,5 +16,4 @@ public interface MyComparable {
      * @return int (0 代表相等；1 代表大于；-1 代表小于；-999 代表类型不匹配)
      */
     int compareTo(MyComparable s);
-    double getXxx();
 }

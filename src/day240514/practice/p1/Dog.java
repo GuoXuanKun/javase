@@ -1,6 +1,6 @@
 package day240514.practice.p1;
 
-public class Dog implements Comparable {
+public class Dog implements MyComparable {
     String name;
     int age;
 
@@ -9,8 +9,6 @@ public class Dog implements Comparable {
         super(age);*/
         this.name = name;
         this.age = age;
-        // 具体的子类中，哪个 state 要参与比较，就把它赋值给从父类基础的那个 xxx
-//        this.xxx = this.age;
     }
 
     @Override
@@ -21,9 +19,8 @@ public class Dog implements Comparable {
                 '}';
     }
 
-
     @Override
-    public int compareTo(Object s) {
+    public int compareTo(MyComparable s) {
         if (s instanceof Dog) {
             Dog other = (Dog) s;
             if (this.age == other.age) {
@@ -39,5 +36,5 @@ public class Dog implements Comparable {
             return -999;
         }
     }
-
 }
+
