@@ -1,6 +1,6 @@
 package day240515.practice.p1;
 
-import day240514.practice.p1.MyComparator;
+
 
 public class MySortUtil {
     public static void print(int[] arr) {
