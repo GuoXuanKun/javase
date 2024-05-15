@@ -40,3 +40,17 @@
 ### 包装类的拆箱与装箱
 - int ( 总结 )
   - ![img_5.png](img_5.png)
+
+## PM
+
+### 泛型 (Generics)
+- Link -> https://docs.oracle.com/javase/tutorial/java/generics/why.html
+- 泛型使类型（类和接口）在定义类、接口和方法时成为参数。
+- 形式参数的输入是值，而类型参数的输入是类型。
+- ![img_10.png](img_10.png)
+- ![img_8.png](img_8.png)
+- ![img_7.png](img_7.png)
+- ![img_9.png](img_9.png)
+
+### 快捷键
+- ctrl + r -> 替换
