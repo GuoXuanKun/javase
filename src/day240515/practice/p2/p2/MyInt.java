@@ -1,11 +1,16 @@
 package day240515.practice.p2.p2;
 
 public class MyInt {
-//    state
+    //    state
     private int value;
 
-//    Constructor
+    //    Constructor
     public MyInt(int value) {
         this.value = value;
+    }
+
+    //    behavior
+    public int intValue() {
+        return value;
     }
 }
