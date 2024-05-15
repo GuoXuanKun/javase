@@ -36,6 +36,9 @@
 - @Deprecated
 - 在 Java 中，@Deprecated 是一个标记注解，用于指示某个程序元素（类，方法等）已经过时。这是一种提示给其他开发人员的信息，表示这个元素不再被推荐使用，可能在将来的版本中被删除或者不再维护。
   - ![img_3.png](img_3.png)
+- @SuppressWarnings
+  - 在 Java 中 @SuppressWarnings 是一个注解，它告诉编译器忽略指定的警告。它只有一个字段“value”，可以接受一组待抑制的警告名称。
+  - ![img_11.png](img_11.png)
 
 ### 包装类的拆箱与装箱
 - int ( 总结 )
