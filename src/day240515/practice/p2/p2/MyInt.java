@@ -13,4 +13,7 @@ public class MyInt {
     public int intValue() {
         return value;
     }
+    public double doubleValue() {
+        return (double) value;
+    }
 }
