@@ -14,6 +14,11 @@ public class MyInt {
     }
 
     //    behavior
+
+    public static MyInt valueOf(int i) {
+        return new MyInt(i);
+    }
+
     public int intValue() {
         return value;
     }
