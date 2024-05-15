@@ -16,4 +16,9 @@ public class MyInt {
     public double doubleValue() {
         return (double) value;
     }
+
+    @Override
+    public String toString() {
+        return "" + this.value;
+    }
 }
