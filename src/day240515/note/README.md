@@ -17,7 +17,7 @@
 - ### Short
 - ### Integer
   - int 对应的`包装类`
-  - int 会自动转成 Integer (自动装箱)
+  - int 会自动转成 Integer (自动装箱 就是自动 new Integer(1))
     - ![img_1.png](img_1.png)
     - ![img_2.png](img_2.png)
     - ![img_4.png](img_4.png)
@@ -26,6 +26,11 @@
 - ### Double
 - ### Character
 - ### Boolean
+
+### String
+- 为什么 String 不用 new
+  - 自动 new 了 
+    - ![img_6.png](img_6.png)
 
 ### 注解
 - @Deprecated
