@@ -27,5 +27,21 @@ public class Test3 {
         });
         MySortUtil.print(integerArr);
 
+        System.out.println("=== === ===");
+
+        int i1 = 5;
+
+        //Integer i2 = new Integer(3);
+        Integer i2 = Integer.valueOf(3);
+        i2 = i1;
+
+        Integer i3 = 5;
+        Integer tmp3 = Integer.valueOf(5);
+
+        Object o = i2;
+
+        Object o2 = i1;
+
+
     }
 }
