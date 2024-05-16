@@ -10,5 +10,22 @@ public class Test3 {
 //        Integer[] integerArr = new Integer[] {new Integer(3), new Integer(5), new Integer(1), new Integer(2), new Integer(9)};
         Integer[] integerArr = new Integer[] {3, 5, 1, 2, 9};
         Object[] oa = new Object[] {3, 5, 1, 2, 9};
+
+        MySortUtil.sort(integerArr, new MyComparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                Integer t1 = (Integer) o1;
+                Integer t2 = (Integer) o2;
+                if (t1.intValue() == t2.intValue()) {
+                    return 0;
+                } if (t1.intValue() > t2.intValue()) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            }
+        });
+        MySortUtil.print(integerArr);
+
     }
 }
