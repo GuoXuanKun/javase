@@ -4,5 +4,7 @@ public class Test2 {
     public static void main(String[] args) {
         //int[] intArr = new int[] {3, 5, 1, 2, 9};
         MyInt[] myIntArr = new MyInt[] {new MyInt(3), new MyInt(5), new MyInt(1), new MyInt(2), new MyInt(9)};
+        // 让 int[] 可以传递到 print(Object[])
+        MySortUtil.print(myIntArr);
     }
 }
