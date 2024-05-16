@@ -23,5 +23,15 @@ public class Test2 {
         });
 
         MySortUtil.print(myIntArr);
+
+        System.out.println("=== === ===");
+
+        int i = 3;
+        //MyInt myInt = new MyInt(3);
+        MyInt myInt = MyInt.valueOf(3);
+        //myInt = i;
+
+
+        // Object[] {Object, Object, Object}
     }
 }
