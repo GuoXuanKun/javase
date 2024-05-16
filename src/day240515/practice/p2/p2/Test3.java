@@ -7,6 +7,8 @@ public class Test3 {
         // 自己创建：MyInt
         //MyInt[] myIntArr = new MyInt[] {new MyInt(3), new MyInt(5), new MyInt(1), new MyInt(2), new MyInt(9)};
         // JDK：Integer
-        Integer[] integerArr = new Integer[] {new Integer(3), new Integer(5), new Integer(1), new Integer(2), new Integer(9)};
+//        Integer[] integerArr = new Integer[] {new Integer(3), new Integer(5), new Integer(1), new Integer(2), new Integer(9)};
+        Integer[] integerArr = new Integer[] {3, 5, 1, 2, 9};
+        Object[] oa = new Object[] {3, 5, 1, 2, 9};
     }
 }
