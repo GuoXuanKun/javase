@@ -33,6 +33,23 @@ public class MySortUtil {
         }
     }*/
 
+    public static void sort(Object[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            boolean swapped = false;
+            for (int j = 0; j < (arr.length - 1) - i; j++) {
+                if (((MyComparable)arr[j]).compareTo(arr[j+1]) > 0) {
+                    Object temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) {
+                break;
+            }
+        }
+    }
+
     public static void sort(Object[] arr, MyComparator comparator) {
         for (int i = 0; i < arr.length - 1; i++) {
             boolean swapped = false;
