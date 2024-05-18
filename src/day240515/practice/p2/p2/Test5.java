@@ -14,8 +14,8 @@ public class Test5 {
 
         MySortUtil.print(teachers);
         //MySortUtil.sort(teachers, new TeacherFirstLetterComparator());
-        //MySortUtil.sort(teachers);
-        Arrays.sort(teachers);
+        MySortUtil.sort(teachers);
+        //Arrays.sort(teachers);
         MySortUtil.print(teachers);
     }
 }

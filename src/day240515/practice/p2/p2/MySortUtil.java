@@ -33,6 +33,7 @@ public class MySortUtil {
         }
     }*/
 
+    @SuppressWarnings({"unchecked", "rawtypes"})
     public static void sort(Object[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             boolean swapped = false;
