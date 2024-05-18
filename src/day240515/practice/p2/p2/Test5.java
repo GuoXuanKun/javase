@@ -12,11 +12,11 @@ public class Test5 {
 
         Teacher[] teachers = new Teacher[]{z, x, b, y, a};
 
-        //MySortUtil.print(teachers);
+        MySortUtil.print(teachers);
         //MySortUtil.sort(teachers, new TeacherFirstLetterComparator());
         //MySortUtil.sort(teachers);
-        //Arrays.sort(teachers);
-        //MySortUtil.print(teachers);
+        Arrays.sort(teachers);
+        MySortUtil.print(teachers);
 
         //System.out.println("=== === ===");
 
