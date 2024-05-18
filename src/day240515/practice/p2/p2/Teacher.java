@@ -22,12 +22,6 @@ public class Teacher implements Comparable<Teacher> {
 
     @Override
     public int compareTo(Teacher o) {
-        if (this.firstLetter == o.firstLetter) {
-            return 0;
-        } if (this.firstLetter > o.firstLetter) {
-            return 1;
-        } else {
-            return -1;
-        }
+        return new TeacherFirstLetterComparator().compare(this, o);
     }
 }
