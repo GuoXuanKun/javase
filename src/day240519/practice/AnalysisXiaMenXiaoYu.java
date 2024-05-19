@@ -1,8 +1,11 @@
 package day240519.practice;
 
+import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import java.io.IOException;
 
 public class AnalysisXiaMenXiaoYu implements AnalysisWebsite {
 
@@ -10,12 +13,12 @@ public class AnalysisXiaMenXiaoYu implements AnalysisWebsite {
     String result;
 
     @Override
-    public String Analysis(Document document, String key)  {
+    public String Analysis(String key) throws IOException {
 
-
+        Document doc = Jsoup.connect("http://bbs.xmfish.com/thread-htm-fid-55.html").get();
 
         // 先假设这里有具体分析算法
-        Elements es = document.select("tbody[id=threadlist]").select("tr[class=tr3]");
+        Elements es = doc.select("tbody[id=threadlist]").select("tr[class=tr3]");
 //        System.out.println(es.size());
 
         /*
