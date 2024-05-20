@@ -44,7 +44,7 @@ public class WrapperClassTest {
     public static void doubleValue(Double a){
         System.out.println(a);
     }
-    public static void CharValue(Character a){
+    public static void charValue(Character a){
         System.out.println(a);
     }
     public static void booleanValue(Boolean a){
@@ -77,14 +77,14 @@ public class WrapperClassTest {
         double doubleValue = 2.0;
 
         // Character
-        Character CharacterWrapperValue = 'A';
+        Character characterWrapperValue = 'A';
         char charValue = 'B';
 
         // Boolean
-        Boolean BooleanWrapperValue = true;
+        Boolean booleanWrapperValue = true;
         boolean booleanValue = true;
 
-        System.out.println("包装类传给基础数据类型: 拆箱");
+        System.out.println("基础数据类型传给包装类: 装箱");
         shortWrapperValue(shortValue);
         byteWrapperValue(byteValue);
         integerWrapperValue(intValue);
@@ -93,6 +93,15 @@ public class WrapperClassTest {
         doubleWrapperValue(doubleValue);
         characterWrapperValue(charValue);
         booleanWrapperValue(booleanValue);
+        System.out.println("包装类传给基础数据类型: 拆箱");
+        shortValue(shortWrapperValue);
+        byteValue(byteWrapperValue);
+        intValue(intWrapperValue);
+        longValue(longWrapperValue);
+        floatValue(floatWrapperValue);
+        doubleValue(doubleWrapperValue);
+        charValue(characterWrapperValue);
+        booleanValue(booleanWrapperValue);
 
     }
 }
