@@ -6,6 +6,8 @@ public class GenericMethod {
     }
 
     public static void main(String[] args) {
-        new GenericMethod().m1(89);
+        GenericMethod gm = new GenericMethod();
+        gm.m1(89);
+        gm.m1("string");
     }
 }
