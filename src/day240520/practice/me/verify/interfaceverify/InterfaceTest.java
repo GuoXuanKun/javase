@@ -1,6 +1,6 @@
 package day240520.practice.me.verify.interfaceverify;
 
-public class InterfaceTest implements Test{
+public class InterfaceTest implements Test,Test1{
     public static void main(String[] args) {
 //        Test test = new Test() ;
     }
@@ -12,6 +12,11 @@ public class InterfaceTest implements Test{
 
     @Override
     public void test1(int a) {
+
+    }
+
+    @Override
+    public void test1() {
 
     }
 }
