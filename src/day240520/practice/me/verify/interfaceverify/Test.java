@@ -6,6 +6,8 @@ public interface Test {
     int value = 0;
 
     public abstract void test();
-    // 方法不能是静态的
+
+    public static void test2(){};
+
     public  void test1(int a);
 }
