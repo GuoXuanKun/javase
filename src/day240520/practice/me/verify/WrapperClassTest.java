@@ -85,23 +85,24 @@ public class WrapperClassTest {
         boolean booleanValue = true;
 
         System.out.println("基础数据类型传给包装类: 装箱");
-        shortWrapperValue(shortValue);
-        byteWrapperValue(byteValue);
-        integerWrapperValue(intValue);
-        longWrapperValue(longValue);
-        floatWrapperValue(floatValue);
-        doubleWrapperValue(doubleValue);
-        characterWrapperValue(charValue);
-        booleanWrapperValue(booleanValue);
+        shortValue(shortValue);
+        byteValue(byteValue);
+        intValue(intValue);
+        longValue(longValue);
+        floatValue(floatValue);
+        doubleValue(doubleValue);
+        charValue(charValue);
+        booleanValue(booleanValue);
+
         System.out.println("包装类传给基础数据类型: 拆箱");
-        shortValue(shortWrapperValue);
-        byteValue(byteWrapperValue);
-        intValue(intWrapperValue);
-        longValue(longWrapperValue);
-        floatValue(floatWrapperValue);
-        doubleValue(doubleWrapperValue);
-        charValue(characterWrapperValue);
-        booleanValue(booleanWrapperValue);
+        shortWrapperValue(shortWrapperValue);
+        byteWrapperValue(byteWrapperValue);
+        integerWrapperValue(intWrapperValue);
+        longWrapperValue(longWrapperValue);
+        floatWrapperValue(floatWrapperValue);
+        doubleWrapperValue(doubleWrapperValue);
+        characterWrapperValue(characterWrapperValue);
+        booleanWrapperValue(booleanWrapperValue);
 
     }
 }
