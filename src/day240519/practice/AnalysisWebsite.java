@@ -6,5 +6,5 @@ import java.io.IOException;
 
 //分析网站算法的父类
 public interface AnalysisWebsite {
-    String Analysis(String key) throws IOException;
+    String analysis(String key) throws IOException;
 }

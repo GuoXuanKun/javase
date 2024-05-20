@@ -14,7 +14,7 @@ public class WebsiteUtil {
 
         // 解析算法
         // 将要搜索的关键词传进算法 ,用 result 接收 分析结果
-        String result = analysisWebsite.Analysis(key);
+        String result = analysisWebsite.analysis(key);
 
 
         // 将解析的结果打印出来 或者 保存进数据库

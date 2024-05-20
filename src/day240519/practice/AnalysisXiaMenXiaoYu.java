@@ -13,7 +13,7 @@ public class AnalysisXiaMenXiaoYu implements AnalysisWebsite {
     String result;
 
     @Override
-    public String Analysis(String key) throws IOException {
+    public String analysis(String key) throws IOException {
 
         Document doc = Jsoup.connect("http://bbs.xmfish.com/thread-htm-fid-55.html").get();
 
