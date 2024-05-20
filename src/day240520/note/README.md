@@ -20,3 +20,8 @@
   - 接口里的 变量 是 public static final
   - 接口里的 方法 是 public abstract
   - ![img_7.png](img_7.png)
+
+### 代码 ( WhyUseGenerics ) 用图
+- ![img_12.png](img_12.png)
+- ![img_13.png](img_13.png)
+- ![img_14.png](img_14.png)
