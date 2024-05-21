@@ -9,3 +9,6 @@
 ### 接口 Interface 面试题
 - ![img_3.png](img_3.png)
 - ![img_4.png](img_4.png)
+### 泛型
+- 题目
+  - ![img_5.png](img_5.png)
