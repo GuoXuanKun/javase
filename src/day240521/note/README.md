@@ -15,6 +15,8 @@
   - ![img_9.png](img_9.png)
 - 显式指定类型 Integer i = gm.<Integer>m1(89);
   - ![img_10.png](img_10.png)
+- 类型参数不能为基本类型
+  - ![img_11.png](img_11.png)
 - 题目
   - ![img_5.png](img_5.png)
 - ### 通配符
