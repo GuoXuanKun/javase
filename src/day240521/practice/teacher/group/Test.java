@@ -13,6 +13,10 @@ public class Test {
         System.out.println("=== === ===");
 
         m3();
+
+        System.out.println("=== === ===");
+
+        m4();
     }
 
     private static void m2() {
@@ -25,5 +29,19 @@ public class Test {
         Group<Integer, Integer> group1 = new Group<>(1, 4);
         group1.set(1, 6);
         System.out.println(group1.get(1));
+    }
+
+    private static void m4() {
+        Group<Integer, Student[]> group1 = new Group<>(1, new Student[] {new Student("学生1"), new Student("学生2")});
+        group1.set(1, new Student[] {new Student("学生8"), new Student("学生9")});
+        System.out.println(group1.get(1));
+    }
+}
+
+class Student {
+    String name;
+
+    public Student(String name) {
+        this.name = name;
     }
 }
