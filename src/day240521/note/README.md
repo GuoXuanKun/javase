@@ -11,6 +11,8 @@
 - ![img_4.png](img_4.png)
 ## PM
 ### 泛型
+- 显式指定类型 gm.<String>m1("string");
+  - ![img_9.png](img_9.png)
 - 题目
   - ![img_5.png](img_5.png)
 - ### 通配符
