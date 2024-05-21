@@ -10,6 +10,10 @@ public class Group {
     }
 
     public String get(String key) {
-        return this.value;
+        if (key.equals(this.key)) {
+            return this.value;
+        } else {
+            return "未知";
+        }
     }
 }
