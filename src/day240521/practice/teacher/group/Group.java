@@ -16,4 +16,9 @@ public class Group {
             return "未知";
         }
     }
+
+    public void set(String key, String value) {
+        this.key = key;
+        this.value = value;
+    }
 }
