@@ -8,4 +8,8 @@ public class Group {
         this.key = key;
         this.value = value;
     }
+
+    public String get(String key) {
+        return this.value;
+    }
 }
