@@ -13,6 +13,8 @@
 ### 泛型
 - 显式指定类型 gm.<String>m1("string");
   - ![img_9.png](img_9.png)
+- 显式指定类型 Integer i = gm.<Integer>m1(89);
+  - ![img_10.png](img_10.png)
 - 题目
   - ![img_5.png](img_5.png)
 - ### 通配符
