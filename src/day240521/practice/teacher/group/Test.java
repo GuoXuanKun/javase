@@ -1,5 +1,7 @@
 package day240521.practice.teacher.group;
 
+import java.util.Arrays;
+
 public class Test {
     public static void main(String[] args) {
         Group<String, String> group1 = new Group<>("第一组", "4人");
@@ -34,7 +36,7 @@ public class Test {
     private static void m4() {
         Group<Integer, Student[]> group1 = new Group<>(1, new Student[] {new Student("学生1"), new Student("学生2")});
         group1.set(1, new Student[] {new Student("学生8"), new Student("学生9")});
-        System.out.println(group1.get(1));
+        System.out.println(Arrays.toString(group1.get(1)));
     }
 }
 
