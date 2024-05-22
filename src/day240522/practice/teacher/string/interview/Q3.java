@@ -19,5 +19,8 @@ public class Q3 {
         System.out.println(s3 == s7); // false
         System.out.println(s5 == s6); // false
         System.out.println(s6 == s7); // false
+
+        String s8 = s6.intern();
+        System.out.println(s3 == s8); // true
     }
 }
