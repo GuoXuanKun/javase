@@ -8,3 +8,5 @@
 - 接口可以继承多个接口
 - default methods , static Methods 
   - 有方法体,并且可以不用被 实现类 Override
+- 题目
+  - ![img.png](img.png)
