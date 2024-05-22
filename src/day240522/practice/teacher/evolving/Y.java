@@ -3,6 +3,9 @@ package day240522.practice.teacher.evolving;
 public interface Y {
     void teach();
     void play();
+    default void xxx() {
+        System.out.println("Y.xxx");
+    }
 }
 
 interface YPlusPlus extends Y {
