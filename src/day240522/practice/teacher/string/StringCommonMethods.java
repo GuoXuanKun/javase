@@ -1,4 +1,4 @@
-package day240522.practice.teacher.string.interview;
+package day240522.practice.teacher.string;
 
 public class StringCommonMethods {
     public static void main(String[] args) {
