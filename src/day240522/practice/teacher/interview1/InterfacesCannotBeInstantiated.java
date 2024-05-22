@@ -1,6 +1,8 @@
 package day240522.practice.teacher.interview1;
 
 public interface InterfacesCannotBeInstantiated {
+    // Not allowed in interface
+    //public InterfacesCannotBeInstantiated() {}
 }
 
 class Test {
