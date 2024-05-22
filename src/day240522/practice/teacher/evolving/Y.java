@@ -5,6 +5,28 @@ public interface Y {
     void play();
 }
 
+interface YPlusPlus extends Y {
+    void sing();
+}
+
+class Y4 implements YPlusPlus {
+
+    @Override
+    public void sing() {
+
+    }
+
+    @Override
+    public void teach() {
+
+    }
+
+    @Override
+    public void play() {
+
+    }
+}
+
 class Y1 implements Y {
     @Override
     public void teach() {
