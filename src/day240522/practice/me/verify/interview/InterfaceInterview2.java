@@ -13,7 +13,7 @@ interface A {
 }
 
 interface B {
-    default void c() {
+    default void m() {
         System.out.println("B.m");
     }
 }
@@ -21,4 +21,8 @@ interface B {
 // 两个 default Method 不能有 相同的 方法名
 class C implements A, B {
 
+    @Override
+    public void m() {
+        A.super.m();
+    }
 }
