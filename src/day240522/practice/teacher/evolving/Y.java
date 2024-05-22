@@ -69,3 +69,11 @@ class Y3 implements Y {
 
     }
 }
+
+class Test3 {
+    public static void main(String[] args) {
+        Y.zzz();
+        // Static method may be invoked on containing interface class only
+        //Y3.zzz();
+    }
+}
