@@ -3,7 +3,7 @@ package day240522.practice.teacher.string.interview;
 @SuppressWarnings("all")
 public class Q3 {
     public static void main(String[] args) {
-        String s1 = "Java";
+        final String s1 = "Java";
         String s2 = "2403";
 
         String s3 = "Java2403";
@@ -14,7 +14,7 @@ public class Q3 {
         String s7 = s1 + s2;
 
         System.out.println(s3 == s4); // true
-        System.out.println(s3 == s5); // false
+        System.out.println(s3 == s5); // false (s1 用 final 声明之后的结果：true)
         System.out.println(s3 == s6); // false
         System.out.println(s3 == s7); // false
         System.out.println(s5 == s6); // false
