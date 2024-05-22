@@ -6,5 +6,21 @@ public class Q1 {
         String s2 = new String("xyz");
         System.out.println(s1 == s2);
         System.out.println(s1.equals(s2));
+
+        System.out.println("=== === ===");
+        Student x = new Student("X", 19);
+        Student y = new Student("X", 19);
+        System.out.println(x == y);
+        System.out.println(x.equals(y));
+    }
+}
+
+class Student {
+    String name;
+    int age;
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 }
