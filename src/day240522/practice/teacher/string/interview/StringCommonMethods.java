@@ -8,5 +8,8 @@ public class StringCommonMethods {
         System.out.println(codeUpperCase);
         System.out.println(code.equals(codeUpperCase));
         System.out.println(code.equalsIgnoreCase(codeUpperCase));
+        System.out.println(code.length());
+        System.out.println(code.endsWith("z"));
+        System.out.println(code.startsWith("a"));
     }
 }
