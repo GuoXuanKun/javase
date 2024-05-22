@@ -6,6 +6,10 @@ public interface Y {
     default void xxx() {
         System.out.println("Y.xxx");
     }
+
+    static void zzz() {
+        System.out.println("Y.zzz");
+    }
 }
 
 interface YPlusPlus extends Y {
