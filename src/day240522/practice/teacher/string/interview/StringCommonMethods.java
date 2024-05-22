@@ -11,5 +11,8 @@ public class StringCommonMethods {
         System.out.println(code.length());
         System.out.println(code.endsWith("z"));
         System.out.println(code.startsWith("a"));
+        String str = "  qwer   ";
+        System.out.println(str);
+        System.out.println(str.trim());
     }
 }
