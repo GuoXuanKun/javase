@@ -8,7 +8,7 @@ public class InterfaceInterview {
 }
 
 interface A {
-    int size = 5;
+    public static final int size = 5;
 }
 
 class B {
@@ -19,6 +19,8 @@ class C extends B implements A {
     public void m() {
         // sout
         // Reference to 'size' is ambiguous, both 'B.size' and 'A.size' match
-        System.out.println(size);
+        // 允许存在，只是要通过更精确的方式去访问它
+        System.out.println(A.size);
+        System.out.println(super.size);
     }
 }
