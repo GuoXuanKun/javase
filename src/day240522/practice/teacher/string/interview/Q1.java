@@ -23,4 +23,10 @@ class Student {
         this.name = name;
         this.age = age;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Student other = (Student) obj;
+        return this.age == other.age;
+    }
 }
