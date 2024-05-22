@@ -8,5 +8,7 @@
 - 接口可以继承多个接口
 - default methods , static Methods 
   - 有方法体,并且可以不用被 实现类 Override
+  - 两个 default Method 不能有 相同的 方法名
+  - static method 要用 接口名.方法()
 - 题目
   - ![img.png](img.png)
