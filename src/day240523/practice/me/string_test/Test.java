@@ -5,7 +5,7 @@ import day240509.practice.p1.MyUtil;
 public class Test {
     public static void main(String[] args) {
 
-        System.out.println("10次");
+        System.out.println("1000次");
         System.out.println("方式1:+");
         MyUtil.calculateTime( new StringPlusWay());
 
