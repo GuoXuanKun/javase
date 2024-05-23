@@ -8,6 +8,7 @@ public class Test {
         for (int i = 0; i < counts.length; i++) {
             MyUtil.calculateTime(new StringPlus(counts[i]));
             MyUtil.calculateTime(new StringBufferAppend(counts[i]));
+            MyUtil.calculateTime(new StringBuilderAppend(counts[i]));
         }
     }
 }
