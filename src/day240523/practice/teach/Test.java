@@ -2,6 +2,9 @@ package day240523.practice.teach;
 
 import day240509.practice.p1.MyUtil;
 
+/**
+ * 类比：不同学习方法对效果的影响...
+ */
 public class Test {
     public static void main(String[] args) {
         int[] counts = new int[] {10, 1000, 10000, 100000};
