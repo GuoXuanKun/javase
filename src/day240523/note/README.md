@@ -14,3 +14,6 @@
   - StringBuilder 更快
 - 多线程:
   - StringBuffer 可能会更快 因为做了多线程的校验 (所以单线程的时候会慢一些)
+### 思考 
+- StringBuilder 的内部是用数组存数据的 为什么 可以 一直 append 字符进去?
+- ![img_2.png](img_2.png)
