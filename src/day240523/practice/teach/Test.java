@@ -4,9 +4,9 @@ import day240509.practice.p1.MyUtil;
 
 public class Test {
     public static void main(String[] args) {
-        MyUtil.calculateTime(new StringPlus(10));
-        MyUtil.calculateTime(new StringPlus(1000));
-        MyUtil.calculateTime(new StringPlus(10000));
-        MyUtil.calculateTime(new StringPlus(100000));
+        int[] counts = new int[] {10, 1000, 10000, 100000};
+        for (int i = 0; i < counts.length; i++) {
+            MyUtil.calculateTime(new StringPlus(counts[i]));
+        }
     }
 }
