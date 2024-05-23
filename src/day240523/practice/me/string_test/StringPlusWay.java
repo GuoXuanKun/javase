@@ -6,7 +6,7 @@ public class StringPlusWay extends Algorithm {
     @Override
     public void justDoIt() {
         String result = "";
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100000; i++) {
             result += i;
         }
     }
