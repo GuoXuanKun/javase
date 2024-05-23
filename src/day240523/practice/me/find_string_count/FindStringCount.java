@@ -16,7 +16,8 @@ public class FindStringCount {
                 ++count;
             }
         }
-        System.out.println("'sb' 出现了 " + count + " 次");
-
+        System.out.println("'sb' 出现了 " + count + " 次" );
+//        方法2 : Java 没有 KMP 算法 那就自己照着 C 写 KMP 算法
+        KMPTest.KMP(d,c);
     }
 }
