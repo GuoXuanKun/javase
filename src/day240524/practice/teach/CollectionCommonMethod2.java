@@ -73,5 +73,15 @@ public class CollectionCommonMethod2 {
         //is.remove(new Integer(2));
         is.remove(Integer.valueOf(2));
         System.out.println(is);
+
+        System.out.println("=== === ===");
+
+        ArrayList<String> ss = new ArrayList<>();
+        ss.add("abc");
+        ss.add("qwe");
+        ss.add("asd");
+
+        ss.set(0, "abc-update");
+        System.out.println(ss);
     }
 }
