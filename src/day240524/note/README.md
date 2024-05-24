@@ -2,6 +2,9 @@
 ## Review
 
 ## AM
+### StringBuilder
+- 源码
+  - ![img_9.png](img_9.png)
 ### 集合
 - ![img.png](img.png)
 - ### ArrayList
@@ -20,7 +23,27 @@
         - ![img_5.png](img_5.png)
     - add 的时候超过数组长度，它是怎么处理的?
       - ![img_7.png](img_7.png)
+- ### Collection
+  - ### 常用方法
+    - contains() 
+      - Returns true if this collection contains the specified element. More formally, returns true if and only if this collection contains at least one element e such that Objects.equals(o, e).
+      - 如果此集合包含指定的元素，则返回true。更正式地说，当且仅当此集合包含至少一个元素(如Objects)时返回true。= (o, e)。
+      - ![img_10.png](img_10.png)
+      - ![img_11.png](img_11.png)
+      - 此方法 底层 调用了equal()
+        - 为什么 strings.contains 与 students.equal() 不一样
+        - 因为 String Override (重写) equal() 方法 如果 students 也要实现类似的效果, Student 类 Override 重写 equal()
+    - remove()
+      - 从列表删除元素
+      - 有两个重载的方法 remove(int) 、remove(Object)
+    - set()
+      - Replaces the element at the specified position in this list with the specified element.
+      - 将此列表中指定位置的元素替换为指定元素。
 ### 在线查看 JDk API
 - https://docs.oracle.com/en/java/javase/21/docs/api/index.html
 
 ### 迭代器 Iterator
+- iterator.hasNext() 
+  - 是否有下一个元素
+- iterator.next()
+  - 返回下一个元素
