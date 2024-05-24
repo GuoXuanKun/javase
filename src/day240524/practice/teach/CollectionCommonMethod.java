@@ -33,7 +33,7 @@ public class CollectionCommonMethod {
         // 思考：
         // 1. 为什么这里返回 false
         // 2. 如何让他返回 true
-        System.out.println(students.contains(new Student("N3", 21)));
+        System.out.println(students.contains(new Student("N4", 21)));
     }
 }
 
@@ -54,7 +54,7 @@ class Student {
         }
 
         if (anObject instanceof Student aStudent) {
-            return this.age == aStudent.age;
+            return this.name.equals(aStudent.name) && this.age == aStudent.age;
         } else {
             return false;
         }
