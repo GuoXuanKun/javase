@@ -20,8 +20,10 @@ public class CollectionCommonMethod2 {
         is.add(3);
 
 
-        is.remove(2);
-
+//        is.remove(2);
+        // 如何真的删除`值为2的那个元素`
+        //is.remove(new Integer(2));
+        is.remove(Integer.valueOf(2));
         System.out.println(is);
     }
 }
