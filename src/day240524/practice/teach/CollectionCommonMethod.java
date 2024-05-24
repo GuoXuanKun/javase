@@ -46,4 +46,17 @@ class Student {
         this.name = name;
         this.age = age;
     }
+
+    @Override
+    public boolean equals(Object anObject) {
+        if (this == anObject) {
+            return true;
+        }
+
+        if (anObject instanceof Student aStudent) {
+            return this.age == aStudent.age;
+        } else {
+            return false;
+        }
+    }
 }
