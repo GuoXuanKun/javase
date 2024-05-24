@@ -12,5 +12,14 @@ public class CollectionCommonMethod {
         cs.add(123);
         System.out.println(cs.size());
         System.out.println(cs.isEmpty());
+
+        System.out.println("=== === ===");
+
+        Collection<String> sc = new ArrayList<>();
+        sc.add("abc");
+        sc.add("qwe");
+        sc.add("xyz");
+
+        System.out.println(sc.contains("xyz"));
     }
 }
