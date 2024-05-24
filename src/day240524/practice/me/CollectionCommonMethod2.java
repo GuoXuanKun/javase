@@ -20,7 +20,7 @@ public class CollectionCommonMethod2 {
         is.add(3);
 
 
-//        is.remove(2);
+        is.remove(2);
 
         System.out.println(is);
     }
