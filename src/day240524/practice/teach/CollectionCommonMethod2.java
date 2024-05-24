@@ -48,5 +48,17 @@ public class CollectionCommonMethod2 {
         }
         // 再看一次 ArrayList 重写的 toString 方法
         cs.toString();
+
+        System.out.println("=== === ===");
+
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("abc");
+        strings.add("qwe");
+        strings.add("asd");
+        strings.add("jkl");
+        strings.add("xyz");
+
+        strings.remove("qwe");
+        System.out.println(strings);
     }
 }
