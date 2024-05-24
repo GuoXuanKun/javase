@@ -25,6 +25,9 @@ public class CollectionCommonMethod {
         System.out.println("--- --- ---");
 
         Collection<Student> students = new ArrayList<>();
+        students.add(new Student("N1", 19));
+        students.add(new Student("N2", 20));
+        students.add(new Student("N3", 21));
     }
 }
 
@@ -35,22 +38,6 @@ class Student {
 
     public Student(String name, int age) {
         this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
         this.age = age;
     }
 }
