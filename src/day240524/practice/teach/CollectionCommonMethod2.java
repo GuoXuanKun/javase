@@ -46,5 +46,7 @@ public class CollectionCommonMethod2 {
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
+        // 再看一次 ArrayList 重写的 toString 方法
+        cs.toString();
     }
 }
