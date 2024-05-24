@@ -22,3 +22,5 @@
       - ![img_7.png](img_7.png)
 ### 在线查看 JDk API
 - https://docs.oracle.com/en/java/javase/21/docs/api/index.html
+
+### 迭代器 Iterator
