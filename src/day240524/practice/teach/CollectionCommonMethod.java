@@ -19,9 +19,9 @@ public class CollectionCommonMethod {
         Collection<String> sc = new ArrayList<>();
         sc.add("abc");
         sc.add("qwe");
-        sc.add("xyz");
+        sc.add(new String("xyz"));
 
-        System.out.println(sc.contains("xyz"));
+        System.out.println(sc.contains(new String("xyz")));
 
         System.out.println("--- --- ---");
 
