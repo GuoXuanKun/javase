@@ -60,5 +60,17 @@ public class CollectionCommonMethod2 {
 
         strings.remove("qwe");
         System.out.println(strings);
+
+        System.out.println("=== === ===");
+
+        ArrayList<Integer> is = new ArrayList<>();
+        is.add(1);
+        is.add(2);
+        is.add(3);
+
+        /*
+        is.remove(2)
+         */
+        System.out.println(is);
     }
 }
