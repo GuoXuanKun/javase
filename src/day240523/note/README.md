@@ -17,3 +17,6 @@
 ### 思考 
 - StringBuilder 的内部是用数组存数据的 为什么 可以 一直 append 字符进去?
 - ![img_2.png](img_2.png)
+
+### String 官网
+- https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html#method-summary
