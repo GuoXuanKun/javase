@@ -4,6 +4,7 @@ package day240524.practice.teach;
 import java.util.ArrayList;
 import java.util.Collection;
 
+@SuppressWarnings({"all"})
 public class CollectionCommonMethod {
     public static void main(String[] args) {
         Collection<Integer> cs = new ArrayList<>();
@@ -28,6 +29,11 @@ public class CollectionCommonMethod {
         students.add(new Student("N1", 19));
         students.add(new Student("N2", 20));
         students.add(new Student("N3", 21));
+
+        // 思考：
+        // 1. 为什么这里返回 false
+        // 2. 如何让他返回 true
+        System.out.println(students.contains(new Student("N3", 21)));
     }
 }
 
