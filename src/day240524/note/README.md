@@ -34,9 +34,13 @@
         - 为什么 strings.contains 与 students.equal() 不一样
         - 因为 String Override (重写) equal() 方法 如果 students 也要实现类似的效果, Student 类 Override 重写 equal()
     - remove()
+      - Removes the first occurrence of the specified element from this list, if it is present. If the list does not contain the element, it is unchanged. More formally, removes the element with the lowest index i such that Objects.equals(o, get(i)) (if such an element exists). Returns true if this list contained the specified element (or equivalently, if this list changed as a result of the call)
+      - 从此列表中删除第一个出现的指定元素(如果该元素存在)。如果列表中不包含该元素，则该元素不变。更正式地说，删除具有最低索引i的元素，例如Objects。= (0, get(i))(如果存在这样的元素)。如果此列表包含指定的元素(或者等价地，如果此列表因调用而更改)，则返回true。
       - 从列表删除元素
       - 有两个重载的方法 remove(int) 、remove(Object)
     - set()
+      - Replaces the element at the specified position in this list with the specified element.
+      - 将此列表中指定位置的元素替换为指定元素。
       - Replaces the element at the specified position in this list with the specified element.
       - 将此列表中指定位置的元素替换为指定元素。
 ### 在线查看 JDk API
