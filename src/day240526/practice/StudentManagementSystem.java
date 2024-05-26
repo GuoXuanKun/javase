@@ -7,24 +7,14 @@ public class StudentManagementSystem {
     public static void main(String[] args) {
         // 让用户输入基本信息
         Scanner scanner = new Scanner(System.in);
-//        System.out.println("请输入学生学号");
-//        int studentNumber = scanner.nextInt();
-//        System.out.println("请输入学生姓名");
-//        String name = scanner.next();
-//        System.out.println("请输入学生的年龄");
-//        int age = scanner.nextInt();
-//        System.out.println("请输入学生的故乡");
-//        String hometown = scanner.next();
-//        Student student = new Student(studentNumber, name, age, hometown);
-
         // 实例化 ArrayList 并将 Student 实例存进去
-        ArrayList<Student> studentList = new ArrayList<>();
+        ArrayList<Student> studentList = joinStudent();
 //        studentList.add(student);
 
-        studentList.add(new Student(1,"1",1,"1"));
-        studentList.add(new Student(2,"1",1,"1"));
-        studentList.add(new Student(3,"1",1,"1"));
-        studentList.add(new Student(4,"1",1,"1"));
+//        studentList.add(new Student(1,"1",1,"1"));
+//        studentList.add(new Student(2,"1",1,"1"));
+//        studentList.add(new Student(3,"1",1,"1"));
+//        studentList.add(new Student(4,"1",1,"1"));
 
         // 输出 ArrayList
         printAllStudent(studentList);
@@ -45,6 +35,27 @@ public class StudentManagementSystem {
         updateStudentAll(studentList,old);
         printAllStudent(studentList);
 
+    }
+    // 让用户输入基本信息 并生成一个 ArrayList<Student> 的实例
+    public static ArrayList<Student> joinStudent(){
+        // 实例化 ArrayList
+        ArrayList<Student> studentList = new ArrayList<>();
+        // 让用户输入基本信息
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("要输入几个学生");
+        int number = scanner.nextInt();
+        for (int i = 0; i < number; i++) {
+            System.out.println("请输入第 " + (i+1) + " 个学生学号");
+            int studentNumber = scanner.nextInt();
+            System.out.println("请输入第 " + (i+1) + " 个学生姓名");
+            String name = scanner.next();
+            System.out.println("请输入第 " + (i+1) + " 个学生的年龄");
+            int age = scanner.nextInt();
+            System.out.println("请输入第 " + (i+1) + " 个学生的故乡");
+            String hometown = scanner.next();
+            studentList.add(new Student(studentNumber, name, age, hometown));
+        }
+        return studentList;
     }
     // 根据学号删除学生
     public static void deleteByStudentNumber(ArrayList<Student> list,int number){
