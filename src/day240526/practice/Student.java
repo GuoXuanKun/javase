@@ -3,7 +3,7 @@ package day240526.practice;
 public class Student {
     // state
     int studentNumber;
-    String  name;
+    String name;
     int age;
     String hometown;
 
@@ -20,11 +20,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "studentNumber=" + studentNumber +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", hometown='" + hometown + '\'' +
-                '}';
+        return "+------------------+------------+------------+------------+"
+                + System.lineSeparator()
+                + String.format("| %-16d | %-10s | %-10d | %-10s |", studentNumber, name, age , hometown)
+                + System.lineSeparator()
+                + "+------------------+------------+------------+------------+";
     }
 }
