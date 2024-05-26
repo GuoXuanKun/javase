@@ -5,16 +5,8 @@ import java.util.Scanner;
 
 public class StudentManagementSystem {
     public static void main(String[] args) {
-        // 让用户输入基本信息
-        Scanner scanner = new Scanner(System.in);
         // 实例化 ArrayList 并将 Student 实例存进去
         ArrayList<Student> studentList = joinStudent();
-//        studentList.add(student);
-
-//        studentList.add(new Student(1,"1",1,"1"));
-//        studentList.add(new Student(2,"1",1,"1"));
-//        studentList.add(new Student(3,"1",1,"1"));
-//        studentList.add(new Student(4,"1",1,"1"));
 
         // 输出 ArrayList
         printAllStudent(studentList);
@@ -117,5 +109,13 @@ public class StudentManagementSystem {
         for (int i = 0; i < studentList.size(); i++) {
             System.out.println(studentList.get(i));
         }
+    }
+
+    public static ArrayList<Student> autoJoinStudentForTest() {
+        ArrayList<Student> studentList = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            studentList.add(new Student(i, "" + i, i, "" + i));
+        }
+        return studentList;
     }
 }
