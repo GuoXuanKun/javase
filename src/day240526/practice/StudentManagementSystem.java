@@ -19,11 +19,8 @@ public class StudentManagementSystem {
         // 输出 ArrayList
         printAllStudent(studentList);
 
-//        // 查找特定的学生
-//        System.out.println("输入要查找第几位学生");
-//        int findIndex = scanner.nextInt() - 1;
-//        System.out.println(studentList.get(findIndex));
-
+        // 根据学号查找学生
+        findStudent(studentList);
 //        // 根据学号删除学生
 //        System.out.println("请输入要删除学生的学号");
 //        int index = scanner.nextInt();
@@ -64,6 +61,24 @@ public class StudentManagementSystem {
                 list.remove(i);
                 break;
             }
+        }
+    }
+    // 根据学号查找学生
+    public static void findStudent(ArrayList<Student> list){
+        Scanner scanner = new Scanner(System.in);
+                // 查找特定的学生
+        System.out.println("输入要查找的学生的学号");
+        int findIndex = scanner.nextInt();
+        int signal = 0;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getStudentNumber() == findIndex){
+                signal = 1;
+                System.out.println(list.get(i));
+                break;
+            }
+        }
+        if (signal == 0){
+            System.out.println("查无此学生");
         }
     }
     // 根据学号更新学生
