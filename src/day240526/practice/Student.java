@@ -15,4 +15,16 @@ public class Student {
         this.age = age;
         this.hometown = hometown;
     }
+
+    // behavoir
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentNumber=" + studentNumber +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", hometown='" + hometown + '\'' +
+                '}';
+    }
 }
