@@ -140,6 +140,26 @@ public static void updateStudentAge(ArrayList<Student> list) {
     }
 }
 
+//    更新学生家乡
+public static void updateStudentHometown(ArrayList<Student> list) {
+    Scanner scanner = new Scanner(System.in);
+    int signal = 0;
+    System.out.println("请输入要更新的学生的学号");
+    int oldNumber = scanner.nextInt();
+    for (int i = 0; i < list.size(); i++) {
+        if (list.get(i).getStudentNumber() == oldNumber) {
+            signal = 1;
+            System.out.println("请输入学生的新故乡");
+            String d = scanner.next();
+            list.set(i, new Student(list.get(i).getStudentNumber(), list.get(i).getName(), list.get(i).getAge(), d));
+            break;
+        }
+    }
+    if (signal == 0) {
+        System.out.println("查无此学生");
+    }
+}
+
     // 根据学号删除学生
     public static void deleteByStudentNumber(ArrayList<Student> list) {
         Scanner scanner = new Scanner(System.in);
