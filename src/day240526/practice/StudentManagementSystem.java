@@ -13,12 +13,13 @@ public class StudentManagementSystem {
 
         // 根据学号查找学生
         findStudent(studentList);
-        // 根据学号删除学生
-        deleteByStudentNumber(studentList);
 
         // 根据学号更新学生信息
         updateStudentAll(studentList);
         printAllStudent(studentList);
+
+        // 根据学号删除学生
+        deleteByStudentNumber(studentList);
 
     }
 
@@ -44,16 +45,12 @@ public class StudentManagementSystem {
         return studentList;
     }
 
-    // 根据学号删除学生
-    public static void deleteByStudentNumber(ArrayList<Student> list) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("请输入要删除学生的学号");
-        int number = scanner.nextInt();
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getStudentNumber() == number) {
-                list.remove(i);
-                break;
-            }
+    // 打印所有学生
+    public static void printAllStudent(ArrayList<Student> studentList) {
+        System.out.println("+------------------+------------+------------+------------+");
+        System.out.printf("| %-16s | %-10s | %-10s |%-10s |\n", "student number", "name", "age", "hometown");
+        for (int i = 0; i < studentList.size(); i++) {
+            System.out.println(studentList.get(i));
         }
     }
 
@@ -102,15 +99,20 @@ public class StudentManagementSystem {
         }
     }
 
-    // 打印所有学生
-    public static void printAllStudent(ArrayList<Student> studentList) {
-        System.out.println("+------------------+------------+------------+------------+");
-        System.out.printf("| %-16s | %-10s | %-10s |%-10s |\n", "student number", "name", "age", "hometown");
-        for (int i = 0; i < studentList.size(); i++) {
-            System.out.println(studentList.get(i));
+    // 根据学号删除学生
+    public static void deleteByStudentNumber(ArrayList<Student> list) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入要删除学生的学号");
+        int number = scanner.nextInt();
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getStudentNumber() == number) {
+                list.remove(i);
+                break;
+            }
         }
     }
 
+    // 自动生成 ArrayList<Student> 实例的方法 - 为测试用
     public static ArrayList<Student> autoJoinStudentForTest() {
         ArrayList<Student> studentList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
