@@ -26,4 +26,8 @@ public class Student {
                 + System.lineSeparator()
                 + "+------------------+------------+------------+------------+";
     }
+
+    public int getStudentNumber() {
+        return studentNumber;
+    }
 }
