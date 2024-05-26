@@ -30,4 +30,16 @@ public class Student {
     public int getStudentNumber() {
         return studentNumber;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getHometown() {
+        return hometown;
+    }
 }
