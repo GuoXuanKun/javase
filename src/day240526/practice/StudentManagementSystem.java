@@ -46,7 +46,7 @@ public class StudentManagementSystem {
         printAllStudent(studentList);
 
     }
-
+    // 根据学号删除学生
     public static void deleteByStudentNumber(ArrayList<Student> list,int number){
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getStudentNumber() == number){
@@ -55,6 +55,7 @@ public class StudentManagementSystem {
             }
         }
     }
+    // 根据学号更新学生
     public static void updateStudentAll(ArrayList<Student> list,int oldNumber){
         int signal = 0;
         for (int i = 0; i < list.size(); i++) {
@@ -77,6 +78,7 @@ public class StudentManagementSystem {
             System.out.println("查无此学生");
         }
     }
+    // 打印所有学生
     public static void printAllStudent(ArrayList<Student> studentList){
         System.out.println("+------------------+------------+------------+------------+");
         System.out.printf("| %-16s | %-10s | %-10s |%-10s |\n", "student number", "name", "age", "hometown");
