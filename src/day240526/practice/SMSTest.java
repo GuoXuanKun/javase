@@ -5,32 +5,32 @@ import java.util.ArrayList;
 public class SMSTest {
     public static void main(String[] args) {
         // 实例化 ArrayList 并将 Student 实例存进去
-//        ArrayList<Student> studentList = StudentManagementSystem.joinStudent();
+        ArrayList<Student> studentList = StudentManagementSystem.joinStudent();
 
 //        // 方便测试用 : 自动 生成 student 并加入 ArrayList<Student> studentList
-        ArrayList<Student> studentList = StudentManagementSystem.autoJoinStudentForTest();
+//        ArrayList<Student> studentList = StudentManagementSystem.autoJoinStudentForTest();
 
-//        // 输出 ArrayList
-//        StudentManagementSystem.printAllStudent(studentList);
-//
-//        // 根据学号查找学生
-//        StudentManagementSystem.findStudent(studentList);
-//
-//        // 根据学号更新学生全部信息
-//        StudentManagementSystem.updateStudentAll(studentList);
-//        // 根据学号更新学生信息
-//        StudentManagementSystem.updateStudentNummer(studentList);
-//        // 根据学号更新学生姓名
-//        StudentManagementSystem.updateStudentName(studentList);
-//        // 根据学号更新学生年龄
-//        StudentManagementSystem.updateStudentAge(studentList);
+        // 输出 ArrayList
+        StudentManagementSystem.printAllStudent(studentList);
+
+        // 根据学号查找学生
+        StudentManagementSystem.findStudent(studentList);
+
+        // 根据学号更新学生全部信息
+        StudentManagementSystem.updateStudentAll(studentList);
+        // 根据学号更新学生信息
+        StudentManagementSystem.updateStudentNummer(studentList);
+        // 根据学号更新学生姓名
+        StudentManagementSystem.updateStudentName(studentList);
+        // 根据学号更新学生年龄
+        StudentManagementSystem.updateStudentAge(studentList);
         // 根据学生学号更新学生家乡(学生故乡)
         StudentManagementSystem.updateStudentHometown(studentList);
         StudentManagementSystem.printAllStudent(studentList);
 
-//        // 根据学号删除学生
-//        StudentManagementSystem.deleteByStudentNumber(studentList);
-//        StudentManagementSystem.printAllStudent(studentList);
+        // 根据学号删除学生
+        StudentManagementSystem.deleteByStudentNumber(studentList);
+        StudentManagementSystem.printAllStudent(studentList);
 
     }
 }
