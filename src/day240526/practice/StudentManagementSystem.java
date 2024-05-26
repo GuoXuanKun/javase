@@ -28,5 +28,8 @@ public class StudentManagementSystem {
             System.out.println(studentList.get(i));
         }
 
+        // 查找特定的学生
+        System.out.println("输入要查找第几位学生");
+
     }
 }
