@@ -18,13 +18,15 @@ public class SMSTest {
 //
 //        // 根据学号更新学生全部信息
 //        StudentManagementSystem.updateStudentAll(studentList);
-        // 根据学号更新学生信息
-        StudentManagementSystem.updateStudentNummer(studentList);
+//        // 根据学号更新学生信息
+//        StudentManagementSystem.updateStudentNummer(studentList);
+        // 根据学号更新学生姓名
+        StudentManagementSystem.updateStudentName(studentList);
         StudentManagementSystem.printAllStudent(studentList);
 
-        // 根据学号删除学生
-        StudentManagementSystem.deleteByStudentNumber(studentList);
-        StudentManagementSystem.printAllStudent(studentList);
+//        // 根据学号删除学生
+//        StudentManagementSystem.deleteByStudentNumber(studentList);
+//        StudentManagementSystem.printAllStudent(studentList);
 
     }
 }
