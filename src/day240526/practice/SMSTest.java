@@ -20,8 +20,10 @@ public class SMSTest {
 //        StudentManagementSystem.updateStudentAll(studentList);
 //        // 根据学号更新学生信息
 //        StudentManagementSystem.updateStudentNummer(studentList);
-        // 根据学号更新学生姓名
-        StudentManagementSystem.updateStudentName(studentList);
+//        // 根据学号更新学生姓名
+//        StudentManagementSystem.updateStudentName(studentList);
+        // 根据学号更新学生年龄
+        StudentManagementSystem.updateStudentAge(studentList);
         StudentManagementSystem.printAllStudent(studentList);
 
 //        // 根据学号删除学生
