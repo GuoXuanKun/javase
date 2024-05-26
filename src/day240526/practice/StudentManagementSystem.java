@@ -27,11 +27,7 @@ public class StudentManagementSystem {
         studentList.add(new Student(4,"1",1,"1"));
 
         // 输出 ArrayList
-        System.out.println("+------------------+------------+------------+------------+");
-        System.out.printf("| %-16s | %-10s | %-10s |%-10s |\n", "student number", "name", "age", "hometown");
-        for (int i = 0; i < studentList.size(); i++) {
-            System.out.println(studentList.get(i));
-        }
+        printAllStudent(studentList);
 
 //        // 查找特定的学生
 //        System.out.println("输入要查找第几位学生");
@@ -47,13 +43,10 @@ public class StudentManagementSystem {
         System.out.println("请输入要更新的学生的学号");
         int old = scanner.nextInt();
         updateStudentAll(studentList,old);
-        System.out.println("+------------------+------------+------------+------------+");
-        System.out.printf("| %-16s | %-10s | %-10s |%-10s |\n", "student number", "name", "age", "hometown");
-        for (int i = 0; i < studentList.size(); i++) {
-            System.out.println(studentList.get(i));
-        }
+        printAllStudent(studentList);
 
     }
+
     public static void deleteByStudentNumber(ArrayList<Student> list,int number){
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getStudentNumber() == number){
@@ -82,6 +75,13 @@ public class StudentManagementSystem {
         }
         if (signal == 0){
             System.out.println("查无此学生");
+        }
+    }
+    public static void printAllStudent(ArrayList<Student> studentList){
+        System.out.println("+------------------+------------+------------+------------+");
+        System.out.printf("| %-16s | %-10s | %-10s |%-10s |\n", "student number", "name", "age", "hometown");
+        for (int i = 0; i < studentList.size(); i++) {
+            System.out.println(studentList.get(i));
         }
     }
 }
