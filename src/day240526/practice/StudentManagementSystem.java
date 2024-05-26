@@ -4,25 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentManagementSystem {
-    public static void main(String[] args) {
-        // 实例化 ArrayList 并将 Student 实例存进去
-        ArrayList<Student> studentList = joinStudent();
-
-        // 输出 ArrayList
-        printAllStudent(studentList);
-
-        // 根据学号查找学生
-        findStudent(studentList);
-
-        // 根据学号更新学生信息
-        updateStudentAll(studentList);
-        printAllStudent(studentList);
-
-        // 根据学号删除学生
-        deleteByStudentNumber(studentList);
-
-    }
-
     // 让用户输入基本信息 并生成一个 ArrayList<Student> 的实例
     public static ArrayList<Student> joinStudent() {
         // 实例化 ArrayList
