@@ -80,6 +80,26 @@ public class StudentManagementSystem {
         }
     }
 
+    // 更新学生学号
+    public static void updateStudentNummer(ArrayList<Student> list) {
+        Scanner scanner = new Scanner(System.in);
+        int signal = 0;
+        System.out.println("请输入要更新的学生的学号");
+        int oldNumber = scanner.nextInt();
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getStudentNumber() == oldNumber) {
+                signal = 1;
+                System.out.println("请输入学生的新学号");
+                int a = scanner.nextInt();
+                list.set(i, new Student(a, list.get(i).getName(), list.get(i).getAge(), list.get(i).getHometown()));
+                break;
+            }
+        }
+        if (signal == 0) {
+            System.out.println("查无此学生");
+        }
+    }
+
     // 根据学号删除学生
     public static void deleteByStudentNumber(ArrayList<Student> list) {
         Scanner scanner = new Scanner(System.in);
