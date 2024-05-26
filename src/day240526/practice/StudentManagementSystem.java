@@ -25,9 +25,7 @@ public class StudentManagementSystem {
         deleteByStudentNumber(studentList);
 
         // 根据学号更新学生信息
-        System.out.println("请输入要更新的学生的学号");
-        int old = scanner.nextInt();
-        updateStudentAll(studentList, old);
+        updateStudentAll(studentList);
         printAllStudent(studentList);
 
     }
@@ -87,12 +85,14 @@ public class StudentManagementSystem {
     }
 
     // 根据学号更新学生
-    public static void updateStudentAll(ArrayList<Student> list, int oldNumber) {
+    public static void updateStudentAll(ArrayList<Student> list) {
+        Scanner scanner = new Scanner(System.in);
         int signal = 0;
+        System.out.println("请输入要更新的学生的学号");
+        int oldNumber = scanner.nextInt();
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getStudentNumber() == oldNumber) {
                 signal = 1;
-                Scanner scanner = new Scanner(System.in);
                 System.out.println("请输入学生的新学号");
                 int a = scanner.nextInt();
                 System.out.println("请输入学生的新名字");
