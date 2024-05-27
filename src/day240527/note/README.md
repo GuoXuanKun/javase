@@ -73,3 +73,6 @@
 ### LinkedHashSet
 - 适合频繁遍历的场景，遍历顺序按添加的顺序输出
 - 但它并非`有序`，底层还是`无序`的，遍历的有序只是因为使用链表结构，额外记录了上一个下一个元素的位置而已，并没有打破 `Set` 的本质特性
+
+### TreeSet
+- All elements inserted into the set must implement the Comparable interface.
