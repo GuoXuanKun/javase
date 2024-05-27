@@ -79,3 +79,27 @@
 - all such elements must be mutually comparable: e1.compareTo(e2) ...
   must not throw a ClassCastException for any elements e1 and e2 in the set.
   简单理解：必须是同一种类型
+
+## The Map Interface
+- A Map is an object that maps keys to values.
+  - Map 是一个将键映射到值的对象。
+- A map cannot contain duplicate keys: Each key can map to at most one value.
+  - 一个映射不能包含重复的键:每个键最多只能映射到一个值。
+- It models the mathematical function abstraction.
+  - 它对数学函数抽象进行建模。
+- The Map interface includes methods for basic operations
+  - Map 接口包括用于基本操作的方法
+    - (such as put, get, remove, containsKey, containsValue, size, and empty),
+      - (例如 put, get, remove, containsKey, containsValue, size，和empty)，
+    - bulk operations (such as putAll and clear),
+      - 批量操作(如putAll和clear);
+    - and collection views (such as keySet, entrySet, and values).
+      - 和集合视图(如 keySet 、 entrySet 和 values )。
+- The Java platform contains three general-purpose Map implementations: HashMap, TreeMap, and LinkedHashMap.
+  - Java 平台包含三种通用的 Map 实现: HashMap 、 TreeMap 和 LinkedHashMap 。
+- Their behavior and performance are precisely analogous to HashSet, TreeSet, and LinkedHashSet, as described in The Set Interface section.
+  - 它们的行为和性能与 HashSet 、 TreeSet 和 LinkedHashSet 非常相似，如 Set Interface 一节所述。
+- read more https://docs.oracle.com/javase/tutorial/collections/interfaces/map.html
+
+### Map 跟 Collection 在顶层上是独立的，没有继承/实现关系
+- ![img_7.png](img_7.png)
