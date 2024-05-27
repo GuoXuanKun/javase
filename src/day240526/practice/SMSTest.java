@@ -1,12 +1,22 @@
 package day240526.practice;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Properties;
 import java.util.Scanner;
 
 public class SMSTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Student> studentList = new ArrayList<>();
+
+        // 从配置文件读取 ArrayList
+        String fileName = "src/day240526/config.properties";
+        Properties properties = new Properties();
+        properties.load(new FileInputStream(fileName));
+
         while (true) {
             System.out.println("--- --- --- --- --- ---");
             System.out.println("请输入操作编号：");
