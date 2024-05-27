@@ -15,3 +15,10 @@
 ### Collections 工具类
 - Collections.shuffle()
   - 乱序 "洗牌"
+
+### The List Interface
+- A List is an ordered Collection(sometimes called a sequence).
+  - 列表是有序的集合(有时称为序列)
+- Lists may contain duplicate elements.
+  - 列表可能包含重复的元素。
+- more reading https://docs.oracle.com/javase/tutorial/collections/interfaces/list.html
