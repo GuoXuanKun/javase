@@ -6,3 +6,6 @@
 
 ### 增强 for 循环
 - ![img.png](img.png)
+
+### IDEA 文件夹 设置 ( 文件夹的路径就不会压缩 )
+- ![img_1.png](img_1.png)
