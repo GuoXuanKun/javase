@@ -111,3 +111,13 @@
 ### Hashtable
 - ![img_10.png](img_10.png)
 - ![img_11.png](img_11.png)
+
+### nullable?
+- HashMap 可以
+  - 基于哈希表的Map接口实现。
+  - 该实现提供了所有可选的map操作，并允许空值和空键。
+- Hashtable 不可以
+  - 这个类实现了一个哈希表，它将键映射到值。
+  - 任何非空对象都可以用作键或值。
+- ![img_12.png](img_12.png)
+- ![img_13.png](img_13.png)
