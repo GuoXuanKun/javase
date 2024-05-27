@@ -76,3 +76,6 @@
 
 ### TreeSet
 - All elements inserted into the set must implement the Comparable interface.
+- all such elements must be mutually comparable: e1.compareTo(e2) ...
+  must not throw a ClassCastException for any elements e1 and e2 in the set.
+  简单理解：必须是同一种类型

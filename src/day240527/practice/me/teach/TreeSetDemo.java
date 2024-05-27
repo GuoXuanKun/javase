@@ -26,6 +26,17 @@ public class TreeSetDemo {
         ts3.add(new Xxx(1));
         ts3.add(new Xxx(5));
         System.out.println(ts3);
-    }
+
+        System.out.println("=== === ===");
+
+        // all such elements must be mutually comparable: e1.compareTo(e2) ...
+        //   must not throw a ClassCastException for any elements e1 and e2 in the set.
+        // 简单理解：必须是同一种类型
+        // java.lang.ClassCastException
+        TreeSet<Object> ts4 = new TreeSet<>();
+        ts4.add(1);
+        ts4.add("string");
+        System.out.println(ts4);
     }
 }
+
