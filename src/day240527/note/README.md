@@ -40,3 +40,21 @@
 - 代码截图
   - ![img_2.png](img_2.png)
   - ![img_3.png](img_3.png)
+
+## The Set Interface
+- A Set is a Collection that cannot contain duplicate elements.
+  - Set是不能包含重复元素的Collection。
+- It models the mathematical set abstraction.
+  - 它对数学集合抽象进行建模。
+- The Set interface contains only methods inherited from Collection
+  - Set 接口只包含从 Collection 继承的方法
+- and adds the restriction that duplicate elements are prohibited.
+  - 并增加了禁止重复元素的限制。
+- Set also adds a stronger contract on the behavior of the equals and hashCode operations, allowing Set instances to be compared meaningfully even if their implementation types differ.
+  - Set 还为 equals 和 hashCode 操作的行为添加了更强的契约，允许对 Set 实例进行有意义的比较，即使它们的实现类型不同。
+- Two Set instances are equal if they contain the same elements.
+  - 如果两个 Set 实例包含相同的元素，则它们是相等的。
+- ![img_4.png](img_4.png)
+- ### Set 在整个 Collection 架构下的大体位置
+  - ![img_5.png](img_5.png)
+
