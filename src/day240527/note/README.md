@@ -124,3 +124,15 @@
 
 ### Properties
 - ![img_14.png](img_14.png)
+- properties.load(new FileInputStream(url));
+  - properties.load()是Java语言中用于加载属性文件（如.config、.properties等）的一种方法。
+  - new FileInputStream(url)是Java中的一个常用操作，通过创建一个FileInputStream对象，将指定的文件路径（url）作为输入流打开。
+- properties.setProperty()
+  - properties.setProperty() 是 Java 中 Properties 类的一个方法，它用于设置属性列表中的键和值。
+- properties.get()
+  - properties.get() 是 Java 中 Properties 类的一个方法，它用于根据键（Key）获得对应的值(Value)。该方法接收一个参数，这个参数是你想要获取值的键。
+- properties.store(new FileOutputStream(url), properties.toString())
+  - properties.store() 是 Java Properties 类的一个方法，它用于将此 Properties 表中的此属性列表（键和元素对）写入输入流。
+  - new FileOutputStream(url) 是在 Java 中创建文件输出流以写入文件的常见方式。
+  - properties.toString() 是 Java Properties 类的一个方法，它用于将属性列表转化为字符串。
+  
