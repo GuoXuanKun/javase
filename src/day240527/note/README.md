@@ -121,3 +121,6 @@
   - 任何非空对象都可以用作键或值。
 - ![img_12.png](img_12.png)
 - ![img_13.png](img_13.png)
+
+### Properties
+- ![img_14.png](img_14.png)
