@@ -59,3 +59,8 @@
 - ### Set 在整个 Collection 架构下的大体位置
   - ![img_5.png](img_5.png)
 
+### Set 是如何判断元素是否重复的
+- 只重写 equals 方法还是无法判断 是否重复
+- 为什么右击 -> Generate 的时候看到两个方法写一起的选项
+  - ![img_6.png](img_6.png)
+
