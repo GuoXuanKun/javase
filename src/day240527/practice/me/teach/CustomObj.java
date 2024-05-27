@@ -16,4 +16,13 @@ public class CustomObj {
                 ", name='" + name + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof CustomObj otherObj) {
+            return this.id == otherObj.id;
+        } else {
+            return false;
+        }
+    }
 }

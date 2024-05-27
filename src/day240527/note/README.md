@@ -54,6 +54,7 @@
   - Set 还为 equals 和 hashCode 操作的行为添加了更强的契约，允许对 Set 实例进行有意义的比较，即使它们的实现类型不同。
 - Two Set instances are equal if they contain the same elements.
   - 如果两个 Set 实例包含相同的元素，则它们是相等的。
+- set 是无序的
 - ![img_4.png](img_4.png)
 - ### Set 在整个 Collection 架构下的大体位置
   - ![img_5.png](img_5.png)
