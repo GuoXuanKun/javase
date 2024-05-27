@@ -8,4 +8,12 @@ public class CustomObj {
         this.id = id;
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "CustomObj{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
