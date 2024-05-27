@@ -1,5 +1,7 @@
 package day240527.practice.me.teach;
 
+import java.util.Objects;
+
 public class CustomObj {
     int id;
     String name;
@@ -18,11 +20,15 @@ public class CustomObj {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof CustomObj otherObj) {
-            return this.id == otherObj.id;
-        } else {
-            return false;
-        }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CustomObj customObj = (CustomObj) o;
+        return id == customObj.id && Objects.equals(name, customObj.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
     }
 }
