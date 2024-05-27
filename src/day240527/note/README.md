@@ -107,3 +107,7 @@
 ### HashMap 及之前泛型练习回顾
 - ![img_8.png](img_8.png)
 - ![img_9.png](img_9.png)
+
+### Hashtable
+- ![img_10.png](img_10.png)
+- ![img_11.png](img_11.png)
