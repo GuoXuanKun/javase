@@ -103,3 +103,7 @@
 
 ### Map 跟 Collection 在顶层上是独立的，没有继承/实现关系
 - ![img_7.png](img_7.png)
+
+### HashMap 及之前泛型练习回顾
+- ![img_8.png](img_8.png)
+- ![img_9.png](img_9.png)
