@@ -11,3 +11,7 @@
 - ![img_1.png](img_1.png)
 
 ### Java 中带 名字带 s 的一般是工具类
+
+### Collections 工具类
+- Collections.shuffle()
+  - 乱序 "洗牌"
