@@ -14,7 +14,7 @@ public class ExceptionThrow {
         try {
             Integer.parseInt(scanner.next());
         } catch (NumberFormatException e) {
-            throw new NumberFormatException("错误编号50008：请输入正整数，我要拿来干什么。。。");
+            throw new MyNumberFormatException("错误编号50008：请输入正整数，我要拿来干什么。。。");
         }
     }
 }
