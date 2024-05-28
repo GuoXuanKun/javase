@@ -24,10 +24,10 @@ public class FileCount {
         // 经查证 确实存在 且返回的是 String
         // 那么 是不是可以用 String 里面 那个判断 结尾 是否是 某字段的方法
         // 问题是 怎么层层往下 ? 用递归
-        System.out.println(countJavaFiles(file));
+        System.out.println("有 "+countJavaFiles(file)+" 个 .java 文件");
         // 同款思路 计算 图片 和 .md 文件
-        System.out.println(countPictureFiles(file));
-        System.out.println(countMdFiles(file));
+        System.out.println("有 "+countPictureFiles(file) + " 张图片");
+        System.out.println("有 "+ countMdFiles(file) + " 个 .md 文件");
 
         // step3 可以用 set 来判断 有几个不同的 .md 文件
         // 将查出来的 .md 文件存入 set 集合
