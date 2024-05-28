@@ -48,7 +48,7 @@
 - 验证完之后，把 `// todo` 删除掉
 
 ## File 初见 & 再次复习核心的学习思想和方法
-- ![img_24.png](img_24.png)
+- ![img_27.png](img_27.png)
 - ![img_25.png](img_25.png)
 
 ## HW
