@@ -34,6 +34,7 @@
   - throws XxxException ...
 - 有能力，自己处理
   - try-catch-finally
+- 大忌 (try - catch 了，但是什么都不处理)
 
 
 
