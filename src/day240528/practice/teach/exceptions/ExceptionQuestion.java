@@ -5,7 +5,7 @@ public class ExceptionQuestion {
         try {
             m1();
         } catch (Exception e) {
-            System.out.println("1");
+            System.out.println(e.getMessage());
         }
         System.out.println(m2());
     }
