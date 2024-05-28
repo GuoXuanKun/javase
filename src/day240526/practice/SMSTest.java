@@ -2,6 +2,7 @@ package day240526.practice;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
@@ -13,6 +14,7 @@ public class SMSTest {
     private static ArrayList<Student> studentList = new ArrayList<>();
     private static final Properties STUDENTS_PROPERTIES = new Properties();
     private static final String FILE_NAME = "src/day240526/config.properties";
+
     public static void main(String[] args) throws IOException {
         // 从文件读取 学生信息
         loadFromFile();
@@ -34,11 +36,11 @@ public class SMSTest {
             switch (choice) {
                 case 0:
                     // 实例化 ArrayList 并将 Student 实例存进去
-                     studentList = StudentManagementSystem.autoJoinStudentForTest();
+                    studentList = StudentManagementSystem.autoJoinStudentForTest();
                     break;
                 case 1:
                     // 实例化 ArrayList 并将 Student 实例存进去
-                     studentList = StudentManagementSystem.joinStudent();
+                    studentList = StudentManagementSystem.joinStudent();
                     break;
                 case 2:
                     // 根据学号删除学生
@@ -57,6 +59,7 @@ public class SMSTest {
                     StudentManagementSystem.printAllStudent(studentList);
                     break;
                 case 6:
+                    storeToFile();
                     System.out.println("已退出学生管理系统。");
                     /*System.exit(0);
                     break;*/
@@ -95,6 +98,7 @@ public class SMSTest {
 //        StudentManagementSystem.printAllStudent(studentList);
 
     }
+
     private static void loadFromFile() throws IOException {
         // Properties类的load()方法用于从输入流中读取属性列表（键和元素对）。它通常用于加载那些以键值对格式存储在文件中的配置数据。
         STUDENTS_PROPERTIES.load(new FileInputStream(FILE_NAME));
@@ -105,8 +109,20 @@ public class SMSTest {
             String name = (String) next;
             String studentString = STUDENTS_PROPERTIES.getProperty(name);
             String[] split = studentString.split(",");
-            studentList.add(new Student(Integer.parseInt(split[0]), split[1],Integer.parseInt(split[2]),split[3]));
+            studentList.add(new Student(Integer.parseInt(split[0]), split[1], Integer.parseInt(split[2]), split[3]));
         }
     }
+
+    private static void storeToFile() throws IOException {
+        // Properties.clear() 方法用于清除此属性列表中所有的键-值对。
+        STUDENTS_PROPERTIES.clear();
+        for (Student student : studentList) {
+            String key = Integer.toString(student.getStudentNumber());
+            String value = student.getStudentNumber() + "," + student.getName() + "," + student.getAge() + "," + student.getHometown();
+            STUDENTS_PROPERTIES.setProperty(key, value);
+        }
+        STUDENTS_PROPERTIES.store(new FileOutputStream(FILE_NAME), STUDENTS_PROPERTIES.toString());
+    }
+
 
 }
