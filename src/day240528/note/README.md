@@ -44,6 +44,13 @@
   - 无论如何都会执行到代码 哪怕出现了异常
   - ![img_12.png](img_12.png)
 
+### 先解决之前留下的 // todo 记号
+- ![img_20.png](img_20.png)
+- 验证在方法声明中增加了抛异常的语句 `throws ...` 对 `Overload` 和 `Override` 的影响
+  - Overload
+  - Override
+- 验证完之后，把 `// todo` 删除掉
+
 ## 截图寄存处
 - ![img_1.png](img_1.png)
 - ![img_2.png](img_2.png)
