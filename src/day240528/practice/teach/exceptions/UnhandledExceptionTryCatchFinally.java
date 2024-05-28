@@ -23,6 +23,7 @@ public class UnhandledExceptionTryCatchFinally {
             // 最简单的处理
             //System.out.println("`config.properties` 文件不存，请确认！");
             // 代码中有 try-catch 的语句，但是里面什么都不做。这是大忌，实际开发中一定不要这么做。
+            e.printStackTrace();
         }
     }
 }
