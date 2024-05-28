@@ -1,21 +1,20 @@
 package day240528.practice.teach.student_manage_system;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.*;
 
 public class StudentManagementSystem {
     private static final Scanner scanner = new Scanner(System.in);
 
     private static List<Student> students = new ArrayList<>();
 
-    static {
-        for (int i = 0; i < 10; i++) {
-            students.add(new Student("name-" + i, 28- i, "ht-" + i));
-        }
-    }
+    private static final Properties STUDENTS_PROPERTIES = new Properties();
+    private static final String FILE_NAME = "src/day240528/practice/teach/student_manage_system/students.properties";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        loadFromFile();
+
         while (true) {
             System.out.println("--- --- --- --- --- ---");
             System.out.println("请输入操作编号：");
@@ -53,6 +52,17 @@ public class StudentManagementSystem {
                 default:
                     System.out.println("无效的操作编号！");
             }
+        }
+    }
+
+    private static void loadFromFile() throws IOException {
+        STUDENTS_PROPERTIES.load(new FileInputStream(FILE_NAME));
+        Set<Object> objects = STUDENTS_PROPERTIES.keySet();
+        for (Object next : objects) {
+            String name = (String) next;
+            String studentString = STUDENTS_PROPERTIES.getProperty(name);
+            String[] split = studentString.split(",");
+            students.add(new Student(split[0], Integer.parseInt(split[1]), split[2]));
         }
     }
 
