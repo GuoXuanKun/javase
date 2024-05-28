@@ -21,6 +21,9 @@ public class FileCount {
         // 那么 是不是可以用 String 里面 那个判断 结尾 是否是 某字段的方法
         // 问题是 怎么层层往下 ? 用递归
         System.out.println(countJavaFiles(file));
+        // 同款思路 计算 图片 和 .md 文件
+        System.out.println(countPictureFiles(file));
+        System.out.println(countMdFiles(file));
     }
 
     public static int countJavaFiles(File files) {
@@ -30,6 +33,34 @@ public class FileCount {
                 // 判断文件夹的下层文件集合的文件是不是文件夹 是 就再往下查
                 count += countJavaFiles(file);
             } else if (file.getName().endsWith(".java")) {
+                // 如果不是 判断文件名是不是 .java 结尾的. 是的话 计数加1
+//                System.out.print(" "+file.getName() + " ");
+                count++;
+            }
+        }
+        return count;
+    }
+    public static int countPictureFiles(File files) {
+        int count = 0;
+        for (File file : files.listFiles()) {
+            if (file.isDirectory()) {
+                // 判断文件夹的下层文件集合的文件是不是文件夹 是 就再往下查
+                count += countPictureFiles(file);
+            } else if (file.getName().endsWith(".png") || file.getName().endsWith(".jpg")) {
+                // 如果不是 判断文件名是不是 .java 结尾的. 是的话 计数加1
+//                System.out.print(" "+file.getName() + " ");
+                count++;
+            }
+        }
+        return count;
+    }
+    public static int countMdFiles(File files) {
+        int count = 0;
+        for (File file : files.listFiles()) {
+            if (file.isDirectory()) {
+                // 判断文件夹的下层文件集合的文件是不是文件夹 是 就再往下查
+                count += countMdFiles(file);
+            } else if (file.getName().endsWith(".md")) {
                 // 如果不是 判断文件名是不是 .java 结尾的. 是的话 计数加1
 //                System.out.print(" "+file.getName() + " ");
                 count++;
