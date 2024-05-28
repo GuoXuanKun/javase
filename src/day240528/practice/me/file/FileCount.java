@@ -15,5 +15,13 @@ public class FileCount {
         // 但是文件夹里面还嵌套这文件夹 利用 isDirectory() 判断 是不是文件夹
         // 利用 listFiles() 层层 往下 直到 不是文件夹
         // 猜测会不会有个方法比如 getfilename 可以 获取文件名
+        for (File file1 : file.listFiles()) {
+            System.out.println(file1.getName());
+        }
      }
+
+
+
+
+
 }
