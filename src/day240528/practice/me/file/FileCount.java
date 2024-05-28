@@ -31,7 +31,7 @@ public class FileCount {
                 count += countJavaFiles(file);
             } else if (file.getName().endsWith(".java")) {
                 // 如果不是 判断文件名是不是 .java 结尾的. 是的话 计数加1
-                System.out.print(" "+file.getName() + " ");
+//                System.out.print(" "+file.getName() + " ");
                 count++;
             }
         }
