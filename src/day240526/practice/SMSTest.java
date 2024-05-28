@@ -6,16 +6,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
 import java.util.Scanner;
+import java.util.Set;
 
 public class SMSTest {
+    private static final Scanner scanner = new Scanner(System.in);
+    private static ArrayList<Student> studentList = new ArrayList<>();
+    private static final Properties STUDENTS_PROPERTIES = new Properties();
+    private static final String FILE_NAME = "src/day240526/config.properties";
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<Student> studentList = new ArrayList<>();
-
-        // 从配置文件读取 ArrayList
-        String fileName = "src/day240526/config.properties";
-        Properties properties = new Properties();
-        properties.load(new FileInputStream(fileName));
+        // 从文件读取 学生信息
+        loadFromFile();
 
         while (true) {
             System.out.println("--- --- --- --- --- ---");
@@ -95,4 +95,18 @@ public class SMSTest {
 //        StudentManagementSystem.printAllStudent(studentList);
 
     }
+    private static void loadFromFile() throws IOException {
+        // Properties类的load()方法用于从输入流中读取属性列表（键和元素对）。它通常用于加载那些以键值对格式存储在文件中的配置数据。
+        STUDENTS_PROPERTIES.load(new FileInputStream(FILE_NAME));
+        // 获取 键值
+        Set<Object> objects = STUDENTS_PROPERTIES.keySet();
+        // 根据 键值 依次获取 元素值
+        for (Object next : objects) {
+            String name = (String) next;
+            String studentString = STUDENTS_PROPERTIES.getProperty(name);
+            String[] split = studentString.split(",");
+            studentList.add(new Student(Integer.parseInt(split[0]), split[1],Integer.parseInt(split[2]),split[3]));
+        }
+    }
+
 }
