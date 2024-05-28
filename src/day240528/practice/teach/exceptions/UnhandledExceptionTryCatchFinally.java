@@ -18,7 +18,9 @@ public class UnhandledExceptionTryCatchFinally {
 
     public static void m3() {
         try {
+            System.out.println("before m1()");
             m2();
+            System.out.println("after m2()");
         } catch (FileNotFoundException e) {
             // 最简单的处理
             //System.out.println("`config.properties` 文件不存，请确认！");
@@ -31,6 +33,8 @@ public class UnhandledExceptionTryCatchFinally {
             //- When an error occurs within a method, the method creates an object and hands it off to the runtime system.
             //- The object, called an exception object, contains information about the error, including its type and the state of the program when the error occurred.
             //- Creating an exception object and handing it to the runtime system is called throwing an exception.
+        } finally {
+            System.out.println("finally - try-catch-finally 类似于分支（无论如何都会执行到的代码，哪怕出现了异常）");
         }
     }
 }

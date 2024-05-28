@@ -37,6 +37,8 @@
 - 大忌 (try - catch 了，但是什么都不处理)
 - e.printStackTrace();
   - ![img_22.png](img_22.png)
+- 完整的处理结构 try-catch-finally
+  - ![img_23.png](img_23.png)
 
 
 
