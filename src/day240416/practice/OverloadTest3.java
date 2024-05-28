@@ -1,7 +1,7 @@
 package day240416.practice;
 
 public class OverloadTest3 {
-    public int add(int a, int b) {
+    public int add(int a, int b) throws  {
         return 0;
     }
 
@@ -25,6 +25,6 @@ public class OverloadTest3 {
     }
     */
 
-    // todo: 等学到 exception 的时候，记得再回来补充验证一下这个细节
+
     // An exception list—to be discussed later.
 }
