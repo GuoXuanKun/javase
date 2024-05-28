@@ -4,7 +4,8 @@
 ### 多光标 Mutiple cursor
 - ![img_16.png](img_16.png)
 
-### 
+### HW - SMS - v2
+- ![img_17.png](img_17.png)
 
 ### 异常
 - 整体架构图

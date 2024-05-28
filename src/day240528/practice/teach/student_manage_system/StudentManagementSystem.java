@@ -1,6 +1,7 @@
 package day240528.practice.teach.student_manage_system;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.*;
 
@@ -10,7 +11,7 @@ public class StudentManagementSystem {
     private static List<Student> students = new ArrayList<>();
 
     private static final Properties STUDENTS_PROPERTIES = new Properties();
-    private static final String FILE_NAME = "src/day240528/practice/teach/student_manage_system/students.properties";
+    private static final String FILE_NAME = "src/day240528/hw_sms_v2/students.properties";
 
     public static void main(String[] args) throws IOException {
         loadFromFile();
@@ -45,6 +46,7 @@ public class StudentManagementSystem {
                     listStudents();
                     break;
                 case 6:
+                    storeToFile();
                     System.out.println("已退出学生管理系统。");
                     /*System.exit(0);
                     break;*/
@@ -64,6 +66,16 @@ public class StudentManagementSystem {
             String[] split = studentString.split(",");
             students.add(new Student(split[0], Integer.parseInt(split[1]), split[2]));
         }
+    }
+
+    private static void storeToFile() throws IOException {
+        STUDENTS_PROPERTIES.clear();
+        for (Student student : students) {
+            String key = student.getName();
+            String value = student.getName() + "," + student.getAge() + "," + student.getHometown();
+            STUDENTS_PROPERTIES.setProperty(key, value);
+        }
+        STUDENTS_PROPERTIES.store(new FileOutputStream(FILE_NAME), STUDENTS_PROPERTIES.toString());
     }
 
     private static void addStudent() {
