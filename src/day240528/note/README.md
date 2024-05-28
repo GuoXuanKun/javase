@@ -51,6 +51,8 @@
 - ![img_24.png](img_24.png)
 - ![img_25.png](img_25.png)
 
+## HW
+- ![img_26.png](img_26.png)
 
 ### 异常
 - 整体架构图
