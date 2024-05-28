@@ -7,6 +7,21 @@
 ### HW - SMS - v2
 - ![img_17.png](img_17.png)
 
+## Exceptions
+### What Is an Exception?
+- The term exception is shorthand for the phrase "exceptional event."
+  - 术语“异常”是“异常事件”的缩写。
+- > Definition: An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
+  - 定义:异常是在程序执行过程中发生的事件，它破坏了程序指令的正常流程。
+- When an error occurs within a method, the method creates an object and hands it off to the runtime system.
+  - 当在方法中发生错误时，该方法创建一个对象并将其传递给运行时系统。
+- The object, called an exception object, contains information about the error, including its type and the state of the program when the error occurred.
+  - 该对象称为异常对象，包含有关错误的信息，包括错误类型和错误发生时程序的状态。
+- Creating an exception object and handing it to the runtime system is called throwing an exception.
+  - 创建异常对象并将其交给运行时系统称为抛出异常。
+- ![img_18.png](img_18.png)
+- ![img_19.png](img_19.png)
+
 ### 异常
 - 整体架构图
 - ![img_11.png](img_11.png)
