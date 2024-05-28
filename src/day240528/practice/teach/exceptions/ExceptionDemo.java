@@ -1,5 +1,7 @@
 package day240528.practice.teach.exceptions;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
@@ -42,7 +44,19 @@ public class ExceptionDemo {
 
 
         // java.io.FileNotFoundException
-        //fileNotFoundException();
+        // 有能力处理，就按自己的逻辑处理
+        try {
+            fileNotFoundException();
+        } catch (FileNotFoundException e) {
+            // 自己的处理逻辑
+            // 1. 记录日志
+            // 2. 发送邮件
+            // 3. 其他处理
+            // config-dev
+            // config-prod
+        } finally {
+            // ...
+        }
 
 
         // java.io.IOException
@@ -79,8 +93,9 @@ public class ExceptionDemo {
         int i = 3 / 0;
     }
 
-    private static void fileNotFoundException() {
-        //FileInputStream fileInputStream = new FileInputStream("config.properties");
+    // 没能力处理异常，往上抛
+    private static void fileNotFoundException() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream("config.properties");
         //checked exception 编译时异常 vs 运行时异常 unchecked exception (RuntimeException)
         //structure
     }
