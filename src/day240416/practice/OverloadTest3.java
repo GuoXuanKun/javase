@@ -1,7 +1,7 @@
 package day240416.practice;
 
 public class OverloadTest3 {
-    public int add(int a, int b) throws  {
+    public int add(int a, int b) {
         return 0;
     }
 
