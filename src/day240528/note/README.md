@@ -26,12 +26,17 @@
 ### 编译时异常 vs 运行时异常
 - checked exception 编译时异常 vs 运行时异常 unchecked exception (RuntimeException)
 - 待补充 UML 类图
+- 异常的整体架构图
+  - ![img_21.png](img_21.png)
 
 ### 异常的处理
 - 你没能力，接着往上抛
   - throws XxxException ...
 - 有能力，自己处理
   - try-catch-finally
+
+
+
 
 ### 异常
 - 整体架构图
