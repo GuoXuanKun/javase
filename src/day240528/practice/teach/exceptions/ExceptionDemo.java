@@ -2,6 +2,8 @@ package day240528.practice.teach.exceptions;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.Scanner;
 
 /**
@@ -100,8 +102,14 @@ public class ExceptionDemo {
         //structure
     }
 
-    private static void ioException() {
-        //Properties properties = new Properties();
-        //properties.load(new FileInputStream("config.properties"));
+    private static void ioException() throws IOException {
+        Properties properties = new Properties();
+        try {
+            properties.load(new FileInputStream("config.properties"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
