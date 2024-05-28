@@ -40,6 +40,12 @@
 - 完整的处理结构 try-catch-finally
   - ![img_23.png](img_23.png)
 
+### 解决之前留下的 // todo 记号
+- ![img_4.png](img_4.png)
+- 验证在方法声明中增加了抛异常的语句 `throws ...` 对 `Overload` 和 `Override` 的影响
+  - Overload
+  - Override
+- 验证完之后，把 `// todo` 删除掉
 
 
 
