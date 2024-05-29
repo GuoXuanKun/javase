@@ -7,6 +7,7 @@ import java.util.HashSet;
 public class FileCount {
     // 实例一个 Hashset 实例
     public static final HashSet<String> set = new HashSet<>();
+    public static final HashSet<String> setForFileKind = new HashSet<>();
     public static void main(String[] args) {
         File file = new File("src");
         System.out.println(Arrays.toString(file.list()));
@@ -31,6 +32,14 @@ public class FileCount {
         // 将查出来的 .md 文件存入 set 集合
         FindDifferenceMdFile(file);
         System.out.println("一共有 " + set.size() + " 种不同名的 .md 文件" );
+
+        // step4 实例化一个 Hashset 对象 来存后缀名
+        // 根据 split()方法取得 后缀名
+        // 根据后缀名 统计有多少 文件
+        // 存进 map 集合 (键值对) 或者 直接 文件名 + 数量 打印出来
+        // 未完成...
+        getFilesKind(file);
+
     }
 
     public static int countJavaFiles(File files) {
@@ -93,6 +102,25 @@ public class FileCount {
     }
     public static void setAdd(String a){
         set.add(a);
+    }
+
+    public static int getFilesKind(File files) {
+        int count = 0;
+        for (File file : files.listFiles()) {
+            if (file.isDirectory()) {
+                // 判断文件夹的下层文件集合的文件是不是文件夹 是 就再往下查
+                count += countJavaFiles(file);
+            } else  {
+                String[] split = file.getName().split(".");
+                // 如果不是 判断文件名是不是 .java 结尾的. 是的话 计数加1
+//                System.out.print(" "+file.getName() + " ");
+                for (String s : split){
+                    setForFileKind.add(s);
+                }
+                count++;
+            }
+        }
+        return count;
     }
 
 
