@@ -13,6 +13,9 @@ public class ProjectStatistics {
     private static final Map<String, Integer> FILE_TYPE_COUNTS = new HashMap<>();
     private static final Set<String> MD_NAMES = new HashSet<>();
     private static long totalLines;
+    private static long maxLines;
+    private static long minLines = Integer.MAX_VALUE;
+    private static final Map<String, String> JAVA_LINES_MAP = new HashMap<>();
 
     public static void main(String[] args) {
         File directory = new File("src");
@@ -27,6 +30,8 @@ public class ProjectStatistics {
         System.out.println("=== Java 文件行数统计 ===");
         Integer javaFiles = FILE_TYPE_COUNTS.get("java");
         System.out.println("Java 文件总数=" + javaFiles + ", 总行数=" + totalLines + ", 平均行数=" + totalLines / (javaFiles + 0.0));
+        System.out.println("最多行数的 Java 文件=" + JAVA_LINES_MAP.get("max") + " (" + maxLines + "行)");
+        System.out.println("最少行数的 Java 文件=" + JAVA_LINES_MAP.get("min") + " (" + minLines + "行)");
     }
 
     private static void countFileTypes(File directory) {
@@ -41,7 +46,16 @@ public class ProjectStatistics {
                         MD_NAMES.add(file.getName());
                     }
                     if ("java".equals(ext)) {
-                        totalLines += countingJavaLines(file);
+                        long currentFileTotalLines = countingJavaLines(file);
+                        if (currentFileTotalLines > maxLines) {
+                            maxLines = currentFileTotalLines;
+                            JAVA_LINES_MAP.put("max", file.getAbsolutePath());
+                        }
+                        if (currentFileTotalLines < minLines) {
+                            minLines = currentFileTotalLines;
+                            JAVA_LINES_MAP.put("min", file.getAbsolutePath());
+                        }
+                        totalLines += currentFileTotalLines;
                     }
                     if (FILE_TYPE_COUNTS.containsKey(ext)) {
                         FILE_TYPE_COUNTS.put(ext, FILE_TYPE_COUNTS.get(ext) + 1);
