@@ -42,6 +42,9 @@
   - 同URL(Uniform Resource Locator/统一资源定位符)相比，URI的使用范围更广，URL可以视作URI的一种，即URL是URI的一种特定形式，它包含了用于查找某个资源的足够的信息。
   - URI对象可以表示不完全指定的，或者相对的，URL路径信息。相较之下，URL对象必须表示完全指定的，或者绝对的，URL路径信息。因此，在处理需要解析的URL路径信息，或者在创建需要从已有的URL对象派生的URL对象时，URI类可以提供比URL类更合适的功能。
 
-
+### URL 和 URI
+- ![img.png](img.png)
+- ![img_1.png](img_1.png)
+- ![img_2.png](img_2.png)
 
 ### 截图寄存器
