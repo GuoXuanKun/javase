@@ -10,9 +10,9 @@ public class URLOpenConnection {
     public static void main(String[] args) throws Exception {
         //testBaidu();
         //testBaiduTimeout();
-        //testCn();
+//        testCn();
         //testCnWithCharset();
-        //testDouban();
+//        testDouban();
         //testDouban2();
     }
 
@@ -65,6 +65,7 @@ public class URLOpenConnection {
     static void testDouban() throws Exception {
         URL oracle = new URL("https://www.douban.com/");
         URLConnection uc = oracle.openConnection();
+        uc.setRequestProperty("User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.95 Safari/537.36");
         BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
         String inputLine;
         while ((inputLine = in.readLine()) != null) {
