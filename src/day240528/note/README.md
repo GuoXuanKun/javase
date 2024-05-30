@@ -35,8 +35,10 @@
 - 有能力，自己处理
   - try-catch-finally
 - 大忌 (try - catch 了，但是什么都不处理)
+- e.getMessage();
+  - 用于获取描述异常的详细信息的字符串。这个方法返回的是在创建异常对象时作为参数传递给它的字符串，通常这个字符串包含了描述该异常的详细信息。
 - e.printStackTrace();
-  - ![img_22.png](img_22.png)
+    - ![img_22.png](img_22.png)
 - 完整的处理结构 try-catch-finally
   - ![img_23.png](img_23.png)
 
