@@ -47,4 +47,11 @@
 - ![img_1.png](img_1.png)
 - ![img_2.png](img_2.png)
 
+### Charset
+- charset.forName()
+  - 一个静态方法，用于返回指定字符集的 Charset 对象。
+  - 字符集是一个系统，用于对字符进行编码和解码。每个 Charset 都有一个唯一的名称，并且可以通过多个别名进行引用。
+- ![img_3.png](img_3.png)
+- ![img_4.png](img_4.png)
+
 ### 截图寄存器
