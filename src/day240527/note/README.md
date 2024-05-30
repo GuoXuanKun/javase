@@ -125,6 +125,9 @@
 ### Hashtable
 - ![img_10.png](img_10.png)
 - ![img_11.png](img_11.png)
+- 线程安全 但是有可代替的 类
+- 数据存储和检索：与 HashMap 相同，Hashtable 允许你存储和快速检索任何存储为键值对的对象
+- Hashtable 不允许空（null）键或值
 
 ### nullable?
 - HashMap 可以
