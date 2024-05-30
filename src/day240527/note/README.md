@@ -117,6 +117,11 @@
 - ![img_8.png](img_8.png)
 - ![img_9.png](img_9.png)
 
+### HashMap
+- 以将数据存储为键值对，并通过键来快速检索值
+- 唯一键：在 HashMap 中，键是唯一的
+- HashMap 允许使用 null 作为键或者值
+
 ### Hashtable
 - ![img_10.png](img_10.png)
 - ![img_11.png](img_11.png)
