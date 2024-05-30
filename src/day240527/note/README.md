@@ -71,6 +71,10 @@
 - 无序 : 非按索引，而是 hash 值。底层 HashMap（数组 + 链表）不同 JDK 版本也有差异（>=JDK8 数组 + 链表 + 红黑树）
 
 ### HashSet
+- HashSet 主要用于需要存储唯一元素，且不关心元素存储顺序的场合。
+- 不允许重复
+- 无序性
+- 允许有 null 值
 
 ### LinkedHashSet
 - 适合频繁遍历的场景，遍历顺序按添加的顺序输出
@@ -81,7 +85,10 @@
 - all such elements must be mutually comparable: e1.compareTo(e2) ...
   must not throw a ClassCastException for any elements e1 and e2 in the set.
   简单理解：必须是同一种类型
-
+- 不允许重复
+- 有序性
+- 允许有 null 元素
+- 
 ## The Map Interface
 - A Map is an object that maps keys to values.
   - Map 是一个将键映射到值的对象。
