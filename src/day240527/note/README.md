@@ -153,3 +153,5 @@
   - new FileOutputStream(url) 是在 Java 中创建文件输出流以写入文件的常见方式。
   - properties.toString() 是 Java Properties 类的一个方法，它用于将属性列表转化为字符串。
   
+### IDEA settings - Compact Middle Packages
+- ![img_15.png](img_15.png)
