@@ -19,7 +19,7 @@ public class DownloadImage {
             urlConnection = (HttpURLConnection) url.openConnection();
             //3. 获取输入流、创建输出流
             is = urlConnection.getInputStream();
-            File file = new File("logo.jpg");
+            File file = new File("src/day240530/logo.png");
             fos = new FileOutputStream(file);
             //4. 读写数据
             byte[] buffer = new byte[1024];
