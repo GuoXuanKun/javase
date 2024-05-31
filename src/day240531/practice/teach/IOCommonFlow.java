@@ -23,7 +23,7 @@ public class IOCommonFlow {
             int c;
             byte[] buffer = new byte[3];
             while ((c = fis.read(buffer)) != -1) {
-                for (int i = 0; i < buffer.length; i++) {
+                for (int i = 0; i < c; i++) {
                     System.out.println((char) buffer[i]);
                 }
             }
