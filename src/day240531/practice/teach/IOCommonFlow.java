@@ -17,9 +17,10 @@ public class IOCommonFlow {
         // 2. 找一根 `管子` 接上去，即：`流`
         FileInputStream fis = new FileInputStream(file);
         // 3. 打开开关，让`东西`流出来
-        int c;
-        while ((c = fis.read()) != -1) {
+        int c = fis.read();
+        while (c != -1) {
             System.out.println((char)c);
+            c = fis.read();
         }
         // 4. 关闭 `流`
         fis.close();
