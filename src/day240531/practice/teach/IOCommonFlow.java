@@ -21,8 +21,11 @@ public class IOCommonFlow {
         ) {
             // 3. 打开开关，让`东西`流出来
             int c;
-            while ((c = fis.read()) != -1) {
-                System.out.println((char)c);
+            byte[] buffer = new byte[3];
+            while ((c = fis.read(buffer)) != -1) {
+                for (int i = 0; i < c; i++) {
+                    System.out.println((char) buffer[i]);
+                }
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
