@@ -22,8 +22,8 @@ public class IOCommonFlow {
             // 3. 打开开关，让`东西`流出来
             int c;
             while ((c = fis.read()) != -1) {
-                System.out.println((char) c);
-                System.out.println("--- --- ---");
+                System.out.print((char) c);
+//                System.out.println("--- --- ---");
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
