@@ -1,4 +1,7 @@
 package day240530.practice.project;
 
-public class MyIODownloader implements Downloader{
+import org.jsoup.nodes.Document;
+
+public class MyIODownloader implements DownloaderIOStream{
+
 }
