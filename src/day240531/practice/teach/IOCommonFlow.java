@@ -31,14 +31,8 @@ public class IOCommonFlow {
             throw new RuntimeException(e);
         } finally {
             // 4. 关闭 `流`
-            try {
-                if (fis != null) {
-                    fis.close();
-                }
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
-                // 'throw' inside 'finally' block
-                throw new RuntimeException(e);
+            if (fis != null) {
+                fis.close();
             }
         }
     }
