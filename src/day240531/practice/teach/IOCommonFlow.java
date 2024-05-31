@@ -8,7 +8,7 @@ import java.io.IOException;
 public class IOCommonFlow {
     public static void main(String[] args) {
         // 回顾之前的 `CopyBytes` 代码
-        //FileInputStream in = new FileInputStream("src/day240531/practice/teach");
+        //FileInputStream in = new FileInputStream("src/day240531/io_demo/file.txt");
         // 可以传入 `文件路径` 给 FileInputStream 构造器
         // 点进源码会发现，内部用这个 `文件路径` new 了 File 对象
 
@@ -21,11 +21,8 @@ public class IOCommonFlow {
         ) {
             // 3. 打开开关，让`东西`流出来
             int c;
-            byte[] buffer = new byte[3];
-            while ((c = fis.read(buffer)) != -1) {
-                for (int i = 0; i < c; i++) {
-                    System.out.println((char) buffer[i]);
-                }
+            while ((c = fis.read()) != -1) {
+                System.out.println((char) c);
                 System.out.println("--- --- ---");
             }
         } catch (FileNotFoundException e) {
