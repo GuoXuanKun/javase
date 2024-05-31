@@ -15,10 +15,10 @@ public class IOCommonFlow {
         // 所以，以`文件&输入流`为例子，它的通用流程是：
         // 1. new File，即：数据源（这里以文件为例，`流`的数据源也可以是其他，如：URL...）
         File file = new File("src/day240531/io_demo/file.txt");
-        FileInputStream fis = null;
-        try {
-            // 2. 找一根 `管子` 接上去，即：`流`
-            fis = new FileInputStream(file);
+        try (
+                // 2. 找一根 `管子` 接上去，即：`流`
+                FileInputStream fis = new FileInputStream(file)
+        ) {
             // 3. 打开开关，让`东西`流出来
             int c;
             while ((c = fis.read()) != -1) {
@@ -29,11 +29,7 @@ public class IOCommonFlow {
         } catch (IOException e) {
             System.out.println(e.getMessage());
             throw new RuntimeException(e);
-        } finally {
-            // 4. 关闭 `流`
-            if (fis != null) {
-                fis.close();
-            }
         }
+        // 4. 关闭 `流`（已通过 ['try' with resources] 的方式自动关闭资源）
     }
 }
