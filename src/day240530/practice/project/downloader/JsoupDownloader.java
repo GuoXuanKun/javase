@@ -1,12 +1,12 @@
 package day240530.practice.project.downloader;
 
-import day240530.practice.project.downloader.DownloaderForDocument;
+import day240530.practice.project.downloader.DownloaderForJsoup;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 
-public class JsoupDownloader implements DownloaderForDocument {
+public class JsoupDownloader implements DownloaderForJsoup {
 
     @Override
     public Document download(String url) {
