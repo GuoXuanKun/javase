@@ -4,6 +4,8 @@ import day240530.practice.project.downloader.JsoupDownloader;
 import day240530.practice.project.parser.JsoupParser;
 import org.jsoup.nodes.Document;
 
+import java.util.Scanner;
+
 public class WebsiteAnalysis {
     /*
         下载模块:
@@ -18,6 +20,9 @@ public class WebsiteAnalysis {
         JsoupDownloader jsoupDownloader = new JsoupDownloader();
         Document doc = jsoupDownloader.download("http://bbs.xmfish.com/thread-htm-fid-55.html");
 
-
+        // 2. 解析模块
+        String key = new Scanner(System.in).nextLine();
+        JsoupParser jsoupParser = new JsoupParser();
+        jsoupParser.analysis(doc,key);
     }
 }
