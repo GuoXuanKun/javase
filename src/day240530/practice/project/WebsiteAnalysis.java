@@ -1,5 +1,9 @@
 package day240530.practice.project;
 
+import day240530.practice.project.downloader.JsoupDownloader;
+import day240530.practice.project.parser.JsoupParser;
+import org.jsoup.nodes.Document;
+
 public class WebsiteAnalysis {
     /*
         下载模块:
@@ -12,5 +16,8 @@ public class WebsiteAnalysis {
     public static void main(String[] args) {
         // 1. 下载模块
         JsoupDownloader jsoupDownloader = new JsoupDownloader();
+        Document doc = jsoupDownloader.download("http://bbs.xmfish.com/thread-htm-fid-55.html");
+
+
     }
 }
