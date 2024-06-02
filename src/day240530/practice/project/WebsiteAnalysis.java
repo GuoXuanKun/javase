@@ -27,5 +27,8 @@ public class WebsiteAnalysis {
         JsoupParser jsoupParser = new JsoupParser();
         String string = jsoupParser.analysis(doc,key);
 
+        // 3. 存储模块
+        PrintMemorizer printMemorizer = new PrintMemorizer();
+        printMemorizer.memorizer(string);
     }
 }
