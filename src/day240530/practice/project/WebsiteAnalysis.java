@@ -13,26 +13,26 @@ import java.util.Scanner;
 
 public class WebsiteAnalysis {
     /*
-        1. 下载模块:
+        1. 下载模块 (Downloader):
             通过 配置文件 ( downloader 的值) 来规定要执行的下载器
             下载模块目前可以分为:
             选择(未完待续):
                     1. Jsoup
                     2. IO 流
 
-        2. 解析模块:
+        2. 解析模块 (Parser):
             根据网站的不同通过 配置文件( parser 的值) 来进行选择相应的下载器
             选择(未完待续):
                     1. Jsoup
                     2. IO流
 
-        3. 存储模块:
+        3. 存储模块 (Memorizer):
                    通过 配置文件 ( memorizer 的值) 来进行选择相应的存储器
                    选择(未完待续):
                     1. 打印的方式
                     2. IO流 : content 关键字来存 (待做)
 
-        4. 通知模块:
+        4. 通知模块 (Notificatior):
                    通过 配置文件 ( notificatior 的值) 来进行选择相应的通知器
                    选择(未完待续):
                     1. 邮件的形式
