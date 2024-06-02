@@ -83,9 +83,7 @@ public class WebsiteAnalysis {
 
 
         // 4. 通知模块
-        System.out.println("请输入要发送的邮件地址:");
-        String address = new Scanner(System.in).nextLine();
-        new EmailNotificatior().notificator(address, content);
+
     }
     public static void downloadModuleMode1(){
         System.out.println("请输入要进行解析的网站:");
@@ -102,5 +100,10 @@ public class WebsiteAnalysis {
     public static void memorizerModuleMode1(){
         PrintMemorizer printMemorizer = new PrintMemorizer();
         printMemorizer.memorizer(content);
+    }
+    public static void notificatiorModuleMode1(){
+        System.out.println("请输入要发送的邮件地址:");
+        String address = new Scanner(System.in).nextLine();
+        new EmailNotificatior().notificator(address, content);
     }
 }
