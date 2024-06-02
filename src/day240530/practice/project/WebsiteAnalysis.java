@@ -46,24 +46,29 @@ public class WebsiteAnalysis {
     public static String parser;
     public static String memorizer;
     public static String notificatior;
-    static {
+
+    public static void main(String[] args) {
         try {
             STUDENTS_PROPERTIES.load(new FileInputStream(FILE_NAME));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        final int DOWNLOADER = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(downloader));
-        final int PARSER = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(parser));
-        final int MEMORIZER = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(memorizer));
-        final int NOTIFICATIOR = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(notificatior));
-    }
-
-    public static void main(String[] args) {
+        int DOWNLOADER = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(downloader));
+        int PARSER = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(parser));
+        int MEMORIZER = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(memorizer));
+        int NOTIFICATIOR = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(notificatior));
         // 1. 下载模块
-        System.out.println("请输入要进行解析的网站:");
-        String url = new Scanner(System.in).nextLine();
-        JsoupDownloader jsoupDownloader = new JsoupDownloader();
-        Document doc = jsoupDownloader.download("http://bbs.xmfish.com/thread-htm-fid-55.html");
+        switch (DOWNLOADER){
+            case 1:
+                System.out.println("请输入要进行解析的网站:");
+                String url = new Scanner(System.in).nextLine();
+                JsoupDownloader jsoupDownloader = new JsoupDownloader();
+                Document doc = jsoupDownloader.download(url);
+                break;
+            default:
+                System.out.println("暂无此操作");
+        }
+
 
         // 2. 解析模块
         System.out.println("请输入要查找的关键字:");
