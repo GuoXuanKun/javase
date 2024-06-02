@@ -89,6 +89,13 @@ public class WebsiteAnalysis {
         }
 
         // 4. 通知模块
+        switch (NOTIFICATIOR){
+            case 1:
+                notificatiorModuleMode1();
+                break;
+            default:
+                System.out.println("暂无此操作");
+        }
 
     }
     public static void downloadModuleMode1(){
