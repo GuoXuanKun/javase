@@ -47,6 +47,10 @@ public class WebsiteAnalysis {
     public static String memorizer;
     public static String notificatior;
 
+    // 解析要用的信息
+    public static Document doc;
+    public static String content;
+
     public static void main(String[] args) {
         try {
             STUDENTS_PROPERTIES.load(new FileInputStream(FILE_NAME));
@@ -63,7 +67,7 @@ public class WebsiteAnalysis {
                 System.out.println("请输入要进行解析的网站:");
                 String url = new Scanner(System.in).nextLine();
                 JsoupDownloader jsoupDownloader = new JsoupDownloader();
-                Document doc = jsoupDownloader.download(url);
+                doc = jsoupDownloader.download(url);
                 break;
             default:
                 System.out.println("暂无此操作");
@@ -74,7 +78,7 @@ public class WebsiteAnalysis {
         System.out.println("请输入要查找的关键字:");
         String key = new Scanner(System.in).nextLine();
         JsoupParser jsoupParser = new JsoupParser();
-        String content = jsoupParser.analysis(doc, key);
+         content = jsoupParser.analysis(doc, key);
 
         // 3. 存储模块
         PrintMemorizer printMemorizer = new PrintMemorizer();
