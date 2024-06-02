@@ -25,10 +25,10 @@ public class WebsiteAnalysis {
         System.out.println("请输入要查找的关键字:");
         String key = new Scanner(System.in).nextLine();
         JsoupParser jsoupParser = new JsoupParser();
-        String string = jsoupParser.analysis(doc,key);
+        String content = jsoupParser.analysis(doc,key);
 
         // 3. 存储模块
         PrintMemorizer printMemorizer = new PrintMemorizer();
-        printMemorizer.memorizer(string);
+        printMemorizer.memorizer(content);
     }
 }
