@@ -24,7 +24,7 @@ public class WebsiteAnalysis {
             根据网站的不同通过 配置文件( parser 的值) 来进行选择相应的下载器
             选择(未完待续):
                     1. Jsoup
-                    2. IO 流 (待做)
+                    2. IO流
 
         3. 存储模块:
                    通过 配置文件 ( memorizer 的值) 来进行选择相应的存储器
