@@ -26,6 +26,8 @@ public class WebsiteAnalysis {
         4. 通知模块:
                    通过 配置文件 来进行选择相应的通知器
         */
+
+    private static final String FILE_NAME = "src/day240530/practice/project/website_analysis.properties";
     public static void main(String[] args) {
         // 1. 下载模块
         System.out.println("请输入要进行解析的网站:");
