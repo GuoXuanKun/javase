@@ -39,7 +39,7 @@ public class WebsiteAnalysis {
 
         */
 
-    // 从配置文件获取信息
+    // 从配置文件需要的获取信息
     private static final String FILE_NAME = "src/day240530/practice/project/website_analysis.properties";
     private static final Properties STUDENTS_PROPERTIES = new Properties();
     public static String downloader;
@@ -52,6 +52,7 @@ public class WebsiteAnalysis {
     public static String content;
 
     public static void main(String[] args) {
+        // 接收配置文件的信息
         try {
             STUDENTS_PROPERTIES.load(new FileInputStream(FILE_NAME));
         } catch (IOException e) {
@@ -61,6 +62,7 @@ public class WebsiteAnalysis {
         int PARSER = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(parser));
         int MEMORIZER = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(memorizer));
         int NOTIFICATIOR = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(notificatior));
+
         // 1. 下载模块
         switch (DOWNLOADER){
             case 1:
