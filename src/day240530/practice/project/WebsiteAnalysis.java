@@ -63,41 +63,41 @@ public class WebsiteAnalysis {
         int MEMORIZER = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(memorizer));
         int NOTIFICATIOR = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(notificatior));
 
-        // 1. 下载模块
-        switch (DOWNLOADER){
-            case 1:
-                downloadModuleMode1();
-                break;
-            default:
-                System.out.println("暂无此操作");
-        }
-
-        // 2. 解析模块
-        switch (PARSER){
-            case 1:
-                parserForXiaMenXiaoYuWang();
-                break;
-            default:
-                System.out.println("暂无此操作");
-        }
-
-        // 3. 存储模块
-        switch (MEMORIZER){
-            case 1:
-                memorizerModuleMode1();
-                break;
-            default:
-                System.out.println("暂无此操作");
-        }
-
-        // 4. 通知模块
-        switch (NOTIFICATIOR){
-            case 1:
-                notificatiorModuleMode1();
-                break;
-            default:
-                System.out.println("暂无此操作");
-        }
+//        // 1. 下载模块
+//        switch (DOWNLOADER){
+//            case 1:
+//                downloadModuleMode1();
+//                break;
+//            default:
+//                System.out.println("暂无此操作");
+//        }
+//
+//        // 2. 解析模块
+//        switch (PARSER){
+//            case 1:
+//                parserForXiaMenXiaoYuWang();
+//                break;
+//            default:
+//                System.out.println("暂无此操作");
+//        }
+//
+//        // 3. 存储模块
+//        switch (MEMORIZER){
+//            case 1:
+//                memorizerModuleMode1();
+//                break;
+//            default:
+//                System.out.println("暂无此操作");
+//        }
+//
+//        // 4. 通知模块
+//        switch (NOTIFICATIOR){
+//            case 1:
+//                notificatiorModuleMode1();
+//                break;
+//            default:
+//                System.out.println("暂无此操作");
+//        }
 
     }
     public static void downloadModuleMode1(){
