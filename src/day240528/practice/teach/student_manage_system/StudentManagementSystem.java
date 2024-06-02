@@ -11,7 +11,7 @@ public class StudentManagementSystem {
     private static List<Student> students = new ArrayList<>();
 
     private static final Properties STUDENTS_PROPERTIES = new Properties();
-    private static final String FILE_NAME = "src/day240528/hw_sms_v2/students.properties";
+    private static final String FILE_NAME = "src/day240528/practice/teach/student_manage_system/students.properties";
 
     public static void main(String[] args) throws IOException {
         loadFromFile();
