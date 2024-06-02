@@ -72,10 +72,7 @@ public class WebsiteAnalysis {
 
 
         // 2. 解析模块
-        System.out.println("请输入要查找的关键字:");
-        String key = new Scanner(System.in).nextLine();
-        JsoupParserForXiaMenXiaoYuWang jsoupParser = new JsoupParserForXiaMenXiaoYuWang();
-         content = jsoupParser.analysis(doc, key);
+
 
         // 3. 存储模块
         PrintMemorizer printMemorizer = new PrintMemorizer();
@@ -91,5 +88,11 @@ public class WebsiteAnalysis {
         String url = new Scanner(System.in).nextLine();
         JsoupDownloader jsoupDownloader = new JsoupDownloader();
         doc = jsoupDownloader.download(url);
+    }
+    public static void parserForXiaMenXiaoYuWang(){
+        System.out.println("请输入要查找的关键字:");
+        String key = new Scanner(System.in).nextLine();
+        JsoupParserForXiaMenXiaoYuWang jsoupParser = new JsoupParserForXiaMenXiaoYuWang();
+        content = jsoupParser.analysis(doc, key);
     }
 }
