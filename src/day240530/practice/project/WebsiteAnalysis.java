@@ -3,7 +3,7 @@ package day240530.practice.project;
 import day240530.practice.project.downloader.JsoupDownloader;
 import day240530.practice.project.memorizer.PrintMemorizer;
 import day240530.practice.project.notificator.EmailNotificatior;
-import day240530.practice.project.parser.JsoupParser;
+import day240530.practice.project.parser.JsoupParserForXiaMenXiaoYuWang;
 import org.jsoup.nodes.Document;
 
 import java.io.FileInputStream;
@@ -64,10 +64,7 @@ public class WebsiteAnalysis {
         // 1. 下载模块
         switch (DOWNLOADER){
             case 1:
-                System.out.println("请输入要进行解析的网站:");
-                String url = new Scanner(System.in).nextLine();
-                JsoupDownloader jsoupDownloader = new JsoupDownloader();
-                doc = jsoupDownloader.download(url);
+                downloadModuleMode1();
                 break;
             default:
                 System.out.println("暂无此操作");
@@ -77,7 +74,7 @@ public class WebsiteAnalysis {
         // 2. 解析模块
         System.out.println("请输入要查找的关键字:");
         String key = new Scanner(System.in).nextLine();
-        JsoupParser jsoupParser = new JsoupParser();
+        JsoupParserForXiaMenXiaoYuWang jsoupParser = new JsoupParserForXiaMenXiaoYuWang();
          content = jsoupParser.analysis(doc, key);
 
         // 3. 存储模块
@@ -88,5 +85,11 @@ public class WebsiteAnalysis {
         System.out.println("请输入要发送的邮件地址:");
         String address = new Scanner(System.in).nextLine();
         new EmailNotificatior().notificator(address, content);
+    }
+    public static void downloadModuleMode1(){
+        System.out.println("请输入要进行解析的网站:");
+        String url = new Scanner(System.in).nextLine();
+        JsoupDownloader jsoupDownloader = new JsoupDownloader();
+        doc = jsoupDownloader.download(url);
     }
 }

@@ -4,7 +4,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class JsoupParser implements ParserForJsoup {
+public class JsoupParserForXiaMenXiaoYuWang implements ParserForJsoup {
     // 设置返回的字符串
     String result;
     @Override
