@@ -80,8 +80,7 @@ public class WebsiteAnalysis {
         }
 
         // 3. 存储模块
-        PrintMemorizer printMemorizer = new PrintMemorizer();
-        printMemorizer.memorizer(content);
+
 
         // 4. 通知模块
         System.out.println("请输入要发送的邮件地址:");
@@ -99,5 +98,9 @@ public class WebsiteAnalysis {
         String key = new Scanner(System.in).nextLine();
         JsoupParserForXiaMenXiaoYuWang jsoupParser = new JsoupParserForXiaMenXiaoYuWang();
         content = jsoupParser.analysis(doc, key);
+    }
+    public static void memorizerModuleMode1(){
+        PrintMemorizer printMemorizer = new PrintMemorizer();
+        printMemorizer.memorizer(content);
     }
 }
