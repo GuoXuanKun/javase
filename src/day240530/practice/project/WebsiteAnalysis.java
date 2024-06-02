@@ -28,6 +28,8 @@ public class WebsiteAnalysis {
         */
     public static void main(String[] args) {
         // 1. 下载模块
+        System.out.println("请输入要进行解析的网站:");
+        String url = new Scanner(System.in).nextLine();
         JsoupDownloader jsoupDownloader = new JsoupDownloader();
         Document doc = jsoupDownloader.download("http://bbs.xmfish.com/thread-htm-fid-55.html");
 
