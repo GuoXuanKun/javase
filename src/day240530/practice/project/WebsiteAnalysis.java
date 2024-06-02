@@ -80,7 +80,13 @@ public class WebsiteAnalysis {
         }
 
         // 3. 存储模块
-
+        switch (MEMORIZER){
+            case 1:
+                memorizerModuleMode1();
+                break;
+            default:
+                System.out.println("暂无此操作");
+        }
 
         // 4. 通知模块
 
