@@ -11,6 +11,12 @@ public class App {
         // 读取配置文件，获取整个程序需要全局配置
         Properties properties = loadFromConfiguration();
         System.out.println(properties);
+        // 根据配置文件中配置的 `下载器` 和 `url` 进行下载
+
+        Downloader downloader = new JsoupDownloader(); // 可以用 JsoupDownloader 也可以用 MyIODownloader
+        String html = downloader.download("http//xxx.com/xxx.html");
+        System.out.println(html);
+
         System.out.println("程序结束运行");
     }
 
