@@ -19,7 +19,7 @@ public class WebsiteAnalysis {
             下载模块目前可以分为:
             选择(未完待续):
                     1. Jsoup
-                    2. IO 流
+                    2. IO 流 (待做) todo
 
         2. 解析模块 (Parser):
             注意 : 这里选择的要解析的网站 (下载的方式可以不同 但是 返回的 Document 对象或许可能是一样的(那么每个网站的解析就一样) 目前先这么写 不行再换方式)
@@ -31,7 +31,7 @@ public class WebsiteAnalysis {
                    通过 配置文件 ( memorizer 的值) 来进行选择相应的存储器
                    选择(未完待续):
                     1. 打印的方式
-                    2. IO流 : content 关键字来存
+                    2. IO流 : content.txt 来存
 
         4. 通知模块 (Notificatior):
                    通过 配置文件 ( notificatior 的值) 来进行选择相应的通知器
