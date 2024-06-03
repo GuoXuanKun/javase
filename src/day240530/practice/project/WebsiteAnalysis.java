@@ -112,8 +112,14 @@ public class WebsiteAnalysis {
     }
 
     public static void parserForXiaMenXiaoYuWang() {
+        Properties properties = new Properties();
+        try {
+            properties.load(new FileInputStream(FILE_NAME));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println("请输入要查找的关键字:");
-        String key = new Scanner(System.in).nextLine();
+        String key = properties.get("keyWord").toString();
         JsoupParserForXiaMenXiaoYuWang jsoupParser = new JsoupParserForXiaMenXiaoYuWang();
         content = jsoupParser.analysis(doc, key);
     }
