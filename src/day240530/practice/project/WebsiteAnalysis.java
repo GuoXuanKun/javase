@@ -121,14 +121,8 @@ public class WebsiteAnalysis {
     }
     // 下载模块
     public static void downloadModuleMode1() {
-        Properties properties = new Properties();
-        try {
-            properties.load(new FileInputStream(FILE_NAME));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
         JsoupDownloader jsoupDownloader = new JsoupDownloader();
-        doc = jsoupDownloader.download(properties.get("url").toString());
+        doc = jsoupDownloader.download(getDemandInformation("url"));
     }
 
     // 解析模块
