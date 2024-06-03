@@ -42,7 +42,7 @@ public class App {
 
     private static Properties loadFromConfiguration() {
         Properties properties = new Properties();
-        String fileName = "src/day240602/app/config.properties";
+        String fileName = "src/day240603/practice/teach/app/config.properties";
         try {
             properties.load(new FileReader(fileName));
         } catch (FileNotFoundException e) {
