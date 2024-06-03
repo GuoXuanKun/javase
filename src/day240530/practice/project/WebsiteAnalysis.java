@@ -42,6 +42,10 @@ public class WebsiteAnalysis {
     // 从配置文件需要的获取信息
     private static final String FILE_NAME = "src/day240530/practice/project/website_analysis.properties";
     private static final Properties STUDENTS_PROPERTIES = new Properties();
+    static int DOWNLOADER;
+    static int PARSER;
+    static int MEMORIZER;
+    static int NOTIFICATIOR;
 
     // 解析要用的信息
     public static Document doc;
@@ -49,15 +53,8 @@ public class WebsiteAnalysis {
 
     public static void main(String[] args) {
         // 接收配置文件的信息
-        try {
-            STUDENTS_PROPERTIES.load(new FileInputStream(FILE_NAME));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        int DOWNLOADER = Integer.parseInt(STUDENTS_PROPERTIES.get("downloader").toString());
-        int PARSER = Integer.parseInt(STUDENTS_PROPERTIES.get("parser").toString());
-        int MEMORIZER = Integer.parseInt(STUDENTS_PROPERTIES.get("memorizer").toString());
-        int NOTIFICATIOR = Integer.parseInt(STUDENTS_PROPERTIES.get("notificatior").toString());
+        acceptInformation();
+
         // 1. 下载模块
         switch (DOWNLOADER) {
             case 1:
@@ -94,6 +91,18 @@ public class WebsiteAnalysis {
                 System.out.println("暂无此操作");
         }
 
+    }
+
+    public static void acceptInformation() {
+        try {
+            STUDENTS_PROPERTIES.load(new FileInputStream(FILE_NAME));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        DOWNLOADER = Integer.parseInt(STUDENTS_PROPERTIES.get("downloader").toString());
+        PARSER = Integer.parseInt(STUDENTS_PROPERTIES.get("parser").toString());
+        MEMORIZER = Integer.parseInt(STUDENTS_PROPERTIES.get("memorizer").toString());
+        NOTIFICATIOR = Integer.parseInt(STUDENTS_PROPERTIES.get("notificatior").toString());
     }
 
     public static void downloadModuleMode1() {
