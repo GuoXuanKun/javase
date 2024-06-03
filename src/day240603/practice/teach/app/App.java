@@ -1,5 +1,9 @@
 package day240603.practice.teach.app;
 
+import day240603.practice.teach.app.downloader.Downloader;
+import day240603.practice.teach.app.downloader.JsoupDownloader;
+import day240603.practice.teach.app.downloader.MyIODownloader;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;

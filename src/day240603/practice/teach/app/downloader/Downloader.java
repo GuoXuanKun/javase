@@ -1,4 +1,4 @@
-package day240603.practice.teach.app;
+package day240603.practice.teach.app.downloader;
 
 public abstract class Downloader {
 

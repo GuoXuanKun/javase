@@ -1,4 +1,6 @@
-package day240603.practice.teach.app;
+package day240603.practice.teach.app.downloader;
+
+import day240603.practice.teach.app.downloader.Downloader;
 
 public class JsoupDownloader extends Downloader {
     @Override
