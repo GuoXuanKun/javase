@@ -5,4 +5,8 @@ public class MyIODownloader extends Downloader {
     public String download(String url) {
         return "即将下载[" + url + "]的源码";
     }
+
+    public MyIODownloader() {
+        System.out.println("MyIODownloader.MyIODownloader");
+    }
 }
