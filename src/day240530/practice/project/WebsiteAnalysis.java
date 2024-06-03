@@ -42,10 +42,6 @@ public class WebsiteAnalysis {
     // 从配置文件需要的获取信息
     private static final String FILE_NAME = "src/day240530/practice/project/website_analysis.properties";
     private static final Properties STUDENTS_PROPERTIES = new Properties();
-    public static String downloader;
-    public static String parser;
-    public static String memorizer;
-    public static String notificatior;
 
     // 解析要用的信息
     public static Document doc;
