@@ -31,7 +31,7 @@ public class WebsiteAnalysis {
                    通过 配置文件 ( memorizer 的值) 来进行选择相应的存储器
                    选择(未完待续):
                     1. 打印的方式
-                    2. IO流 : content 关键字来存 (待做)
+                    2. IO流 : content 关键字来存
 
         4. 通知模块 (Notificatior):
                    通过 配置文件 ( notificatior 的值) 来进行选择相应的通知器
@@ -97,6 +97,7 @@ public class WebsiteAnalysis {
 
     }
 
+    // 接受配置信息
     public static void acceptInformation() {
         try {
             STUDENTS_PROPERTIES.load(new FileInputStream(FILE_NAME));
@@ -109,6 +110,7 @@ public class WebsiteAnalysis {
         NOTIFICATIOR = Integer.parseInt(STUDENTS_PROPERTIES.get("notificatior").toString());
     }
 
+    // 下载模块
     public static void downloadModuleMode1() {
         Properties properties = new Properties();
         try {
@@ -120,6 +122,7 @@ public class WebsiteAnalysis {
         doc = jsoupDownloader.download(properties.get("url").toString());
     }
 
+    // 解析模块
     public static void parserForXiaMenXiaoYuWang() {
         Properties properties = new Properties();
         try {
@@ -133,6 +136,7 @@ public class WebsiteAnalysis {
         content = jsoupParser.analysis(doc, key);
     }
 
+    // 存储模块
     public static void memorizerModuleMode1() {
         PrintMemorizer printMemorizer = new PrintMemorizer();
         printMemorizer.memorizer(content);
@@ -142,6 +146,8 @@ public class WebsiteAnalysis {
         TextMeorizer textMeorizer = new TextMeorizer();
         textMeorizer.memorizer(content);
     }
+
+    // 通知模块
     public static void notificatiorModuleMode1() {
         Properties properties = new Properties();
         try {
