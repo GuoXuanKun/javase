@@ -97,7 +97,7 @@ public class WebsiteAnalysis {
 
     }
 
-    // 接受配置信息
+    // 接收配置信息
     public static void acceptInformation() {
         try {
             STUDENTS_PROPERTIES.load(new FileInputStream(FILE_NAME));
