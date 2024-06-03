@@ -2,6 +2,7 @@ package day240530.practice.project;
 
 import day240530.practice.project.downloader.JsoupDownloader;
 import day240530.practice.project.memorizer.PrintMemorizer;
+import day240530.practice.project.memorizer.TextMeorizer;
 import day240530.practice.project.notificator.EmailNotificatior;
 import day240530.practice.project.parser.JsoupParserForXiaMenXiaoYuWang;
 import org.jsoup.nodes.Document;
@@ -78,6 +79,9 @@ public class WebsiteAnalysis {
             case 1:
                 memorizerModuleMode1();
                 break;
+            case 2:
+                memorizerModuleMode2();
+                break;
             default:
                 System.out.println("暂无此操作");
         }
@@ -134,6 +138,10 @@ public class WebsiteAnalysis {
         printMemorizer.memorizer(content);
     }
 
+    public static void memorizerModuleMode2(){
+        TextMeorizer textMeorizer = new TextMeorizer();
+        textMeorizer.memorizer(content);
+    }
     public static void notificatiorModuleMode1() {
         Properties properties = new Properties();
         try {
