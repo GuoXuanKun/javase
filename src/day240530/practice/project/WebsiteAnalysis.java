@@ -63,7 +63,7 @@ public class WebsiteAnalysis {
         int MEMORIZER = Integer.parseInt(STUDENTS_PROPERTIES.get("memorizer").toString());
         int NOTIFICATIOR = Integer.parseInt(STUDENTS_PROPERTIES.get("notificatior").toString());
         // 1. 下载模块
-        switch (DOWNLOADER){
+        switch (DOWNLOADER) {
             case 1:
                 downloadModuleMode1();
                 break;
@@ -72,7 +72,7 @@ public class WebsiteAnalysis {
         }
 
         // 2. 解析模块
-        switch (PARSER){
+        switch (PARSER) {
             case 1:
                 parserForXiaMenXiaoYuWang();
                 break;
@@ -81,7 +81,7 @@ public class WebsiteAnalysis {
         }
 
         // 3. 存储模块
-        switch (MEMORIZER){
+        switch (MEMORIZER) {
             case 1:
                 memorizerModuleMode1();
                 break;
@@ -90,7 +90,7 @@ public class WebsiteAnalysis {
         }
 
         // 4. 通知模块
-        switch (NOTIFICATIOR){
+        switch (NOTIFICATIOR) {
             case 1:
                 notificatiorModuleMode1();
                 break;
@@ -99,23 +99,31 @@ public class WebsiteAnalysis {
         }
 
     }
-    public static void downloadModuleMode1(){
-        System.out.println("请输入要进行解析的网站:");
-        String url = new Scanner(System.in).nextLine();
+
+    public static void downloadModuleMode1() {
+        Properties properties = new Properties();
+        try {
+            properties.load(new FileInputStream(FILE_NAME));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         JsoupDownloader jsoupDownloader = new JsoupDownloader();
-        doc = jsoupDownloader.download(url);
+        doc = jsoupDownloader.download(properties.get("url").toString());
     }
-    public static void parserForXiaMenXiaoYuWang(){
+
+    public static void parserForXiaMenXiaoYuWang() {
         System.out.println("请输入要查找的关键字:");
         String key = new Scanner(System.in).nextLine();
         JsoupParserForXiaMenXiaoYuWang jsoupParser = new JsoupParserForXiaMenXiaoYuWang();
         content = jsoupParser.analysis(doc, key);
     }
-    public static void memorizerModuleMode1(){
+
+    public static void memorizerModuleMode1() {
         PrintMemorizer printMemorizer = new PrintMemorizer();
         printMemorizer.memorizer(content);
     }
-    public static void notificatiorModuleMode1(){
+
+    public static void notificatiorModuleMode1() {
         System.out.println("请输入要发送的邮件地址:");
         String address = new Scanner(System.in).nextLine();
         new EmailNotificatior().notificator(address, content);
