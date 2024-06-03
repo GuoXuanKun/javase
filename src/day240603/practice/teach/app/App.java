@@ -3,10 +3,13 @@ package day240603.practice.teach.app;
 import day240603.practice.teach.app.downloader.Downloader;
 import day240603.practice.teach.app.downloader.JsoupDownloader;
 import day240603.practice.teach.app.downloader.MyIODownloader;
+import day240603.practice.teach.app.parser.Parser;
+import day240603.practice.teach.app.parser.XmfishParser;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 
 public class App {
@@ -19,9 +22,24 @@ public class App {
 
         Downloader downloader = getDownloader(properties.getProperty("downloader")); // 可以用 JsoupDownloader 也可以用 MyIODownloader
         String html = downloader.download(properties.getProperty("url"));
-        System.out.println(html);
+        //System.out.println(html);
+
+        Parser parser = getParser(properties.getProperty("parser"));
+        List<String> titles = parser.parse(html);
+        System.out.println(titles);
 
         System.out.println("程序结束运行");
+    }
+
+    private static Parser getParser(String parser) {
+        Parser ps = null;
+        if ("xmfish".equals(parser)) {
+            ps = new XmfishParser();
+        } else {
+            System.out.println("不支持的 Parser");
+            System.exit(-1);
+        }
+        return ps;
     }
 
     private static Downloader getDownloader(String downloader) {
