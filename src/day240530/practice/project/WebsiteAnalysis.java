@@ -109,7 +109,16 @@ public class WebsiteAnalysis {
         MEMORIZER = Integer.parseInt(STUDENTS_PROPERTIES.get("memorizer").toString());
         NOTIFICATIOR = Integer.parseInt(STUDENTS_PROPERTIES.get("notificatior").toString());
     }
-
+    // 通过配置文件的关键字获取对应的值
+    public static String getDemandInformation(String String){
+        Properties properties = new Properties();
+        try {
+            properties.load(new FileInputStream(FILE_NAME));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return properties.get(String).toString();
+    }
     // 下载模块
     public static void downloadModuleMode1() {
         Properties properties = new Properties();
