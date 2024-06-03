@@ -118,7 +118,6 @@ public class WebsiteAnalysis {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("请输入要查找的关键字:");
         String key = properties.get("keyWord").toString();
         JsoupParserForXiaMenXiaoYuWang jsoupParser = new JsoupParserForXiaMenXiaoYuWang();
         content = jsoupParser.analysis(doc, key);
@@ -130,8 +129,13 @@ public class WebsiteAnalysis {
     }
 
     public static void notificatiorModuleMode1() {
-        System.out.println("请输入要发送的邮件地址:");
-        String address = new Scanner(System.in).nextLine();
+        Properties properties = new Properties();
+        try {
+            properties.load(new FileInputStream(FILE_NAME));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        String address = properties.get("address").toString();
         new EmailNotificatior().notificator(address, content);
     }
 }
