@@ -24,7 +24,7 @@ public class WebsiteAnalysis {
             注意 : 这里选择的要解析的网站 (下载的方式可以不同 但是 返回的 Document 对象或许可能是一样的(那么每个网站的解析就一样) 目前先这么写 不行再换方式)
             根据网站的不同通过 配置文件( parser 的值) 来进行选择相应的下载器
             选择(未完待续):
-                    1. 厦门小鱼网
+                    1. 厦门小鱼网 ("http://bbs.xmfish.com/thread-htm-fid-55.html")
 
         3. 存储模块 (Memorizer):
                    通过 配置文件 ( memorizer 的值) 来进行选择相应的存储器
@@ -58,46 +58,45 @@ public class WebsiteAnalysis {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        int DOWNLOADER = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(downloader));
-        int PARSER = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(parser));
-        int MEMORIZER = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(memorizer));
-        int NOTIFICATIOR = Integer.getInteger(STUDENTS_PROPERTIES.getProperty(notificatior));
+        int DOWNLOADER = Integer.parseInt(STUDENTS_PROPERTIES.get("downloader").toString());
+        int PARSER = Integer.parseInt(STUDENTS_PROPERTIES.get("parser").toString());
+        int MEMORIZER = Integer.parseInt(STUDENTS_PROPERTIES.get("memorizer").toString());
+        int NOTIFICATIOR = Integer.parseInt(STUDENTS_PROPERTIES.get("notificatior").toString());
+        // 1. 下载模块
+        switch (DOWNLOADER){
+            case 1:
+                downloadModuleMode1();
+                break;
+            default:
+                System.out.println("暂无此操作");
+        }
 
-//        // 1. 下载模块
-//        switch (DOWNLOADER){
-//            case 1:
-//                downloadModuleMode1();
-//                break;
-//            default:
-//                System.out.println("暂无此操作");
-//        }
-//
-//        // 2. 解析模块
-//        switch (PARSER){
-//            case 1:
-//                parserForXiaMenXiaoYuWang();
-//                break;
-//            default:
-//                System.out.println("暂无此操作");
-//        }
-//
-//        // 3. 存储模块
-//        switch (MEMORIZER){
-//            case 1:
-//                memorizerModuleMode1();
-//                break;
-//            default:
-//                System.out.println("暂无此操作");
-//        }
-//
-//        // 4. 通知模块
-//        switch (NOTIFICATIOR){
-//            case 1:
-//                notificatiorModuleMode1();
-//                break;
-//            default:
-//                System.out.println("暂无此操作");
-//        }
+        // 2. 解析模块
+        switch (PARSER){
+            case 1:
+                parserForXiaMenXiaoYuWang();
+                break;
+            default:
+                System.out.println("暂无此操作");
+        }
+
+        // 3. 存储模块
+        switch (MEMORIZER){
+            case 1:
+                memorizerModuleMode1();
+                break;
+            default:
+                System.out.println("暂无此操作");
+        }
+
+        // 4. 通知模块
+        switch (NOTIFICATIOR){
+            case 1:
+                notificatiorModuleMode1();
+                break;
+            default:
+                System.out.println("暂无此操作");
+        }
 
     }
     public static void downloadModuleMode1(){
