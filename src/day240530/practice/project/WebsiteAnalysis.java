@@ -152,13 +152,7 @@ public class WebsiteAnalysis {
 
     // 通知模块
     public static void notificatiorModuleMode1() {
-        Properties properties = new Properties();
-        try {
-            properties.load(new FileInputStream(FILE_NAME));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        String address = properties.get("address").toString();
+        String address = getDemandInformation("address");
         System.out.println("将邮箱发送至 : " + address);
         new EmailNotificatior().notificator(address, content);
     }
