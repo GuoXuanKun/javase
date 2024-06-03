@@ -156,7 +156,7 @@ public class WebsiteAnalysis {
             throw new RuntimeException(e);
         }
         String address = properties.get("address").toString();
-        System.out.println(address);
+        System.out.println("将邮箱发送至 : " + address);
         new EmailNotificatior().notificator(address, content);
     }
 }
