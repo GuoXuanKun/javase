@@ -55,11 +55,11 @@ public class JsoupParserForXiaMenXiaoYuWang implements ParserForJsoup {
             */
             // 关键词判断
             if (title.contains(target)) {
-                System.out.println("命中了你设置的关键词：" + target);
-                System.out.println("标题：" + title);
-                System.out.println("链接：" + url);
-                System.out.println("发布时间：" + createdAt);
-                System.out.println("~~~ --- ~~~");
+//                System.out.println("命中了你设置的关键词：" + target);
+//                System.out.println("标题：" + title);
+//                System.out.println("链接：" + url);
+//                System.out.println("发布时间：" + createdAt);
+//                System.out.println("~~~ --- ~~~");
                 String msg = "发现了你感兴趣的内容：" + target + "<br>" +
                         "标题：" + title + "<br>" +
                         "链接：" + url + "<br>" +
