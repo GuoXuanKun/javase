@@ -5,12 +5,14 @@ import day240603.practice.teach.app.downloader.JsoupDownloader;
 import day240603.practice.teach.app.downloader.MyIODownloader;
 import day240603.practice.teach.app.dto.CustomResult;
 import day240603.practice.teach.app.notificator.ConsoleNotificator;
+import day240603.practice.teach.app.notificator.EmailNotificator;
 import day240603.practice.teach.app.notificator.Notificator;
 import day240603.practice.teach.app.parser.Parser;
 import day240603.practice.teach.app.parser.XmfishParser;
 import day240603.practice.teach.app.repository.ConsoleRepository;
 import day240603.practice.teach.app.repository.FileRepository;
 import day240603.practice.teach.app.repository.Repository;
+import day240603.practice.teach.app.util.MyEmailUtil;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -25,6 +27,8 @@ public class App {
         System.out.println("程序开始运行...");
         // 读取配置文件，获取整个程序需要全局配置
         Properties properties = loadFromConfiguration();
+        MyEmailUtil.FROM = properties.getProperty("from", "admin@xxx.com");
+        MyEmailUtil.SECRET_TOKEN = properties.getProperty("secret_token");
         System.out.println(properties);
         // 根据配置文件中配置的 `下载器` 和 `url` 进行下载
 
