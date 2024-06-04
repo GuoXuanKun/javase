@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class CustomObj implements Serializable {
     String name;
     int value;
+    int id;
 
     public CustomObj(String name, int value) {
         this.name = name;
