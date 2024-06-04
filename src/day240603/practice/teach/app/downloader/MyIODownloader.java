@@ -17,6 +17,7 @@ public class MyIODownloader extends Downloader {
         try {
             URL oracle = new URL(url);
             URLConnection uc = oracle.openConnection();
+            uc.setRequestProperty("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36");
             in = new BufferedReader(new InputStreamReader(uc.getInputStream(), Charset.forName("gbk")));
             String inputLine;
             while ((inputLine = in.readLine()) != null) {
