@@ -7,7 +7,9 @@ public class CustomObj implements Serializable {
     // ANY-ACCESS-MODIFIER
     private static final long serialVersionUID = 998800L;
 
-    String name;
+    // lasting for only a short time; temporary 短暂的，转瞬即逝的; 暂时的
+    // someone who lives only temporarily in a place 暂住者
+    transient String name;
     int value;
     MyObj myObj;
 
