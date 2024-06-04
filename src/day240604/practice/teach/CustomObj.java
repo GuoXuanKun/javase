@@ -1,6 +1,8 @@
 package day240604.practice.teach;
 
-public class CustomObj {
+import java.io.Serializable;
+
+public class CustomObj implements Serializable {
     String name;
     int value;
 
