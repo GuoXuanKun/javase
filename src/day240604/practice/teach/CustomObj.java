@@ -9,11 +9,12 @@ public class CustomObj implements Serializable {
 
     String name;
     int value;
-    //int id;
+    MyObj myObj;
 
-    public CustomObj(String name, int value) {
+    public CustomObj(String name, int value, MyObj myObj) {
         this.name = name;
         this.value = value;
+        this.myObj = myObj;
     }
 
     @Override
@@ -21,6 +22,7 @@ public class CustomObj implements Serializable {
         return "CustomObj{" +
                 "name='" + name + '\'' +
                 ", value=" + value +
+                ", myObj=" + myObj +
                 '}';
     }
 }

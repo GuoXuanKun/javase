@@ -14,7 +14,7 @@ public class ObjectStreamCustomObj {
         ObjectOutputStream oos = null;
         try {
             oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME));
-            oos.writeObject(new CustomObj("x1", 1));
+            oos.writeObject(new CustomObj("x1", 1, new MyObj()));
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
@@ -48,3 +48,4 @@ public class ObjectStreamCustomObj {
         }
     }
 }
+
