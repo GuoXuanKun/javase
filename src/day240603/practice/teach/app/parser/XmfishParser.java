@@ -1,5 +1,6 @@
 package day240603.practice.teach.app.parser;
 
+import day240603.practice.teach.app.dto.CustomResult;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -10,9 +11,9 @@ import java.util.List;
 
 public class XmfishParser implements Parser {
     @Override
-    public List<String> parse(String html) {
+    public List<CustomResult> parse(String html) {
         Document document = Jsoup.parse(html);
-        List<String> titles = new ArrayList<>();
+        List<CustomResult> results = new ArrayList<>();
         Elements es = document.select("tbody[id=threadlist]").select("tr[class=tr3]");
         for (Element e : es) {
             // 过滤公告、置顶
@@ -23,12 +24,11 @@ public class XmfishParser implements Parser {
 
             Element titleElement = e.select("td.subject a.subject_t").first();
             String title = titleElement.text();
-            titles.add(title);
-            //String url = titleElement.attr("href");
-            //url = "http://bbs.xmfish.com/" + url;
-            //String createdAt = e.select("td.author").first().select("p").text();
+            String url = titleElement.attr("href");
+            url = "http://bbs.xmfish.com/" + url;
+            String createdAt = e.select("td.author").first().select("p").text();
+            results.add(new CustomResult(title, url, createdAt));
         }
-        return titles;
+        return results;
     }
 }
-

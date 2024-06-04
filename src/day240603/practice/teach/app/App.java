@@ -3,6 +3,7 @@ package day240603.practice.teach.app;
 import day240603.practice.teach.app.downloader.Downloader;
 import day240603.practice.teach.app.downloader.JsoupDownloader;
 import day240603.practice.teach.app.downloader.MyIODownloader;
+import day240603.practice.teach.app.dto.CustomResult;
 import day240603.practice.teach.app.parser.Parser;
 import day240603.practice.teach.app.parser.XmfishParser;
 
@@ -25,8 +26,8 @@ public class App {
         //System.out.println(html);
 
         Parser parser = getParser(properties.getProperty("parser"));
-        List<String> titles = parser.parse(html);
-        System.out.println(titles);
+        List<CustomResult> results = parser.parse(html);
+        System.out.println(results);
 
         System.out.println("程序结束运行");
     }
@@ -60,7 +61,7 @@ public class App {
 
     private static Properties loadFromConfiguration() {
         Properties properties = new Properties();
-        String fileName = "src/day240603/practice/teach/app/config.properties";
+        String fileName = "src/day240603/app/config.properties";
         try {
             properties.load(new FileReader(fileName));
         } catch (FileNotFoundException e) {
