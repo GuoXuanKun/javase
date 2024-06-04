@@ -23,8 +23,10 @@
 - ![img_7.png](img_7.png)
 
 ### ObjectStream
-- 只要是想写出去的类都要实现序列化接口 (Serializable)
-  - ![img_9.png](img_9.png)
+- 序列化接口 (Serializable)
+  - 类要想读出来写出去 都要实现序列化接口
+  - 只要是想写出去的类都要实现序列化接口 (Serializable)
+    - ![img_9.png](img_9.png)
 - 定义版本 
   -  serialVersionUID
   - 不写 , 如果后续要读的对象做了更改 就读不出来了(会报错)
