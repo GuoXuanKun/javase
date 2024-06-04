@@ -6,7 +6,7 @@ public class ObjectStreamCustomObj {
     static final String FILE_NAME = "src/day240604/practice/teach/obj.txt";
 
     public static void main(String[] args) {
-//        out();
+        out();
         in();
     }
 
