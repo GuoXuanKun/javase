@@ -1,6 +1,8 @@
 package day240604.practice.teach;
 
-public class MyObj {
+import java.io.Serializable;
+
+public class MyObj implements Serializable {
     String name;
     int id;
 }
