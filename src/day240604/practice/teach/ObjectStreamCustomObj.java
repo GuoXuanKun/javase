@@ -35,6 +35,7 @@ public class ObjectStreamCustomObj {
             CustomObj o = (CustomObj) oos.readObject();
             System.out.println(o);
         } catch (IOException | ClassNotFoundException e) {
+            // 另一种 catch 合并写法：`Collapse 'catch' blocks`
             throw new RuntimeException(e);
         } finally {
             try {
@@ -47,4 +48,3 @@ public class ObjectStreamCustomObj {
         }
     }
 }
-
