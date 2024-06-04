@@ -6,6 +6,9 @@ import day240603.practice.teach.app.downloader.MyIODownloader;
 import day240603.practice.teach.app.dto.CustomResult;
 import day240603.practice.teach.app.parser.Parser;
 import day240603.practice.teach.app.parser.XmfishParser;
+import day240603.practice.teach.app.repository.ConsoleRepository;
+import day240603.practice.teach.app.repository.FileRepository;
+import day240603.practice.teach.app.repository.Repository;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -27,9 +30,26 @@ public class App {
 
         Parser parser = getParser(properties.getProperty("parser"));
         List<CustomResult> results = parser.parse(html);
-        System.out.println(results);
+        //System.out.println(results);
+
+        Repository repository = getRepository(properties.getProperty("repository"));
+        repository.store(results);
+        System.out.println("Repository - 已输出到指定位置");
 
         System.out.println("程序结束运行");
+    }
+
+    private static Repository getRepository(String repository) {
+        Repository r = null;
+        if ("console".equalsIgnoreCase(repository)) {
+            r = new ConsoleRepository();
+        } else if ("file".equalsIgnoreCase(repository)) {
+            r = new FileRepository();
+        } else {
+            System.out.println("不支持的 Repository");
+            System.exit(-1);
+        }
+        return r;
     }
 
     private static Parser getParser(String parser) {
@@ -61,7 +81,7 @@ public class App {
 
     private static Properties loadFromConfiguration() {
         Properties properties = new Properties();
-        String fileName = "src/day240603/app/config.properties";
+        String fileName = "src/day240603/practice/teach/app/config.properties";
         try {
             properties.load(new FileReader(fileName));
         } catch (FileNotFoundException e) {
