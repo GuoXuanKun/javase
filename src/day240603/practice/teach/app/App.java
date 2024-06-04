@@ -4,6 +4,8 @@ import day240603.practice.teach.app.downloader.Downloader;
 import day240603.practice.teach.app.downloader.JsoupDownloader;
 import day240603.practice.teach.app.downloader.MyIODownloader;
 import day240603.practice.teach.app.dto.CustomResult;
+import day240603.practice.teach.app.notificator.ConsoleNotificator;
+import day240603.practice.teach.app.notificator.Notificator;
 import day240603.practice.teach.app.parser.Parser;
 import day240603.practice.teach.app.parser.XmfishParser;
 import day240603.practice.teach.app.repository.ConsoleRepository;
@@ -13,8 +15,10 @@ import day240603.practice.teach.app.repository.Repository;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) {
@@ -36,7 +40,52 @@ public class App {
         repository.store(results);
         System.out.println("Repository - 已输出到指定位置");
 
+        Notificator notificator = getNotificator(properties.getProperty("notificator"));
+        String to = properties.getProperty("to");
+        String msg = getMsgFromResult(results, properties.getProperty("keywords"));
+        if (!msg.isBlank()) {
+            notificator.send(to, msg);
+            System.out.println("成功给【" + to + "】发送了通知");
+        } else {
+            System.out.println("没有命中任何关键词，无序发送通知");
+        }
+
         System.out.println("程序结束运行");
+    }
+
+    private static String getMsgFromResult(List<CustomResult> results, String keywords) {
+        String[] kws = keywords.split(",");
+        List<CustomResult> hitResults = new ArrayList<>();
+        StringBuilder sb = new StringBuilder();
+        for (String kw : kws) {
+            boolean hit = false;
+            for (CustomResult cr : results) {
+                if (cr.getTitle().contains(kw)) {
+                    hit = true;
+                    hitResults.add(cr);
+                }
+            }
+            if (hit) {
+                sb.append("*** 命中关键词【").append(kw).append("】").append("\n");
+                for (CustomResult hitCr : hitResults) {
+                    sb.append(hitCr.getTitle()).append("\n").append(hitCr.getUrl()).append("\n").append(hitCr.getCreatedAt()).append("\n");
+                }
+            }
+        }
+        return sb.toString();
+    }
+
+    private static Notificator getNotificator(String notificator) {
+        Notificator nf = null;
+        if ("console".equalsIgnoreCase(notificator)) {
+            nf = new ConsoleNotificator();
+        } else if ("email".equalsIgnoreCase(notificator)) {
+            nf = new EmailNotificator();
+        } else {
+            System.out.println("不支持的 Notificator");
+            System.exit(-1);
+        }
+        return nf;
     }
 
     private static Repository getRepository(String repository) {
