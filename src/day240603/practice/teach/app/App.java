@@ -26,10 +26,10 @@ public class App {
     public static final Properties PROPERTIES;
 
     static {
-        // 读取配置文件，获取整个程序需要全局配置
+        // 读取配置文件，获取整个程序需要的全局配置信息
         PROPERTIES = loadFromConfiguration();
-        System.out.println(PROPERTIES);
 
+        // 初始化
         init();
     }
 
@@ -44,19 +44,27 @@ public class App {
         System.out.println("程序开始运行...");
 
         // 下载
-        String html = Downloader.getInstance().download(PROPERTIES.getProperty("url"));
+        String url = PROPERTIES.getProperty("url");
+        System.out.println("Downloader - 正在下载...：" + url);
+        String html = Downloader.getInstance().download(url);
         //System.out.println(html);
+        System.out.println("Downloader - 下载完成！");
 
         // 解析
+        System.out.println("Parser - 正在解析...");
         List<CustomResult> results = Parser.getInstance().parse(html);
         //System.out.println(results);
+        System.out.println("Parser - 解析完成！(共获取到" + results.size() + "条数据)");
 
         // 存储
+        System.out.println("Repository - 正在存储...");
         Repository.getInstance().store(results);
-        System.out.println("Repository - 已输出到指定位置");
+        System.out.println("Repository - 存储完成！");
 
         // 通知
+        System.out.println("Notificator - 正在通知...");
         Notificator.notice(results);
+        System.out.println("Notificator - 通知完成！");
 
         // 结束
         System.out.println("程序结束运行");
@@ -74,6 +82,7 @@ public class App {
             System.out.println("未知的错误！");
             throw new RuntimeException(e);
         }
+        System.out.println(properties);
         System.out.println("配置文件读取成功");
         return properties;
     }
