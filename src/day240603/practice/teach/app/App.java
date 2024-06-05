@@ -24,30 +24,30 @@ import java.util.*;
 
 public class App {
     // 读取配置文件，获取整个程序需要全局配置
-    public static final Properties properties = loadFromConfiguration();
+    public static final Properties PROPERTIES = loadFromConfiguration();
 
     public static void main(String[] args) {
         System.out.println("程序开始运行...");
-        MyEmailUtil.FROM = properties.getProperty("from", "admin@xxx.com");
-        MyEmailUtil.SECRET_TOKEN = properties.getProperty("secret_token");
-        System.out.println(properties);
+        MyEmailUtil.FROM = PROPERTIES.getProperty("from", "admin@xxx.com");
+        MyEmailUtil.SECRET_TOKEN = PROPERTIES.getProperty("secret_token");
+        System.out.println(PROPERTIES);
         // 根据配置文件中配置的 `下载器` 和 `url` 进行下载
 
-        Downloader downloader = getDownloader(properties.getProperty("downloader")); // 可以用 JsoupDownloader 也可以用 MyIODownloader
-        String html = downloader.download(properties.getProperty("url"));
+        Downloader downloader = getDownloader(PROPERTIES.getProperty("downloader")); // 可以用 JsoupDownloader 也可以用 MyIODownloader
+        String html = downloader.download(PROPERTIES.getProperty("url"));
         //System.out.println(html);
 
-        Parser parser = getParser(properties.getProperty("parser"));
+        Parser parser = getParser(PROPERTIES.getProperty("parser"));
         List<CustomResult> results = parser.parse(html);
         //System.out.println(results);
 
-        Repository repository = getRepository(properties.getProperty("repository"));
+        Repository repository = getRepository(PROPERTIES.getProperty("repository"));
         repository.store(results);
         System.out.println("Repository - 已输出到指定位置");
 
-        Notificator notificator = getNotificator(properties.getProperty("notificator"));
-        String to = properties.getProperty("to");
-        String msg = getMsgFromResult(results, properties.getProperty("keywords"));
+        Notificator notificator = getNotificator(PROPERTIES.getProperty("notificator"));
+        String to = PROPERTIES.getProperty("to");
+        String msg = getMsgFromResult(results, PROPERTIES.getProperty("keywords"));
         if (!msg.isBlank()) {
             notificator.send(to, msg);
             System.out.println("成功给【" + to + "】发送了通知");
