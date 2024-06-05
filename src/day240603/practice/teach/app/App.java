@@ -71,7 +71,7 @@ public class App {
             if (!hitResults.isEmpty()) {
                 sb.append("*** 命中关键词【").append(kw).append("】").append(hitResults.size()).append("条\n");
                 for (CustomResult hitCr : hitResults) {
-                    sb.append(hitCr.getTitle()).append("\n").append(hitCr.getUrl()).append("\n").append(hitCr.getCreatedAt()).append("\n");
+                    sb.append(hitCr.getTitle()).append("\n").append(hitCr.getUrl()).append("\n").append(hitCr.getCreatedAt()).append("\n").append(hitCr.getUpdatedAt()).append("\n");
                 }
             }
         }

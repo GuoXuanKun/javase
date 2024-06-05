@@ -4,11 +4,13 @@ public class CustomResult {
     private String title;
     private String url;
     private String createdAt;
+    private String updatedAt;
 
-    public CustomResult(String title, String url, String createdAt) {
+    public CustomResult(String title, String url, String createdAt, String updatedAt) {
         this.title = title;
         this.url = url;
         this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public String getTitle() {
@@ -35,12 +37,21 @@ public class CustomResult {
         this.createdAt = createdAt;
     }
 
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
     @Override
     public String toString() {
         return "CustomResult{" +
                 "title='" + title + '\'' +
                 ", url='" + url + '\'' +
                 ", createdAt='" + createdAt + '\'' +
+                ", updatedAt='" + updatedAt + '\'' +
                 '}';
     }
 }

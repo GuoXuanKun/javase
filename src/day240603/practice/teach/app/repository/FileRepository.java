@@ -18,6 +18,7 @@ public class FileRepository implements Repository {
                 pw.println(cr.getTitle());
                 pw.println(cr.getUrl());
                 pw.println(cr.getCreatedAt());
+                pw.println(cr.getUpdatedAt());
                 pw.println("--- --- ---");
             }
         } catch (IOException e) {

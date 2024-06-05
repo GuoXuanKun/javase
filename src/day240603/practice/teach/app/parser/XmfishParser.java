@@ -27,7 +27,8 @@ public class XmfishParser implements Parser {
             String url = titleElement.attr("href");
             url = "http://bbs.xmfish.com/" + url;
             String createdAt = e.select("td.author").first().select("p").text();
-            results.add(new CustomResult(title, url, createdAt));
+            String updatedAt = e.select("td.author").eq(1).select("p > a").attr("title");
+            results.add(new CustomResult(title, url, createdAt, updatedAt));
         }
         return results;
     }

@@ -11,6 +11,7 @@ public class ConsoleRepository implements Repository{
             System.out.println(cr.getTitle());
             System.out.println(cr.getUrl());
             System.out.println(cr.getCreatedAt());
+            System.out.println(cr.getUpdatedAt());
             System.out.println("--- --- ---");
         }
     }
