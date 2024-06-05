@@ -72,7 +72,7 @@ public class App {
 
     private static Properties loadFromConfiguration() {
         Properties properties = new Properties();
-        String fileName = "src/day240603/practice/teach/app/config.properties";
+        String fileName = "src/day240603/practice/teach/app/config-local.properties";
         try {
             properties.load(new FileReader(fileName));
         } catch (FileNotFoundException e) {
@@ -82,7 +82,7 @@ public class App {
             System.out.println("未知的错误！");
             throw new RuntimeException(e);
         }
-        System.out.println(properties);
+        //System.out.println(properties);
         System.out.println("配置文件读取成功");
         return properties;
     }

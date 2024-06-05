@@ -27,7 +27,7 @@ public interface Notificator {
         if (!msg.isBlank()) {
             String to = PROPERTIES.getProperty("to");
             Notificator.getInstance().send(to, msg);
-            System.out.println("成功给【" + to + "】发送了通知");
+            //System.out.println("成功给【" + to + "】发送了通知");
         } else {
             System.out.println("没有命中任何关键词，无需发送通知");
         }
