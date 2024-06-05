@@ -40,31 +40,32 @@ public class App {
     }
 
     public static void main(String[] args) {
+        // 开始
         System.out.println("程序开始运行...");
-        // 根据配置文件中配置的 `下载器` 和 `url` 进行下载
 
-        Downloader downloader = getDownloader();
-        String html = downloader.download(PROPERTIES.getProperty("url"));
+        // 下载
+        String html = Downloader.getInstance().download(PROPERTIES.getProperty("url"));
         //System.out.println(html);
 
-        Parser parser = getParser();
-        List<CustomResult> results = parser.parse(html);
+        // 解析
+        List<CustomResult> results = Parser.getInstance().parse(html);
         //System.out.println(results);
 
-        Repository repository = getRepository();
-        repository.store(results);
+        // 存储
+        Repository.getInstance().store(results);
         System.out.println("Repository - 已输出到指定位置");
 
-        Notificator notificator = getNotificator();
+        // 通知
         String to = PROPERTIES.getProperty("to");
         String msg = getMsgFromResult(results, PROPERTIES.getProperty("keywords"));
         if (!msg.isBlank()) {
-            notificator.send(to, msg);
+            Notificator.getInstance().send(to, msg);
             System.out.println("成功给【" + to + "】发送了通知");
         } else {
-            System.out.println("没有命中任何关键词，无序发送通知");
+            System.out.println("没有命中任何关键词，无需发送通知");
         }
 
+        // 结束
         System.out.println("程序结束运行");
     }
 
@@ -87,62 +88,6 @@ public class App {
             }
         }
         return sb.toString();
-    }
-
-    private static Notificator getNotificator() {
-        String notificator = PROPERTIES.getProperty("notificator");
-        Notificator nf = null;
-        if ("console".equalsIgnoreCase(notificator)) {
-            nf = new ConsoleNotificator();
-        } else if ("email".equalsIgnoreCase(notificator)) {
-            nf = new EmailNotificator();
-        } else {
-            System.out.println("不支持的 Notificator");
-            System.exit(-1);
-        }
-        return nf;
-    }
-
-    private static Repository getRepository() {
-        String repository = PROPERTIES.getProperty("repository");
-        Repository r = null;
-        if ("console".equalsIgnoreCase(repository)) {
-            r = new ConsoleRepository();
-        } else if ("file".equalsIgnoreCase(repository)) {
-            r = new FileRepository();
-        } else {
-            System.out.println("不支持的 Repository");
-            System.exit(-1);
-        }
-        return r;
-    }
-
-    private static Parser getParser() {
-        String parser = PROPERTIES.getProperty("parser");
-        Parser ps = null;
-        if ("xmfish".equals(parser)) {
-            ps = new XmfishParser();
-        } else {
-            System.out.println("不支持的 Parser");
-            System.exit(-1);
-        }
-        return ps;
-    }
-
-    private static Downloader getDownloader() {
-        Downloader dl;
-        switch (PROPERTIES.getProperty("downloader")) {
-            case "jsoup":
-                dl = new JsoupDownloader();
-                break;
-            case "io":
-                dl = new MyIODownloader();
-                break;
-            default:
-                dl = new JsoupDownloader();
-                break;
-        }
-        return dl;
     }
 
     private static Properties loadFromConfiguration() {
