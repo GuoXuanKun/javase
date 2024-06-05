@@ -23,10 +23,11 @@ import java.util.Properties;
 import java.util.*;
 
 public class App {
+    // 读取配置文件，获取整个程序需要全局配置
+    public static final Properties properties = loadFromConfiguration();
+
     public static void main(String[] args) {
         System.out.println("程序开始运行...");
-        // 读取配置文件，获取整个程序需要全局配置
-        Properties properties = loadFromConfiguration();
         MyEmailUtil.FROM = properties.getProperty("from", "admin@xxx.com");
         MyEmailUtil.SECRET_TOKEN = properties.getProperty("secret_token");
         System.out.println(properties);
