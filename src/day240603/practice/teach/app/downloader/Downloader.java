@@ -1,23 +1,22 @@
 package day240603.practice.teach.app.downloader;
 
+import java.lang.reflect.Constructor;
+
 import static day240603.practice.teach.app.App.PROPERTIES;
 
 public abstract class Downloader {
 
     public static Downloader getInstance() {
-        Downloader dl;
-        switch (PROPERTIES.getProperty("downloader")) {
-            case "jsoup":
-                dl = new JsoupDownloader();
-                break;
-            case "io":
-                dl = new MyIODownloader();
-                break;
-            default:
-                dl = new JsoupDownloader();
-                break;
+        Downloader downloader;
+        try {
+            Class<?> downloaderClass = Class.forName(PROPERTIES.getProperty("downloader"));
+            Constructor<?> declaredConstructor = downloaderClass.getDeclaredConstructor();
+            downloader = (Downloader)declaredConstructor.newInstance();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
-        return dl;
+
+        return downloader;
     }
 
     public abstract String download(String url);
