@@ -59,18 +59,17 @@ public class App {
 
     private static String getMsgFromResult(List<CustomResult> results, String keywords) {
         String[] kws = keywords.split(",");
-        List<CustomResult> hitResults = new ArrayList<>();
+        List<CustomResult> hitResults;
         StringBuilder sb = new StringBuilder();
         for (String kw : kws) {
-            boolean hit = false;
+            hitResults = new ArrayList<>();
             for (CustomResult cr : results) {
                 if (cr.getTitle().contains(kw)) {
-                    hit = true;
                     hitResults.add(cr);
                 }
             }
-            if (hit) {
-                sb.append("*** 命中关键词【").append(kw).append("】").append("\n");
+            if (!hitResults.isEmpty()) {
+                sb.append("*** 命中关键词【").append(kw).append("】").append(hitResults.size()).append("条\n");
                 for (CustomResult hitCr : hitResults) {
                     sb.append(hitCr.getTitle()).append("\n").append(hitCr.getUrl()).append("\n").append(hitCr.getCreatedAt()).append("\n");
                 }
