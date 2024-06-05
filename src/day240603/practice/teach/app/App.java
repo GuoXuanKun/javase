@@ -29,12 +29,18 @@ public class App {
         // 读取配置文件，获取整个程序需要全局配置
         PROPERTIES = loadFromConfiguration();
         System.out.println(PROPERTIES);
+
+        init();
+    }
+
+    private static void init() {
+        // Email 相关设置
+        MyEmailUtil.FROM = PROPERTIES.getProperty("from", "admin@xxx.com");
+        MyEmailUtil.SECRET_TOKEN = PROPERTIES.getProperty("secret_token");
     }
 
     public static void main(String[] args) {
         System.out.println("程序开始运行...");
-        MyEmailUtil.FROM = PROPERTIES.getProperty("from", "admin@xxx.com");
-        MyEmailUtil.SECRET_TOKEN = PROPERTIES.getProperty("secret_token");
         // 根据配置文件中配置的 `下载器` 和 `url` 进行下载
 
         Downloader downloader = getDownloader(PROPERTIES.getProperty("downloader")); // 可以用 JsoupDownloader 也可以用 MyIODownloader
