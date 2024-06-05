@@ -43,19 +43,19 @@ public class App {
         System.out.println("程序开始运行...");
         // 根据配置文件中配置的 `下载器` 和 `url` 进行下载
 
-        Downloader downloader = getDownloader(PROPERTIES.getProperty("downloader")); // 可以用 JsoupDownloader 也可以用 MyIODownloader
+        Downloader downloader = getDownloader();
         String html = downloader.download(PROPERTIES.getProperty("url"));
         //System.out.println(html);
 
-        Parser parser = getParser(PROPERTIES.getProperty("parser"));
+        Parser parser = getParser();
         List<CustomResult> results = parser.parse(html);
         //System.out.println(results);
 
-        Repository repository = getRepository(PROPERTIES.getProperty("repository"));
+        Repository repository = getRepository();
         repository.store(results);
         System.out.println("Repository - 已输出到指定位置");
 
-        Notificator notificator = getNotificator(PROPERTIES.getProperty("notificator"));
+        Notificator notificator = getNotificator();
         String to = PROPERTIES.getProperty("to");
         String msg = getMsgFromResult(results, PROPERTIES.getProperty("keywords"));
         if (!msg.isBlank()) {
@@ -89,7 +89,8 @@ public class App {
         return sb.toString();
     }
 
-    private static Notificator getNotificator(String notificator) {
+    private static Notificator getNotificator() {
+        String notificator = PROPERTIES.getProperty("notificator");
         Notificator nf = null;
         if ("console".equalsIgnoreCase(notificator)) {
             nf = new ConsoleNotificator();
@@ -102,7 +103,8 @@ public class App {
         return nf;
     }
 
-    private static Repository getRepository(String repository) {
+    private static Repository getRepository() {
+        String repository = PROPERTIES.getProperty("repository");
         Repository r = null;
         if ("console".equalsIgnoreCase(repository)) {
             r = new ConsoleRepository();
@@ -115,7 +117,8 @@ public class App {
         return r;
     }
 
-    private static Parser getParser(String parser) {
+    private static Parser getParser() {
+        String parser = PROPERTIES.getProperty("parser");
         Parser ps = null;
         if ("xmfish".equals(parser)) {
             ps = new XmfishParser();
@@ -126,9 +129,9 @@ public class App {
         return ps;
     }
 
-    private static Downloader getDownloader(String downloader) {
+    private static Downloader getDownloader() {
         Downloader dl;
-        switch (downloader) {
+        switch (PROPERTIES.getProperty("downloader")) {
             case "jsoup":
                 dl = new JsoupDownloader();
                 break;
