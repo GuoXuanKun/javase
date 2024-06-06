@@ -10,5 +10,7 @@ public class DayTest {
     private static void whatExactlyIsIt() {
         Day thursday = Day.THURSDAY;
         System.out.println(thursday);
+        // All enums implicitly extend java.lang.Enum
+        System.out.println(thursday.toString());
     }
 }
