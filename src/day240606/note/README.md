@@ -18,4 +18,5 @@
 - 加 state ,behavior
   - ![img_4.png](img_4.png)
 - ![img_5.png](img_5.png)
+- ll enums implicitly extend java.lang.Enum
 ### 截图寄存处
