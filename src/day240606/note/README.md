@@ -19,4 +19,7 @@
   - ![img_4.png](img_4.png)
 - ![img_5.png](img_5.png)
 - ll enums implicitly extend java.lang.Enum
+- 方法
+  - valueOf(...)
+  - 
 ### 截图寄存处

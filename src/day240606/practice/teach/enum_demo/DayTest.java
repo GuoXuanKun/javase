@@ -21,6 +21,8 @@ public class DayTest {
             System.out.println(day);
             System.out.println(day.name() + "-" + day.ordinal());
         }
+        System.out.println("=== === ===");
+        System.out.println(Day.valueOf("FRIDAY"));
     }
 
     private static void useWithSwitch(Day day) {
