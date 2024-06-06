@@ -21,5 +21,11 @@
 - ll enums implicitly extend java.lang.Enum
 - 方法
   - valueOf(...)
-  - 
+
+### 多线程
+- Tread
+- ![img_7.png](img_7.png)
+- 锁
+  - synchronized
+
 ### 截图寄存处
