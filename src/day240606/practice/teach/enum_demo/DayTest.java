@@ -12,5 +12,11 @@ public class DayTest {
         System.out.println(thursday);
         // All enums implicitly extend java.lang.Enum
         System.out.println(thursday.toString());
+
+        System.out.println("=== === ===");
+        Day[] values = Day.values();
+        for (Day day : values) {
+            System.out.println(day);
+        }
     }
 }
