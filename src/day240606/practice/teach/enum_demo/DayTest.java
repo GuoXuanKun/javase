@@ -7,8 +7,6 @@ public class DayTest {
         whatExactlyIsIt();
         System.out.println("===---===---===");
         useWithSwitch(Day.TUESDAY);
-        System.out.println("===---===---===");
-        enumImplementsInterface();
     }
 
     private static void whatExactlyIsIt() {
@@ -52,11 +50,4 @@ public class DayTest {
                 break;
         }
     }
-
-    private static void enumImplementsInterface() {
-        for (Day day : Day.values()) {
-            day.desc();
-        }
-    }
 }
-
