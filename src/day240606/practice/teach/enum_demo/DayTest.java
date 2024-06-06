@@ -1,4 +1,6 @@
-package day240606.practice.teach;
+package day240606.practice.teach.enum_demo;
+
+import day240606.practice.teach.enum_demo.Day;
 
 public class DayTest {
     public static void main(String[] args) {

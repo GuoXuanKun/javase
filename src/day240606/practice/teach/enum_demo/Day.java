@@ -1,4 +1,4 @@
-package day240606.practice.teach;
+package day240606.practice.teach.enum_demo;
 
 public enum Day {
     MONDAY,
