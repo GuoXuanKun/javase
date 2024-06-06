@@ -17,6 +17,7 @@ public class DayTest {
         Day[] values = Day.values();
         for (Day day : values) {
             System.out.println(day);
+            System.out.println(day.name() + "-" + day.ordinal());
         }
     }
 }
