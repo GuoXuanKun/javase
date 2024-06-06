@@ -5,5 +5,9 @@ public class SingletonTest {
         for (int i = 0; i < 5; i++) {
             System.out.println(Student.INSTANCE);
         }
+
+        Student student1 = Student.INSTANCE;
+        Student student2 = Student.INSTANCE;
+        System.out.println(student1 == student2);
     }
 }
