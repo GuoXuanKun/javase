@@ -12,7 +12,7 @@ public class Student {
 
     // 2. behavior (method, function)
     public static Student getInstance() {
-        Student student = new Student();
-        return student;
+        instance = new Student();
+        return instance;
     }
 }
