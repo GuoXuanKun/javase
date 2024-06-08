@@ -4,6 +4,8 @@ public class Student {
     // 1. state (field, variable)
 
     // 3. constructor
+    public Student() {
+    }
 
     // 2. behavior (method, function)
 }
