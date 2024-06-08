@@ -33,5 +33,8 @@ public class StudentTest {
         //   - Instance Variables (Non-Static Fields)
         //   - Class Variables (Static Fields)
 
+        // 破解死结：static
+        Student student = Student.student;
+        System.out.println(student);
     }
 }
