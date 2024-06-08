@@ -27,5 +27,11 @@ public class StudentTest {
         // 怎么获取到在里面的 state 位置 new 出来的 Student 对象？
         // 正常情况，应该先在外部 new 出 Student 对象出来，然后才能访问里面的 state 和 behavior ...
         // 但是现在：我们在外部并不能 new 出 Student。因为构造器被保护起来
+
+        // 回顾之前的知识：
+        // Fields:
+        //   - Instance Variables (Non-Static Fields)
+        //   - Class Variables (Static Fields)
+
     }
 }
