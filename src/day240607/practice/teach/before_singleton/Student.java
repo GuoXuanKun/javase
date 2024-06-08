@@ -3,7 +3,7 @@ package day240607.practice.teach.before_singleton;
 public class Student {
     // 1. state (field, variable)
     // 变量类型 变量名 = 变量值;
-    static Student student = new Student();
+    static Student instance = new Student();
 
     // 3. constructor
     private Student() { // public -> private
