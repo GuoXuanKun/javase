@@ -34,16 +34,20 @@ public class StudentTest {
         //   - Class Variables (Static Fields)
 
         // 破解死结：static
-        Student student = Student.instance;
-        System.out.println(student);
-
-        Student student2 = Student.instance;
-        System.out.println(student2);
-
-        Student student3 = Student.instance;
-        System.out.println(student3);
+//        Student student = Student.instance;
+//        System.out.println(student);
+//
+//        Student student2 = Student.instance;
+//        System.out.println(student2);
+//
+//        Student student3 = Student.instance;
+//        System.out.println(student3);
 
         // 解法2. 还可以在里面的 behavior 的位置 new 它
         // 第一步：不在 state 位置 new，删掉那段代码
+        // 第二步：在 behavior 位置 new 它
+        //       重点：一旦要开始写 behavior (method, function) 就要回想起定义方法那6个东西（其中第5个可暂时忽略的）
+        Student student1 = Student.getInstance();
+        System.out.println(student1);
     }
 }
