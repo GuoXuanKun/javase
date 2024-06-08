@@ -42,5 +42,7 @@ public class StudentTest {
 
         Student student3 = Student.instance;
         System.out.println(student3);
+
+        // todo：解法2. 还可以在里面的 behavior 的位置 new 它
     }
 }
