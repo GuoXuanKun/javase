@@ -12,7 +12,9 @@ public class Student {
 
     // 2. behavior (method, function)
     public static Student getInstance() {
-        instance = new Student();
+        if (instance == null) {
+            instance = new Student();
+        }
         return instance;
     }
 }

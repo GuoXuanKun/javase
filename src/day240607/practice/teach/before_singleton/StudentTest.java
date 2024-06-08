@@ -53,5 +53,8 @@ public class StudentTest {
         // 验证重复通过 behavior 的方式获取对象，是否是同一个对象
         Student student2 = Student.getInstance();
         System.out.println(student2);
+
+        Student student3 = Student.getInstance();
+        System.out.println(student3);
     }
 }
