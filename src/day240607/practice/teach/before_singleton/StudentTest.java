@@ -49,5 +49,9 @@ public class StudentTest {
         //       重点：一旦要开始写 behavior (method, function) 就要回想起定义方法那6个东西（其中第5个可暂时忽略的）
         Student student1 = Student.getInstance();
         System.out.println(student1);
+
+        // 验证重复通过 behavior 的方式获取对象，是否是同一个对象
+        Student student2 = Student.getInstance();
+        System.out.println(student2);
     }
 }
