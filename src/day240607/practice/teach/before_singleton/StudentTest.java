@@ -47,8 +47,8 @@ public class StudentTest {
         // 第一步：不在 state 位置 new，删掉那段代码
         // 第二步：在 behavior 位置 new 它
         //       重点：一旦要开始写 behavior (method, function) 就要回想起定义方法那6个东西（其中第5个可暂时忽略的）
-        Student student0 = Student.instance;
-        System.out.println(student0);
+//        Student student0 = Student.instance;
+//        System.out.println(student0);
 
         Student student1 = Student.getInstance();
         System.out.println(student1);
