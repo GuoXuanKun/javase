@@ -36,5 +36,11 @@ public class StudentTest {
         // 破解死结：static
         Student student = Student.instance;
         System.out.println(student);
+
+        Student student2 = Student.instance;
+        System.out.println(student2);
+
+        Student student3 = Student.instance;
+        System.out.println(student3);
     }
 }
