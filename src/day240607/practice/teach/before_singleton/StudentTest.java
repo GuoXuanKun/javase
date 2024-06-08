@@ -18,5 +18,9 @@ public class StudentTest {
 //        System.out.println(student3);
 
         // 思考：现在外面不能直接 new 它，那可以在哪里 new ?
+        //   - 思路：外面（StudentTest）不行 -> 里面（Student 本身） new 它
+        //     - 里面：有哪些位置可以 new ?
+        //       - 1. 在里面的 state 的位置 new 它
+        //       - 2. 在里面的 behavior 的位置 new 它
     }
 }
