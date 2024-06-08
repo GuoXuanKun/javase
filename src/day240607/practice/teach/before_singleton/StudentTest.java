@@ -10,5 +10,11 @@ public class StudentTest {
         //   - 能看到在 class 文件中自动生成了 构造器
         Student student1 = new Student();
         System.out.println(student1);
+
+        Student student2 = new Student();
+        System.out.println(student2);
+
+        Student student3 = new Student();
+        System.out.println(student3);
     }
 }
