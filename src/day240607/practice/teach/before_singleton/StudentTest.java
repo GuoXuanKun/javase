@@ -22,5 +22,10 @@ public class StudentTest {
         //     - 里面：有哪些位置可以 new ?
         //       - 1. 在里面的 state 的位置 new 它
         //       - 2. 在里面的 behavior 的位置 new 它
+
+        // 死结：
+        // 怎么获取到在里面的 state 位置 new 出来的 Student 对象？
+        // 正常情况，应该先在外部 new 出 Student 对象出来，然后才能访问里面的 state 和 behavior ...
+        // 但是现在：我们在外部并不能 new 出 Student。因为构造器被保护起来
     }
 }
