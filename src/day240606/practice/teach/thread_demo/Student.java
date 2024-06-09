@@ -7,7 +7,7 @@ public class Student {
         System.out.println("验证 new 的时候是否会调用到我");
     }
 
-    public static Student getInstance() {
+    public synchronized static Student getInstance() {
         if (instance == null) {
             instance = new Student();
         }
