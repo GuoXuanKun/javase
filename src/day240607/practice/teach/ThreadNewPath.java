@@ -19,8 +19,16 @@ public class ThreadNewPath {
         // 调用 start 方法，才是启动一条新的执行路径
         myThread1.start();
 
-        Thread myThread2 = new Thread(new MyThread2(), "Thread-path2");
-        myThread2.start();
+        /*Thread myThread2 = new Thread(new MyThread2(), "Thread-path2");
+        myThread2.start();*/
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 100; i++) {
+                    System.out.println(Thread.currentThread().getName() + "---" + i);
+                }
+            }
+        }).start();
     }
 }
 
@@ -40,11 +48,11 @@ class MyThread1 extends Thread {
     }
 }
 
-class MyThread2 implements Runnable {
+/*class MyThread2 implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 100; i++) {
             System.out.println(Thread.currentThread().getName() + "---" + i);
         }
     }
-}
+}*/
