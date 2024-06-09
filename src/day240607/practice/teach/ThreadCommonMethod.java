@@ -3,7 +3,8 @@ package day240607.practice.teach;
 public class ThreadCommonMethod {
     public static void main(String[] args) throws InterruptedException {
         //sleep();
-        join();
+        //join();
+        testYield();
     }
 
     private static void sleep() throws InterruptedException {
@@ -27,6 +28,21 @@ public class ThreadCommonMethod {
         }
 
         for (int i = 0; i < 10; i++) {
+            System.out.println(Thread.currentThread().getName() + "---" + i);
+        }
+    }
+
+    private static void testYield() {
+        new Thread(() -> {
+            for (int i = 0; i < 100; i++) {
+                System.out.println(Thread.currentThread().getName() + "---" + i);
+                if (i % 10 == 0) {
+                    Thread.yield();
+                }
+            }
+        }).start();
+
+        for (int i = 0; i < 100; i++) {
             System.out.println(Thread.currentThread().getName() + "---" + i);
         }
     }
