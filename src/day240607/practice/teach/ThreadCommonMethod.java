@@ -4,7 +4,8 @@ public class ThreadCommonMethod {
     public static void main(String[] args) throws InterruptedException {
         //sleep();
         //join();
-        testYield();
+        //testYield();
+        testPriority();
     }
 
     private static void sleep() throws InterruptedException {
@@ -41,6 +42,20 @@ public class ThreadCommonMethod {
                 }
             }
         }).start();
+
+        for (int i = 0; i < 100; i++) {
+            System.out.println(Thread.currentThread().getName() + "---" + i);
+        }
+    }
+
+    private static void testPriority() {
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 100; i++) {
+                System.out.println(Thread.currentThread().getName() + "---" + i);
+            }
+        });
+        t1.setPriority(Thread.NORM_PRIORITY + 3);
+        t1.start();
 
         for (int i = 0; i < 100; i++) {
             System.out.println(Thread.currentThread().getName() + "---" + i);
