@@ -10,6 +10,7 @@ import day240603.practice.me.app.util.MyEmailUtil;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Properties;
 
@@ -30,7 +31,7 @@ public class App {
         MyEmailUtil.SECRET_TOKEN = PROPERTIES.getProperty("secret_token");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         // 开始
         System.out.println("程序开始运行...");
 
