@@ -13,4 +13,8 @@ public class JDBCUtil {
             throw new RuntimeException(e);
         }
     }
+
+    public static Connection getConnection() {
+        return connection;
+    }
 }
