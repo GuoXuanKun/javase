@@ -23,5 +23,6 @@ public class JDBCRepository implements Repository {
             ppstmt.setString(4, cr.getUpdatedAt());
             ppstmt.executeUpdate();
         }
+        ppstmt.close();
     }
 }
