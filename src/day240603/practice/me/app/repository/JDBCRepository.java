@@ -1,6 +1,7 @@
 package day240603.practice.me.app.repository;
 
 import day240603.practice.me.app.dto.CustomResult;
+import day240603.practice.me.app.util.JDBCUtil;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,7 +13,7 @@ public class JDBCRepository implements Repository {
 
     @Override
     public void store(List<CustomResult> results) throws SQLException {
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb1", "root", "这里放密码");
+        Connection connection = JDBCUtil.getConnection();
 
         String insertSql = "insert into article(title,url,create_at,update_at) values(?, ?, ?, ?);";
         PreparedStatement ppstmt = connection.prepareStatement(insertSql);
